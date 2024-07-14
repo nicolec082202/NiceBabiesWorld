@@ -7,18 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E1CECCF92C3BA18D00F736C9 /* HouseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CECCF82C3BA18D00F736C9 /* HouseView.swift */; };
+		E1CECCFB2C3BA7C100F736C9 /* ClubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CECCFA2C3BA7C100F736C9 /* ClubView.swift */; };
+		E1CECCFD2C3BA7CB00F736C9 /* GameCatalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CECCFC2C3BA7CB00F736C9 /* GameCatalogView.swift */; };
+		E1CECCFF2C44758A00F736C9 /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CECCFE2C44758A00F736C9 /* NavBar.swift */; };
 		E1D9D7812C38B97800FB1B4E /* NiceBabiesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D9D7802C38B97800FB1B4E /* NiceBabiesApp.swift */; };
 		E1D9D7832C38B97800FB1B4E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D9D7822C38B97800FB1B4E /* ContentView.swift */; };
 		E1D9D7852C38B97900FB1B4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1D9D7842C38B97900FB1B4E /* Assets.xcassets */; };
 		E1D9D7882C38B97900FB1B4E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1D9D7872C38B97900FB1B4E /* Preview Assets.xcassets */; };
+		E1D9D7902C38B99D00FB1B4E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = E1D9D78F2C38B99D00FB1B4E /* FirebaseAuth */; };
+		E1D9D7922C38B99D00FB1B4E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = E1D9D7912C38B99D00FB1B4E /* FirebaseFirestore */; };
+		E1D9D7942C38B9BC00FB1B4E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1D9D7932C38B9BC00FB1B4E /* GoogleService-Info.plist */; };
+		E1D9D7962C38BA8900FB1B4E /* LoginAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D9D7952C38BA8900FB1B4E /* LoginAppView.swift */; };
+		E1D9D7982C38BAF200FB1B4E /* NewAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D9D7972C38BAF200FB1B4E /* NewAccountView.swift */; };
+		E1D9D79A2C38BB3200FB1B4E /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D9D7992C38BB3200FB1B4E /* HomePageView.swift */; };
+		E1D9D79C2C38BEBB00FB1B4E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D9D79B2C38BEBA00FB1B4E /* String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E1CECCF82C3BA18D00F736C9 /* HouseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseView.swift; sourceTree = "<group>"; };
+		E1CECCFA2C3BA7C100F736C9 /* ClubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubView.swift; sourceTree = "<group>"; };
+		E1CECCFC2C3BA7CB00F736C9 /* GameCatalogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCatalogView.swift; sourceTree = "<group>"; };
+		E1CECCFE2C44758A00F736C9 /* NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBar.swift; sourceTree = "<group>"; };
 		E1D9D77D2C38B97800FB1B4E /* NiceBabies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NiceBabies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1D9D7802C38B97800FB1B4E /* NiceBabiesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiceBabiesApp.swift; sourceTree = "<group>"; };
 		E1D9D7822C38B97800FB1B4E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E1D9D7842C38B97900FB1B4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1D9D7872C38B97900FB1B4E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E1D9D7932C38B9BC00FB1B4E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E1D9D7952C38BA8900FB1B4E /* LoginAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAppView.swift; sourceTree = "<group>"; };
+		E1D9D7972C38BAF200FB1B4E /* NewAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccountView.swift; sourceTree = "<group>"; };
+		E1D9D7992C38BB3200FB1B4E /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
+		E1D9D79B2C38BEBA00FB1B4E /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +46,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1D9D7902C38B99D00FB1B4E /* FirebaseAuth in Frameworks */,
+				E1D9D7922C38B99D00FB1B4E /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,7 +75,16 @@
 			children = (
 				E1D9D7802C38B97800FB1B4E /* NiceBabiesApp.swift */,
 				E1D9D7822C38B97800FB1B4E /* ContentView.swift */,
+				E1D9D7952C38BA8900FB1B4E /* LoginAppView.swift */,
+				E1D9D79B2C38BEBA00FB1B4E /* String.swift */,
+				E1D9D7992C38BB3200FB1B4E /* HomePageView.swift */,
+				E1CECCFE2C44758A00F736C9 /* NavBar.swift */,
+				E1CECCFA2C3BA7C100F736C9 /* ClubView.swift */,
+				E1CECCFC2C3BA7CB00F736C9 /* GameCatalogView.swift */,
+				E1CECCF82C3BA18D00F736C9 /* HouseView.swift */,
+				E1D9D7972C38BAF200FB1B4E /* NewAccountView.swift */,
 				E1D9D7842C38B97900FB1B4E /* Assets.xcassets */,
+				E1D9D7932C38B9BC00FB1B4E /* GoogleService-Info.plist */,
 				E1D9D7862C38B97900FB1B4E /* Preview Content */,
 			);
 			path = NiceBabies;
@@ -83,6 +114,10 @@
 			dependencies = (
 			);
 			name = NiceBabies;
+			packageProductDependencies = (
+				E1D9D78F2C38B99D00FB1B4E /* FirebaseAuth */,
+				E1D9D7912C38B99D00FB1B4E /* FirebaseFirestore */,
+			);
 			productName = NiceBabies;
 			productReference = E1D9D77D2C38B97800FB1B4E /* NiceBabies.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +146,9 @@
 				Base,
 			);
 			mainGroup = E1D9D7742C38B97800FB1B4E;
+			packageReferences = (
+				E1D9D78E2C38B99D00FB1B4E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = E1D9D77E2C38B97800FB1B4E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +165,7 @@
 			files = (
 				E1D9D7882C38B97900FB1B4E /* Preview Assets.xcassets in Resources */,
 				E1D9D7852C38B97900FB1B4E /* Assets.xcassets in Resources */,
+				E1D9D7942C38B9BC00FB1B4E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +176,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1D9D79C2C38BEBB00FB1B4E /* String.swift in Sources */,
 				E1D9D7832C38B97800FB1B4E /* ContentView.swift in Sources */,
+				E1CECCFB2C3BA7C100F736C9 /* ClubView.swift in Sources */,
+				E1D9D7982C38BAF200FB1B4E /* NewAccountView.swift in Sources */,
 				E1D9D7812C38B97800FB1B4E /* NiceBabiesApp.swift in Sources */,
+				E1CECCFF2C44758A00F736C9 /* NavBar.swift in Sources */,
+				E1CECCF92C3BA18D00F736C9 /* HouseView.swift in Sources */,
+				E1D9D7962C38BA8900FB1B4E /* LoginAppView.swift in Sources */,
+				E1D9D79A2C38BB3200FB1B4E /* HomePageView.swift in Sources */,
+				E1CECCFD2C3BA7CB00F736C9 /* GameCatalogView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +384,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E1D9D78E2C38B99D00FB1B4E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E1D9D78F2C38B99D00FB1B4E /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E1D9D78E2C38B99D00FB1B4E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		E1D9D7912C38B99D00FB1B4E /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E1D9D78E2C38B99D00FB1B4E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E1D9D7752C38B97800FB1B4E /* Project object */;
 }
