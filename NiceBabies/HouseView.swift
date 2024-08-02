@@ -9,27 +9,17 @@ import SwiftUI
 
 struct HouseView: View {
     
+    @Binding var username:String
+    
     var body: some View {
         
-        @Environment(\.presentationMode)
-        var presentationMode
-        
-        Button(action: {
-            presentationMode.wrappedValue.dismiss()
-        }) {
-            Image(systemName: "house.fill")
-                .foregroundColor(.black)
-                .font(.system(size: 20))
-        }
+        NavBar(username: $username)
             
-        
-        
-        
     }
 }
 
 struct HouseView_Previews: PreviewProvider {
     static var previews: some View {
-        HouseView()
+        HouseView(username: .constant("The Baby"))
     }
 }

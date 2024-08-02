@@ -10,16 +10,16 @@ import SwiftUI
 struct HomePageView: View {
     
     @Binding var username:String
-    @State private var isHousePresented = false
-    @State private var isClubPresented = false
-    @State private var isGameCatalogPresented = false
 
     
     var body: some View {
         
        // NavigationView{
-            
+                    
             VStack{
+                
+                Spacer()
+                
                 Text("@" + username)
                     .font(.system(size: 30))
                     .padding(.trailing, 235)
@@ -49,45 +49,18 @@ struct HomePageView: View {
                 }
                 .padding(.trailing, 125)
                 
+                Spacer()
+                
                 HStack{
                     Image(systemName: "figure.stand")
                         .font(.system(size: 450))
                     
-                   /* NavigationLink(destination: HouseView()){
-                        
-                        Image(systemName: "house.fill")
-                            .foregroundColor(.black)
-                            .font(.system(size: 35))
-                    }*/
-                    
-                    VStack{
-                        
-                        Button(action: {
-                            isHousePresented.toggle()
-                        }) {
-                            Image(systemName: "house.fill")
-                                .foregroundColor(.black)
-                                .font(.system(size: 35))
-                        }
-                        .fullScreenCover(isPresented: $isHousePresented){
-                            HouseView()
-                        }
-                        
-                        Button(action: {
-                            isClubPresented.toggle()
-                        }) {
-                            Image(systemName: "opticaldisc.fill")
-                                .foregroundColor(.black)
-                                .font(.system(size: 35))
-                        }
-                        .fullScreenCover(isPresented: $isClubPresented){
-                            ClubView()
-                        }
-                        
-                        
-                    }
                     
                 }
+                
+                Spacer()
+                
+                NavBar(username: $username)
                 
                 
             }
