@@ -9,15 +9,36 @@ import SwiftUI
 
 struct GameCatalogView: View {
     
-    @Binding var username:String
+    @Environment(\.presentationMode) var isGameCatalogViewPresented
+    
 
     var body: some View {
-        NavBar(username: $username)
+        
+        ZStack{
+            
+            Button(action: {
+                isGameCatalogViewPresented.wrappedValue.dismiss()
+            }) {
+                
+                Image(systemName: "house.fill")
+                    .font(.system(size: 25))
+                    .foregroundColor(Color.black)
+                
+            }
+            .position(x: 50, y: 10)
+
+            
+            Text("Game Catalog View")
+                .position(x: 200, y: 30)
+                
+            }
+            
+        }
     }
-}
+
 
 struct GameCatalogView_Previews: PreviewProvider {
     static var previews: some View {
-        GameCatalogView(username: .constant("The Baby"))
+        GameCatalogView()
     }
 }

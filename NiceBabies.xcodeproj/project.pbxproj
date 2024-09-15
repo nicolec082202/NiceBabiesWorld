@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E191FFA92C54B3D600D3AD3A /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E191FFA82C54B3D600D3AD3A /* NavBar.swift */; };
+		E191FFAD2C5D924400D3AD3A /* DollGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E191FFAC2C5D924400D3AD3A /* DollGalleryView.swift */; };
+		E1AC1E752C96927D009C56D1 /* ClosetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AC1E742C96927D009C56D1 /* ClosetView.swift */; };
 		E1CECCF92C3BA18D00F736C9 /* HouseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CECCF82C3BA18D00F736C9 /* HouseView.swift */; };
 		E1CECCFD2C3BA7CB00F736C9 /* GameCatalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CECCFC2C3BA7CB00F736C9 /* GameCatalogView.swift */; };
 		E1D9D7812C38B97800FB1B4E /* NiceBabiesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D9D7802C38B97800FB1B4E /* NiceBabiesApp.swift */; };
@@ -19,12 +20,13 @@
 		E1D9D7942C38B9BC00FB1B4E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1D9D7932C38B9BC00FB1B4E /* GoogleService-Info.plist */; };
 		E1D9D7962C38BA8900FB1B4E /* LoginAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D9D7952C38BA8900FB1B4E /* LoginAppView.swift */; };
 		E1D9D7982C38BAF200FB1B4E /* NewAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D9D7972C38BAF200FB1B4E /* NewAccountView.swift */; };
-		E1D9D79A2C38BB3200FB1B4E /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D9D7992C38BB3200FB1B4E /* HomePageView.swift */; };
+		E1D9D79A2C38BB3200FB1B4E /* DollStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D9D7992C38BB3200FB1B4E /* DollStatusView.swift */; };
 		E1D9D79C2C38BEBB00FB1B4E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D9D79B2C38BEBA00FB1B4E /* String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E191FFA82C54B3D600D3AD3A /* NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBar.swift; sourceTree = "<group>"; };
+		E191FFAC2C5D924400D3AD3A /* DollGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DollGalleryView.swift; sourceTree = "<group>"; };
+		E1AC1E742C96927D009C56D1 /* ClosetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosetView.swift; sourceTree = "<group>"; };
 		E1CECCF82C3BA18D00F736C9 /* HouseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseView.swift; sourceTree = "<group>"; };
 		E1CECCFC2C3BA7CB00F736C9 /* GameCatalogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCatalogView.swift; sourceTree = "<group>"; };
 		E1D9D77D2C38B97800FB1B4E /* NiceBabies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NiceBabies.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,7 +37,7 @@
 		E1D9D7932C38B9BC00FB1B4E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E1D9D7952C38BA8900FB1B4E /* LoginAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAppView.swift; sourceTree = "<group>"; };
 		E1D9D7972C38BAF200FB1B4E /* NewAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccountView.swift; sourceTree = "<group>"; };
-		E1D9D7992C38BB3200FB1B4E /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
+		E1D9D7992C38BB3200FB1B4E /* DollStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DollStatusView.swift; sourceTree = "<group>"; };
 		E1D9D79B2C38BEBA00FB1B4E /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,10 +77,11 @@
 				E1D9D7822C38B97800FB1B4E /* ContentView.swift */,
 				E1D9D7952C38BA8900FB1B4E /* LoginAppView.swift */,
 				E1D9D79B2C38BEBA00FB1B4E /* String.swift */,
-				E1D9D7992C38BB3200FB1B4E /* HomePageView.swift */,
-				E191FFA82C54B3D600D3AD3A /* NavBar.swift */,
+				E1D9D7992C38BB3200FB1B4E /* DollStatusView.swift */,
+				E191FFAC2C5D924400D3AD3A /* DollGalleryView.swift */,
 				E1CECCFC2C3BA7CB00F736C9 /* GameCatalogView.swift */,
 				E1CECCF82C3BA18D00F736C9 /* HouseView.swift */,
+				E1AC1E742C96927D009C56D1 /* ClosetView.swift */,
 				E1D9D7972C38BAF200FB1B4E /* NewAccountView.swift */,
 				E1D9D7842C38B97900FB1B4E /* Assets.xcassets */,
 				E1D9D7932C38B9BC00FB1B4E /* GoogleService-Info.plist */,
@@ -176,11 +179,12 @@
 				E1D9D79C2C38BEBB00FB1B4E /* String.swift in Sources */,
 				E1D9D7832C38B97800FB1B4E /* ContentView.swift in Sources */,
 				E1D9D7982C38BAF200FB1B4E /* NewAccountView.swift in Sources */,
+				E191FFAD2C5D924400D3AD3A /* DollGalleryView.swift in Sources */,
 				E1D9D7812C38B97800FB1B4E /* NiceBabiesApp.swift in Sources */,
-				E191FFA92C54B3D600D3AD3A /* NavBar.swift in Sources */,
 				E1CECCF92C3BA18D00F736C9 /* HouseView.swift in Sources */,
+				E1AC1E752C96927D009C56D1 /* ClosetView.swift in Sources */,
 				E1D9D7962C38BA8900FB1B4E /* LoginAppView.swift in Sources */,
-				E1D9D79A2C38BB3200FB1B4E /* HomePageView.swift in Sources */,
+				E1D9D79A2C38BB3200FB1B4E /* DollStatusView.swift in Sources */,
 				E1CECCFD2C3BA7CB00F736C9 /* GameCatalogView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

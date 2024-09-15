@@ -23,5 +23,10 @@ extension String {
         
         return true
     }
+    
+    func isValidPassword () -> Bool{
+        
+        return true
+    }
 }
 

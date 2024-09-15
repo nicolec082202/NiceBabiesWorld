@@ -7,22 +7,35 @@
 
 import SwiftUI
 
-struct HomePageView: View {
+struct DollStatusView: View {
     
     @Binding var username:String
-
+    @State private var currentIndex = 0
+    @Binding var equippedBaby:String
+    @Environment(\.presentationMode) var isDollStatusViewPresented
     
     var body: some View {
+                    
+        ZStack(){
+                        
+
         
-       // NavigationView{
+                Button(action: {
+                    isDollStatusViewPresented.wrappedValue.dismiss()
+                }) {
+                    
+                    Image(systemName: "house.fill")
+                        .font(.system(size: 25))
+                        .foregroundColor(Color.black)
+                    }
+                    .position(x: 50, y: 10)
+            
                     
             VStack{
-                
-                Spacer()
+
                 
                 Text("@" + username)
                     .font(.system(size: 30))
-                    .padding(.trailing, 235)
                 
                 HStack{
                     
@@ -46,33 +59,42 @@ struct HomePageView: View {
                         .foregroundColor(.red)
                         .font(.system(size: 35))
                     
+                    }
+                
                 }
-                .padding(.trailing, 125)
+                .frame(width: 135, height: 5)
+                .position(x: 200, y: 150)
+
+  
+
                 
-                Spacer()
-                
-                HStack{
-                    Image(systemName: "figure.stand")
-                        .font(.system(size: 450))
+            VStack {
                     
+                    Image(equippedBaby)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 800, height: 1000)
                     
                 }
+                .zIndex(-1.0)
+                .position(x: 200, y: 400)
                 
-                Spacer()
+
+
+
+          //  }
                 
-                NavBar(username: $username)
-                
-                
-            }
-            
         }
-   // }
+            
+    }
 }
 
-struct HomePageView_Previews: PreviewProvider {
+
+
+struct DollStatusView_Previews: PreviewProvider {
     static var previews: some View {
         
 
-        HomePageView(username: .constant("thebaby"))
+        DollStatusView(username: .constant("thebaby"), equippedBaby: .constant("NiceBaby_Monkey"))
     }
 }

@@ -24,7 +24,7 @@ struct LoginAppView: View {
                 }
                 .padding()
             }
-            NavigationLink(destination: HomePageView(username: $username), isActive: $isPasswordCorrect) {
+            NavigationLink(destination: HouseView(username: $username), isActive: $isPasswordCorrect) {
                 EmptyView()
             }
         }
