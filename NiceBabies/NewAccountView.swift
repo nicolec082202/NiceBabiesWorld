@@ -11,6 +11,7 @@ struct NewAccountView: View {
     @State private var password: String = ""
     @State private var username: String = ""
     @State private var showErrorAlert: Bool = false
+    @State private var errorMessage: String = ""
 
 
 
@@ -102,14 +103,17 @@ struct NewAccountView: View {
                                     
                                     let db = Firestore.firestore()
                                     db.collection("users").document(authResult.user.uid).setData([
-                                        "username": username,
-                                        "email": email
+                                        "email": email,
+                                        "username": username
                                     ]) { error in
                                         if let error = error {
-                                            print("Error adding  document: \(error)")
-                                        } else {
-                                            print("Document added with ID: \(authResult.user.uid)")
-                                        }
+                                                                               print("Error adding document: \(error)")
+                                                                               self.errorMessage = "Failed to save user data: \(error.localizedDescription)"
+                                                                               self.showErrorAlert = true
+                                                                       } else {
+                                                                               print("Document added with ID: \(authResult.user.uid)")
+                                                                               presentationMode.wrappedValue.dismiss()
+                                                                           }
                                     }
                                 }
                                 presentationMode.wrappedValue.dismiss()
