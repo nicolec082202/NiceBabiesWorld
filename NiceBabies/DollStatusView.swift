@@ -18,8 +18,6 @@ struct DollStatusView: View {
                     
         ZStack(){
                         
-
-        
                 Button(action: {
                     isDollStatusViewPresented.wrappedValue.dismiss()
                 }) {
@@ -29,7 +27,6 @@ struct DollStatusView: View {
                         .foregroundColor(Color.black)
                     }
                     .position(x: 50, y: 10)
-            
                     
             VStack{
 

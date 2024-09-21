@@ -12,7 +12,6 @@ struct HouseView: View {
     @State private var isGameCatalogViewPresented = false
     @State private var isDollStatusViewPresented = false
     @State private var equippedBaby = "NiceBaby_Monkey"
-    
     @Binding var username:String
 
     var body: some View {

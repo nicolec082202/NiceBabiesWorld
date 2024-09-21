@@ -30,7 +30,7 @@ struct JournalAppApp: App {
     var body: some Scene {
         
             WindowGroup {
-                LoginAppView(username: .constant("thebaby"))
+                LoginAppView()
             }
         
     }
