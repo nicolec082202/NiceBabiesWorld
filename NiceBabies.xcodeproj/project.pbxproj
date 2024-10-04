@@ -7,10 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E135FB932CA293490006457C /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E135FB922CA293490006457C /* Media.xcassets */; };
+		E135FB952CA76B5B0006457C /* SpriteKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E135FB942CA76B5B0006457C /* SpriteKitView.swift */; };
 		E191FFAD2C5D924400D3AD3A /* DollGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E191FFAC2C5D924400D3AD3A /* DollGalleryView.swift */; };
 		E1AC1E752C96927D009C56D1 /* ClosetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AC1E742C96927D009C56D1 /* ClosetView.swift */; };
 		E1CECCF92C3BA18D00F736C9 /* HouseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CECCF82C3BA18D00F736C9 /* HouseView.swift */; };
 		E1CECCFD2C3BA7CB00F736C9 /* GameCatalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CECCFC2C3BA7CB00F736C9 /* GameCatalogView.swift */; };
+		E1D92DAB2C9E7EF200B09F0C /* WorkOutGameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E1D92DAA2C9E7EF200B09F0C /* WorkOutGameScene.sks */; };
+		E1D92DAF2C9E7FF500B09F0C /* WorkOutGameActions.sks in Resources */ = {isa = PBXBuildFile; fileRef = E1D92DAE2C9E7FF500B09F0C /* WorkOutGameActions.sks */; };
+		E1D92DB12C9E801A00B09F0C /* WorkOutGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D92DB02C9E801A00B09F0C /* WorkOutGameScene.swift */; };
+		E1D92DB32C9E80B800B09F0C /* WorkOutGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D92DB22C9E80B800B09F0C /* WorkOutGameViewController.swift */; };
+		E1D92DB52C9E80F900B09F0C /* WorkOutGameStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1D92DB42C9E80F900B09F0C /* WorkOutGameStoryboard.storyboard */; };
+		E1D92DB72C9E810F00B09F0C /* WorkOutGameLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1D92DB62C9E810F00B09F0C /* WorkOutGameLaunchScreen.storyboard */; };
 		E1D9D7812C38B97800FB1B4E /* NiceBabiesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D9D7802C38B97800FB1B4E /* NiceBabiesApp.swift */; };
 		E1D9D7832C38B97800FB1B4E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D9D7822C38B97800FB1B4E /* ContentView.swift */; };
 		E1D9D7852C38B97900FB1B4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1D9D7842C38B97900FB1B4E /* Assets.xcassets */; };
@@ -25,10 +33,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E135FB922CA293490006457C /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		E135FB942CA76B5B0006457C /* SpriteKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteKitView.swift; sourceTree = "<group>"; };
 		E191FFAC2C5D924400D3AD3A /* DollGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DollGalleryView.swift; sourceTree = "<group>"; };
 		E1AC1E742C96927D009C56D1 /* ClosetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosetView.swift; sourceTree = "<group>"; };
 		E1CECCF82C3BA18D00F736C9 /* HouseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseView.swift; sourceTree = "<group>"; };
 		E1CECCFC2C3BA7CB00F736C9 /* GameCatalogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCatalogView.swift; sourceTree = "<group>"; };
+		E1D92DAA2C9E7EF200B09F0C /* WorkOutGameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = WorkOutGameScene.sks; sourceTree = "<group>"; };
+		E1D92DAE2C9E7FF500B09F0C /* WorkOutGameActions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = WorkOutGameActions.sks; sourceTree = "<group>"; };
+		E1D92DB02C9E801A00B09F0C /* WorkOutGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOutGameScene.swift; sourceTree = "<group>"; };
+		E1D92DB22C9E80B800B09F0C /* WorkOutGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOutGameViewController.swift; sourceTree = "<group>"; };
+		E1D92DB42C9E80F900B09F0C /* WorkOutGameStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WorkOutGameStoryboard.storyboard; sourceTree = "<group>"; };
+		E1D92DB62C9E810F00B09F0C /* WorkOutGameLaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WorkOutGameLaunchScreen.storyboard; sourceTree = "<group>"; };
 		E1D9D77D2C38B97800FB1B4E /* NiceBabies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NiceBabies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1D9D7802C38B97800FB1B4E /* NiceBabiesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiceBabiesApp.swift; sourceTree = "<group>"; };
 		E1D9D7822C38B97800FB1B4E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,9 +70,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E1D92DB82C9E814200B09F0C /* WorkOutGame */ = {
+			isa = PBXGroup;
+			children = (
+				E1D92DAA2C9E7EF200B09F0C /* WorkOutGameScene.sks */,
+				E1D92DAE2C9E7FF500B09F0C /* WorkOutGameActions.sks */,
+				E1D92DB02C9E801A00B09F0C /* WorkOutGameScene.swift */,
+				E1D92DB22C9E80B800B09F0C /* WorkOutGameViewController.swift */,
+				E1D92DB42C9E80F900B09F0C /* WorkOutGameStoryboard.storyboard */,
+				E1D92DB62C9E810F00B09F0C /* WorkOutGameLaunchScreen.storyboard */,
+				E135FB922CA293490006457C /* Media.xcassets */,
+			);
+			path = WorkOutGame;
+			sourceTree = "<group>";
+		};
 		E1D9D7742C38B97800FB1B4E = {
 			isa = PBXGroup;
 			children = (
+				E1D92DB82C9E814200B09F0C /* WorkOutGame */,
 				E1D9D77F2C38B97800FB1B4E /* NiceBabies */,
 				E1D9D77E2C38B97800FB1B4E /* Products */,
 			);
@@ -83,6 +114,7 @@
 				E1CECCF82C3BA18D00F736C9 /* HouseView.swift */,
 				E1AC1E742C96927D009C56D1 /* ClosetView.swift */,
 				E1D9D7972C38BAF200FB1B4E /* NewAccountView.swift */,
+				E135FB942CA76B5B0006457C /* SpriteKitView.swift */,
 				E1D9D7842C38B97900FB1B4E /* Assets.xcassets */,
 				E1D9D7932C38B9BC00FB1B4E /* GoogleService-Info.plist */,
 				E1D9D7862C38B97900FB1B4E /* Preview Content */,
@@ -163,8 +195,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1D92DB52C9E80F900B09F0C /* WorkOutGameStoryboard.storyboard in Resources */,
 				E1D9D7882C38B97900FB1B4E /* Preview Assets.xcassets in Resources */,
+				E135FB932CA293490006457C /* Media.xcassets in Resources */,
 				E1D9D7852C38B97900FB1B4E /* Assets.xcassets in Resources */,
+				E1D92DB72C9E810F00B09F0C /* WorkOutGameLaunchScreen.storyboard in Resources */,
+				E1D92DAF2C9E7FF500B09F0C /* WorkOutGameActions.sks in Resources */,
+				E1D92DAB2C9E7EF200B09F0C /* WorkOutGameScene.sks in Resources */,
 				E1D9D7942C38B9BC00FB1B4E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -178,10 +215,13 @@
 			files = (
 				E1D9D79C2C38BEBB00FB1B4E /* String.swift in Sources */,
 				E1D9D7832C38B97800FB1B4E /* ContentView.swift in Sources */,
+				E1D92DB32C9E80B800B09F0C /* WorkOutGameViewController.swift in Sources */,
+				E1D92DB12C9E801A00B09F0C /* WorkOutGameScene.swift in Sources */,
 				E1D9D7982C38BAF200FB1B4E /* NewAccountView.swift in Sources */,
 				E191FFAD2C5D924400D3AD3A /* DollGalleryView.swift in Sources */,
 				E1D9D7812C38B97800FB1B4E /* NiceBabiesApp.swift in Sources */,
 				E1CECCF92C3BA18D00F736C9 /* HouseView.swift in Sources */,
+				E135FB952CA76B5B0006457C /* SpriteKitView.swift in Sources */,
 				E1AC1E752C96927D009C56D1 /* ClosetView.swift in Sources */,
 				E1D9D7962C38BA8900FB1B4E /* LoginAppView.swift in Sources */,
 				E1D9D79A2C38BB3200FB1B4E /* DollStatusView.swift in Sources */,

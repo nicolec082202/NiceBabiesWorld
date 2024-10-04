@@ -19,7 +19,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 }
 */
 @main
-struct JournalAppApp: App {
+struct NiceBabiesApp: App {
     
     // register app delegate for Firebase setup
     //  @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
