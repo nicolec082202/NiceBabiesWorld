@@ -1,90 +1,64 @@
-//
-//  ClosetView.swift
-//  NiceBabies
-//
-//  Created by Nicole Potter on 9/14/24.
-//
+import SwiftUI  
 
-import SwiftUI
-
+// Define the ClosetView structure conforming to the View protocol
 struct ClosetView: View {
     var body: some View {
-
-    VStack{
-
-        
-            HStack{
-                
-                Text("Collection")
-                
-                
-                Image(systemName: "plus.circle")
-                
-                
-                }
-                .font(.system(size: 45))
-                .position(x: 200, y: 70)
-        
+        // Use a VStack to vertically stack elements
+        VStack {
             
-        
-                        
-            HStack{
+            // HStack to display the "Collection" label and a plus icon horizontally
+            HStack {
+                Text("Collection")  // Display the text "Collection"
+                Image(systemName: "plus.circle")  // Display a plus circle icon
+            }
+            .font(.system(size: 45))  // Set the font size for both elements
+            .position(x: 200, y: 70)  // Position the HStack within the view
+            
+            // HStack to display the first row of baby images
+            HStack {
+                Image("NiceBaby_Fish")  // Load the fish-themed baby image
+                    .resizable()  // Allow the image to resize
+                    .aspectRatio(contentMode: .fit)  // Maintain aspect ratio
                 
-                
-                Image("NiceBaby_Fish")
+                Image("NiceBaby_Monkey")  // Load the monkey-themed baby image
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-
                 
-                Image("NiceBaby_Monkey")
+                Image("NiceBaby_Sheep")  // Load the sheep-themed baby image
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-
-                Image("NiceBaby_Sheep")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                
             }
             
+            // Add a horizontal divider between rows
             Divider()
-            .frame(width: 320, height: 10)
-            .overlay(.black)
-        
-        HStack{
+                .frame(width: 320, height: 10)  // Set the divider’s size
+                .overlay(.black)  // Set the divider’s color to black
             
+            // HStack to display the second row of baby images
+            HStack {
+                Image("NiceBaby_Panda")  // Load the panda-themed baby image
+                    .resizable()
+                
+                Image("NiceBaby_Rabbit")  // Load the rabbit-themed baby image
+                    .resizable()
+                
+                Image("NiceBaby_Cow")  // Load the cow-themed baby image
+                    .resizable()
+            }
             
-            Image("NiceBaby_Panda")
-                .resizable()
-
+            // Add another horizontal divider between rows
+            Divider()
+                .frame(width: 320, height: 10)
+                .overlay(.black)
             
-            Image("NiceBaby_Rabbit")
-                .resizable()
-
-            Image("NiceBaby_Cow")
-                .resizable()
-
-
-            
-            
-        }
-        
-        Divider()
-        .frame(width: 320, height: 10)
-        .overlay(.black)
-        
-        
-        Spacer()
-
-            
-        }
-                    
-            
-        
+            Spacer()  // Add a spacer to push content to the top
         }
     }
+}
 
+// Preview of the ClosetView for development in Xcode
 struct ClosetView_Previews: PreviewProvider {
     static var previews: some View {
-        ClosetView()
+        ClosetView()  // Display the ClosetView in preview mode
     }
 }

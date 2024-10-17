@@ -1,97 +1,65 @@
-//
-//  HomePageView.swift
-//  NiceBabies
-//
-//  Created by Nicole Potter on 7/5/24.
-//
+import SwiftUI  
 
-import SwiftUI
-
+// Define a view called DollStatusView
 struct DollStatusView: View {
     
-    @Binding var username:String
-    @State private var currentIndex = 0
-    @Binding var equippedBaby:String
+    // Use @Binding to get and update the value from a parent view
+    @Binding var username: String  // Username of the user
+    @State private var currentIndex = 0  // Track the current index (not used in this code snippet)
+    @Binding var equippedBaby: String  // Name of the currently equipped baby or doll image
+
+    // Access the environment to control the presentation mode of the view (dismiss or present)
     @Environment(\.presentationMode) var isDollStatusViewPresented
     
     var body: some View {
-                    
-        ZStack(){
-                        
-                Button(action: {
-                    isDollStatusViewPresented.wrappedValue.dismiss()
-                }) {
-                    
-                    Image(systemName: "house.fill")
-                        .font(.system(size: 25))
-                        .foregroundColor(Color.black)
-                    }
-                    .position(x: 50, y: 10)
-                    
-            VStack{
-
-                
+        // A ZStack to layer the components
+        ZStack {
+            // Button to dismiss the view
+            Button(action: {
+                // Dismiss the DollStatusView when the button is pressed
+                isDollStatusViewPresented.wrappedValue.dismiss()
+            }) {
+                Image(systemName: "house.fill")  // House icon
+                    .font(.system(size: 25))  // Set font size for the icon
+                    .foregroundColor(Color.black)  // Set the icon color to black
+            }
+            .position(x: 50, y: 10)  // Position the button within the view
+            
+            // A vertical stack containing the username and hearts
+            VStack {
+                // Display the username with a font size of 30
                 Text("@" + username)
                     .font(.system(size: 30))
                 
-                HStack{
-                    
-                    Image(systemName: "heart.fill")
-                        .foregroundColor(.red)
-                        .font(.system(size: 35))
-                    
-                    Image(systemName: "heart.fill")
-                        .foregroundColor(.red)
-                        .font(.system(size: 35))
-                    
-                    Image(systemName: "heart.fill")
-                        .foregroundColor(.red)
-                        .font(.system(size: 35))
-                    
-                    Image(systemName: "heart.fill")
-                        .foregroundColor(.red)
-                        .font(.system(size: 35))
-                    
-                    Image(systemName: "heart.fill")
-                        .foregroundColor(.red)
-                        .font(.system(size: 35))
-                    
+                // HStack to display a row of heart icons
+                HStack {
+                    ForEach(0..<5) { _ in  // Loop to create 5 heart icons
+                        Image(systemName: "heart.fill")  // Red heart icon
+                            .foregroundColor(.red)  // Set the heart color to red
+                            .font(.system(size: 35))  // Set the font size for the hearts
                     }
-                
                 }
-                .frame(width: 135, height: 5)
-                .position(x: 200, y: 150)
-
-  
-
-                
-            VStack {
-                    
-                    Image(equippedBaby)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 800, height: 1000)
-                    
-                }
-                .zIndex(-1.0)
-                .position(x: 200, y: 400)
-                
-
-
-
-          //  }
-                
-        }
+            }
+            .frame(width: 135, height: 5)  // Set the size of the VStack
+            .position(x: 200, y: 150)  // Position the VStack
             
+            // A VStack to display the equipped baby/doll image
+            VStack {
+                Image(equippedBaby)  // Load the image using the equippedBaby string
+                    .resizable()  // Allow the image to resize
+                    .aspectRatio(contentMode: .fit)  // Maintain the aspect ratio
+                    .frame(width: 800, height: 1000)  // Set the size of the image
+            }
+            .zIndex(-1.0)  // Set the z-index to ensure it appears in the background
+            .position(x: 200, y: 400)  // Position the VStack containing the image
+        }
     }
 }
 
-
-
+// Preview for the DollStatusView
 struct DollStatusView_Previews: PreviewProvider {
     static var previews: some View {
-        
-
+        // Provide constant values for bindings in the preview
         DollStatusView(username: .constant("thebaby"), equippedBaby: .constant("NiceBaby_Monkey"))
     }
 }

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		E135FB932CA293490006457C /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E135FB922CA293490006457C /* Media.xcassets */; };
 		E135FB952CA76B5B0006457C /* SpriteKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E135FB942CA76B5B0006457C /* SpriteKitView.swift */; };
-		E191FFAD2C5D924400D3AD3A /* DollGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E191FFAC2C5D924400D3AD3A /* DollGalleryView.swift */; };
 		E1AC1E752C96927D009C56D1 /* ClosetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AC1E742C96927D009C56D1 /* ClosetView.swift */; };
 		E1CECCF92C3BA18D00F736C9 /* HouseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CECCF82C3BA18D00F736C9 /* HouseView.swift */; };
 		E1CECCFD2C3BA7CB00F736C9 /* GameCatalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CECCFC2C3BA7CB00F736C9 /* GameCatalogView.swift */; };
@@ -20,22 +19,20 @@
 		E1D92DB52C9E80F900B09F0C /* WorkOutGameStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1D92DB42C9E80F900B09F0C /* WorkOutGameStoryboard.storyboard */; };
 		E1D92DB72C9E810F00B09F0C /* WorkOutGameLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1D92DB62C9E810F00B09F0C /* WorkOutGameLaunchScreen.storyboard */; };
 		E1D9D7812C38B97800FB1B4E /* NiceBabiesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D9D7802C38B97800FB1B4E /* NiceBabiesApp.swift */; };
-		E1D9D7832C38B97800FB1B4E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D9D7822C38B97800FB1B4E /* ContentView.swift */; };
 		E1D9D7852C38B97900FB1B4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1D9D7842C38B97900FB1B4E /* Assets.xcassets */; };
 		E1D9D7882C38B97900FB1B4E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1D9D7872C38B97900FB1B4E /* Preview Assets.xcassets */; };
 		E1D9D7902C38B99D00FB1B4E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = E1D9D78F2C38B99D00FB1B4E /* FirebaseAuth */; };
 		E1D9D7922C38B99D00FB1B4E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = E1D9D7912C38B99D00FB1B4E /* FirebaseFirestore */; };
-		E1D9D7942C38B9BC00FB1B4E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1D9D7932C38B9BC00FB1B4E /* GoogleService-Info.plist */; };
 		E1D9D7962C38BA8900FB1B4E /* LoginAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D9D7952C38BA8900FB1B4E /* LoginAppView.swift */; };
 		E1D9D7982C38BAF200FB1B4E /* NewAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D9D7972C38BAF200FB1B4E /* NewAccountView.swift */; };
 		E1D9D79A2C38BB3200FB1B4E /* DollStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D9D7992C38BB3200FB1B4E /* DollStatusView.swift */; };
 		E1D9D79C2C38BEBB00FB1B4E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D9D79B2C38BEBA00FB1B4E /* String.swift */; };
+		E1F50C8E2CB38A9200042384 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1F50C8D2CB38A9200042384 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E135FB922CA293490006457C /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		E135FB942CA76B5B0006457C /* SpriteKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteKitView.swift; sourceTree = "<group>"; };
-		E191FFAC2C5D924400D3AD3A /* DollGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DollGalleryView.swift; sourceTree = "<group>"; };
 		E1AC1E742C96927D009C56D1 /* ClosetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosetView.swift; sourceTree = "<group>"; };
 		E1CECCF82C3BA18D00F736C9 /* HouseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseView.swift; sourceTree = "<group>"; };
 		E1CECCFC2C3BA7CB00F736C9 /* GameCatalogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCatalogView.swift; sourceTree = "<group>"; };
@@ -47,14 +44,13 @@
 		E1D92DB62C9E810F00B09F0C /* WorkOutGameLaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WorkOutGameLaunchScreen.storyboard; sourceTree = "<group>"; };
 		E1D9D77D2C38B97800FB1B4E /* NiceBabies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NiceBabies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1D9D7802C38B97800FB1B4E /* NiceBabiesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiceBabiesApp.swift; sourceTree = "<group>"; };
-		E1D9D7822C38B97800FB1B4E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E1D9D7842C38B97900FB1B4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1D9D7872C38B97900FB1B4E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		E1D9D7932C38B9BC00FB1B4E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E1D9D7952C38BA8900FB1B4E /* LoginAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAppView.swift; sourceTree = "<group>"; };
 		E1D9D7972C38BAF200FB1B4E /* NewAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccountView.swift; sourceTree = "<group>"; };
 		E1D9D7992C38BB3200FB1B4E /* DollStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DollStatusView.swift; sourceTree = "<group>"; };
 		E1D9D79B2C38BEBA00FB1B4E /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		E1F50C8D2CB38A9200042384 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../NiceBabiesWorld-main/NiceBabies/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,18 +101,16 @@
 			isa = PBXGroup;
 			children = (
 				E1D9D7802C38B97800FB1B4E /* NiceBabiesApp.swift */,
-				E1D9D7822C38B97800FB1B4E /* ContentView.swift */,
 				E1D9D7952C38BA8900FB1B4E /* LoginAppView.swift */,
 				E1D9D79B2C38BEBA00FB1B4E /* String.swift */,
 				E1D9D7992C38BB3200FB1B4E /* DollStatusView.swift */,
-				E191FFAC2C5D924400D3AD3A /* DollGalleryView.swift */,
 				E1CECCFC2C3BA7CB00F736C9 /* GameCatalogView.swift */,
 				E1CECCF82C3BA18D00F736C9 /* HouseView.swift */,
 				E1AC1E742C96927D009C56D1 /* ClosetView.swift */,
 				E1D9D7972C38BAF200FB1B4E /* NewAccountView.swift */,
 				E135FB942CA76B5B0006457C /* SpriteKitView.swift */,
+				E1F50C8D2CB38A9200042384 /* GoogleService-Info.plist */,
 				E1D9D7842C38B97900FB1B4E /* Assets.xcassets */,
-				E1D9D7932C38B9BC00FB1B4E /* GoogleService-Info.plist */,
 				E1D9D7862C38B97900FB1B4E /* Preview Content */,
 			);
 			path = NiceBabies;
@@ -196,13 +190,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1D92DB52C9E80F900B09F0C /* WorkOutGameStoryboard.storyboard in Resources */,
+				E1F50C8E2CB38A9200042384 /* GoogleService-Info.plist in Resources */,
 				E1D9D7882C38B97900FB1B4E /* Preview Assets.xcassets in Resources */,
 				E135FB932CA293490006457C /* Media.xcassets in Resources */,
 				E1D9D7852C38B97900FB1B4E /* Assets.xcassets in Resources */,
 				E1D92DB72C9E810F00B09F0C /* WorkOutGameLaunchScreen.storyboard in Resources */,
 				E1D92DAF2C9E7FF500B09F0C /* WorkOutGameActions.sks in Resources */,
 				E1D92DAB2C9E7EF200B09F0C /* WorkOutGameScene.sks in Resources */,
-				E1D9D7942C38B9BC00FB1B4E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,11 +208,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1D9D79C2C38BEBB00FB1B4E /* String.swift in Sources */,
-				E1D9D7832C38B97800FB1B4E /* ContentView.swift in Sources */,
 				E1D92DB32C9E80B800B09F0C /* WorkOutGameViewController.swift in Sources */,
 				E1D92DB12C9E801A00B09F0C /* WorkOutGameScene.swift in Sources */,
 				E1D9D7982C38BAF200FB1B4E /* NewAccountView.swift in Sources */,
-				E191FFAD2C5D924400D3AD3A /* DollGalleryView.swift in Sources */,
 				E1D9D7812C38B97800FB1B4E /* NiceBabiesApp.swift in Sources */,
 				E1CECCF92C3BA18D00F736C9 /* HouseView.swift in Sources */,
 				E135FB952CA76B5B0006457C /* SpriteKitView.swift in Sources */,
