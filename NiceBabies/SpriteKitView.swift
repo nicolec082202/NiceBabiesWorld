@@ -18,6 +18,7 @@ struct SpriteKitView: UIViewControllerRepresentable {
         let scene = WorkOutGameScene(size: UIScreen.main.bounds.size)
         scene.scaleMode = .resizeFill  // Adjust the scene to fill the view, resizing as needed
         
+        
         // Present the scene in the SKView
         skView.presentScene(scene)
         

@@ -23,7 +23,7 @@ class WorkOutGameViewController: UIViewController {
             }
             
             // Optimize rendering by ignoring the order of sibling nodes
-            view.ignoresSiblingOrder = true
+            view.ignoresSiblingOrder = false
             
             // Enable FPS display to show frames per second (useful for debugging performance)
             view.showsFPS = true

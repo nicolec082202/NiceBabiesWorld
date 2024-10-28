@@ -34,75 +34,77 @@ class WorkOutGameScene: SKScene {
             ]))
         }
     }
-    
-    // Handle a touch that begins at a specific point
-    func touchDown(atPoint pos: CGPoint) {
-        // Create a copy of the spinny node and set its position and color
-        if let n = self.spinnyNode?.copy() as? SKShapeNode {
-            n.position = pos
-            n.strokeColor = SKColor.green  // Set stroke color to green
-            self.addChild(n)  // Add the node to the scene
+        
+        // Handle a touch that begins at a specific point
+        func touchDown(atPoint pos: CGPoint) {
+            // Create a copy of the spinny node and set its position and color
+            if let n = self.spinnyNode?.copy() as? SKShapeNode {
+                n.position = pos
+                n.strokeColor = SKColor.green  // Set stroke color to green
+                self.addChild(n)  // Add the node to the scene
+            }
+        }
+        
+        // Handle a touch that moves to a new point
+        func touchMoved(toPoint pos: CGPoint) {
+            // Create a copy of the spinny node and set its position and color
+            if let n = self.spinnyNode?.copy() as? SKShapeNode {
+                n.position = pos
+                n.strokeColor = SKColor.blue  // Set stroke color to blue
+                self.addChild(n)  // Add the node to the scene
+            }
+        }
+        
+        // Handle a touch that ends at a specific point
+        func touchUp(atPoint pos: CGPoint) {
+            // Create a copy of the spinny node and set its position and color
+            if let n = self.spinnyNode?.copy() as? SKShapeNode {
+                n.position = pos
+                n.strokeColor = SKColor.red  // Set stroke color to red
+                self.addChild(n)  // Add the node to the scene
+            }
+        }
+        
+        // Called when a touch begins
+        override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            // Run a pulse animation on the label when touched
+            if let label = self.label {
+                label.run(SKAction(named: "Pulse")!, withKey: "fadeInOut")
+            }
+            // For each touch, call touchDown at the touch's location
+            for t in touches {
+                self.touchDown(atPoint: t.location(in: self))
+            }
+        }
+        
+        // Called when a touch moves
+        override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+            // For each touch, call touchMoved at the touch's new location
+            for t in touches {
+                self.touchMoved(toPoint: t.location(in: self))
+            }
+        }
+        
+        // Called when a touch ends
+        override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+            // For each touch, call touchUp at the touch's location
+            for t in touches {
+                self.touchUp(atPoint: t.location(in: self))
+            }
+        }
+        
+        // Called when a touch is canceled (e.g., interrupted by an event like a phone call)
+        override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+            // For each touch, call touchUp at the touch's location
+            for t in touches {
+                self.touchUp(atPoint: t.location(in: self))
+            }
+        }
+        
+        // Called before each frame is rendered
+        override func update(_ currentTime: TimeInterval) {
+            // Use this function to update the game’s state or animations
         }
     }
     
-    // Handle a touch that moves to a new point
-    func touchMoved(toPoint pos: CGPoint) {
-        // Create a copy of the spinny node and set its position and color
-        if let n = self.spinnyNode?.copy() as? SKShapeNode {
-            n.position = pos
-            n.strokeColor = SKColor.blue  // Set stroke color to blue
-            self.addChild(n)  // Add the node to the scene
-        }
-    }
-    
-    // Handle a touch that ends at a specific point
-    func touchUp(atPoint pos: CGPoint) {
-        // Create a copy of the spinny node and set its position and color
-        if let n = self.spinnyNode?.copy() as? SKShapeNode {
-            n.position = pos
-            n.strokeColor = SKColor.red  // Set stroke color to red
-            self.addChild(n)  // Add the node to the scene
-        }
-    }
-    
-    // Called when a touch begins
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        // Run a pulse animation on the label when touched
-        if let label = self.label {
-            label.run(SKAction(named: "Pulse")!, withKey: "fadeInOut")
-        }
-        // For each touch, call touchDown at the touch's location
-        for t in touches {
-            self.touchDown(atPoint: t.location(in: self))
-        }
-    }
-    
-    // Called when a touch moves
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        // For each touch, call touchMoved at the touch's new location
-        for t in touches {
-            self.touchMoved(toPoint: t.location(in: self))
-        }
-    }
-    
-    // Called when a touch ends
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        // For each touch, call touchUp at the touch's location
-        for t in touches {
-            self.touchUp(atPoint: t.location(in: self))
-        }
-    }
-    
-    // Called when a touch is canceled (e.g., interrupted by an event like a phone call)
-    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-        // For each touch, call touchUp at the touch's location
-        for t in touches {
-            self.touchUp(atPoint: t.location(in: self))
-        }
-    }
-    
-    // Called before each frame is rendered
-    override func update(_ currentTime: TimeInterval) {
-        // Use this function to update the game’s state or animations
-    }
-}
+
