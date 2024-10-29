@@ -7,6 +7,9 @@ struct DollStatusView: View {
     @Binding var username: String  // Username of the user
     @State private var currentIndex = 0  // Track the current index (not used in this code snippet)
     @Binding var equippedBaby: String  // Name of the currently equipped baby or doll image
+    
+    @State private var hearts = 5.0 // initial amount of hearts
+    @State private var workoutGameCompleted = false // Dummy boolean for game completion
 
     // Access the environment to control the presentation mode of the view (dismiss or present)
     @Environment(\.presentationMode) var isDollStatusViewPresented
@@ -33,10 +36,23 @@ struct DollStatusView: View {
                 
                 // HStack to display a row of heart icons
                 HStack {
-                    ForEach(0..<5) { _ in  // Loop to create 5 heart icons
-                        Image(systemName: "heart.fill")  // Red heart icon
-                            .foregroundColor(.red)  // Set the heart color to red
-                            .font(.system(size: 35))  // Set the font size for the hearts
+                    ForEach(0..<5) { index in  // Loop to create 5 heart icons
+                        if Double(index) < hearts {
+                            if hearts - Double(index) > 0.5 {
+                                Image(systemName: "heart.fill")  // Full heart
+                                    .foregroundColor(.red)
+                                    .font(.system(size: 35))
+                            } else {
+                                Image("half_heart")  // Half heart image from assets
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 35, height: 35)
+                            }
+                        } else {
+                            Image(systemName: "heart")  // Empty heart
+                                .foregroundColor(.gray)
+                                .font(.system(size: 35))
+                        }
                     }
                 }
             }
@@ -52,9 +68,48 @@ struct DollStatusView: View {
             }
             .zIndex(-1.0)  // Set the z-index to ensure it appears in the background
             .position(x: 200, y: 400)  // Position the VStack containing the image
+            
+        }.onAppear(perform: checkInactivity)
+        
+    }
+        
+    // Check inactivity and adjust the amount of hearts accordingly
+    func checkInactivity(){
+        if let lastActiveDate = UserDefaults.standard.object(forKey: "lastActiveDate") as? Date {
+            let hourElapsed = Date().timeIntervalSince(lastActiveDate) / 3600
+            
+            //let testTimeElapsed = Date().timeIntervalSince(lastActiveDate) / 60 // Variable for testing purposes only
+
+            // For every 6 hours take half a heart
+            let heartsLost = hourElapsed / 6 / 2
+            //let heartsLost = testTimeElapsed / 6 / 2 // Variable for testing purposes only
+
+            hearts = max(hearts - heartsLost, 0)
+
+
+        } else {
+            // First app launch, initialize lastActiveDate without reducing hearts
+            UserDefaults.standard.set(Date(), forKey: "lastActiveDate")
+        }
+
+        // Save the current time as the last active time (update every time the view appears)
+        UserDefaults.standard.set(Date(), forKey: "lastActiveDate")
+        
+    }
+    
+    // Function to update hearts when game is completed
+    func updateHearts() {
+        if workoutGameCompleted {
+            // Increase hearts by 1, but do not exceed 5
+            hearts = min(hearts + 1, 5)
+            
+            // Reset the boolean after updating hearts
+            workoutGameCompleted = false
         }
     }
 }
+
+
 
 // Preview for the DollStatusView
 struct DollStatusView_Previews: PreviewProvider {
