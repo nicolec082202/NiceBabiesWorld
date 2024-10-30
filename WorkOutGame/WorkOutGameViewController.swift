@@ -13,7 +13,7 @@ class WorkOutGameViewController: UIViewController {
         if let view = self.view as? SKView {
             
             // Try to load the game scene from 'GameScene.sks' (a SpriteKit scene file)
-            if let scene = SKScene(fileNamed: "GameScene") {
+            if let scene = SKScene(fileNamed: "WorkOutGameLoadingScene") {
                 
                 // Set the scene’s scale mode to fill the window while maintaining the aspect ratio
                 scene.scaleMode = .aspectFill
@@ -36,16 +36,17 @@ class WorkOutGameViewController: UIViewController {
     // Specify the supported interface orientations
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         // If the device is an iPhone, allow all orientations except upside down
-        if UIDevice.current.userInterfaceIdiom == .phone {
-            return .allButUpsideDown
-        } else {
-            // Allow all orientations on other devices (e.g., iPads)
-            return .all
-        }
+        return .landscape
     }
 
     // Hide the status bar for a more immersive game experience
     override var prefersStatusBarHidden: Bool {
         return true  // Return true to hide the status bar
     }
+    
+    override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
+        return .landscapeLeft
+    }
+    
+    
 }

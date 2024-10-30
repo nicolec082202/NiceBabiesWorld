@@ -132,7 +132,7 @@ struct LoginAppView: View {
             }
             
             // Navigation to HouseView when the password is correct
-            NavigationLink(destination: HouseView(username: $username), isActive: $isPasswordCorrect) {
+            NavigationLink(destination: HouseView(username: $username).navigationBarBackButtonHidden(true), isActive: $isPasswordCorrect) {
                 EmptyView()  // Use an empty view to trigger the navigation
             }
         }

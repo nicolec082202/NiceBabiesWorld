@@ -10,8 +10,48 @@ class WorkOutGameScene: SKScene {
     
     // This method is called when the scene is presented by an SKView
     override func didMove(to view: SKView) {
-        // Retrieve a label node from the scene with the name "helloLabel" and store it
-        self.label = self.childNode(withName: "//helloLabel") as? SKLabelNode
+
+        let background = SKSpriteNode(imageNamed: "background")
+        background.position = CGPoint(x: size.width / 2, y: size.height / 2)
+        background.size = size  // Resize to fit the scene
+        background.zPosition = -10  // Send to back
+               addChild(background)
+        
+        let ground = SKSpriteNode(imageNamed: "ground")
+        ground.position = CGPoint(x: size.width / 2, y: ground.size.height / 2)
+        ground.zPosition = -1
+        addChild(ground)
+        
+        let moon = SKSpriteNode(imageNamed: "moon")
+        moon.position = CGPoint(x: size.width * 0.7, y: size.height * 0.6)
+        moon.zPosition = -2
+        moon.setScale(0.6)  // Adjust size if needed
+        addChild(moon)
+        
+        let mountain = SKSpriteNode(imageNamed: "mountain 1")
+         mountain.position = CGPoint(x: size.width * 0.8, y: ground.size.height)
+         mountain.zPosition = -1
+         mountain.setScale(0.5)
+         addChild(mountain)
+        
+        let character = SKSpriteNode(imageNamed: "player")
+        character.position = CGPoint(x: size.width * 0.1, y: ground.size.height + character.size.height / 2)
+        character.zPosition = 1
+        addChild(character)
+        
+        let joystick = SKNode()
+        joystick.position = CGPoint(x: 100, y: 100)  // Place joystick bottom-left
+        joystick.zPosition = 2
+        
+        // Create the joystick knob
+        let joystickKnob = SKSpriteNode(imageNamed: "knob")
+        joystickKnob.position = .zero
+        joystickKnob.zPosition = 3
+        joystick.addChild(joystickKnob)
+        
+        addChild(joystick)
+        
+      /*  self.label = self.childNode(withName: "//helloLabel") as? SKLabelNode
         if let label = self.label {
             label.alpha = 0.0  // Set the label to be initially transparent
             label.run(SKAction.fadeIn(withDuration: 2.0))  // Animate label fade-in over 2 seconds
@@ -32,7 +72,7 @@ class WorkOutGameScene: SKScene {
                 SKAction.fadeOut(withDuration: 0.5),
                 SKAction.removeFromParent()
             ]))
-        }
+        }*/
     }
         
         // Handle a touch that begins at a specific point
