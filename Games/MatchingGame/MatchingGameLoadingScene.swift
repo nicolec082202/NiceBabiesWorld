@@ -2,42 +2,48 @@ import SpriteKit  // Import SpriteKit for game scenes and visual elements
 import GameplayKit  // Import GameplayKit for potential game mechanics and AI behavior
 
 // Define the WorkOutGameScene class, inheriting from SKScene
-class WorkOutGameLoadingScene: SKScene {
-    
+class MatchingGameLoadingScene: SKScene {
+
     var loadingFlower = SKSpriteNode()
-    
-    var TextureAtlas = SKTextureAtlas()
-    var TextureArray = [SKTexture]()
-    
-    // This method is called when the scene is presented by an SKView
+    var textureArray = [SKTexture]()
+
     override func didMove(to view: SKView) {
-        
-        TextureAtlas = SKTextureAtlas(named: "Loading")
-        
-        // Check if textures are available to prevent index errors
-            guard TextureAtlas.textureNames.count > 0 else {
-                print("Error: No textures found in the atlas.")
-                return
-            }
-        
-        for i in 1...TextureAtlas.textureNames.count{
-            
-            var Name = "loading_\(i)"
-            TextureArray.append(SKTexture(imageNamed: Name))
-            
-            
+        // Set up the loading animation
+        setupLoadingAnimation()
+
+        // Simulate a loading delay (e.g., 2 seconds)
+        let wait = SKAction.wait(forDuration: 2.0)
+        let transition = SKAction.run { [weak self] in
+            self?.goToMainMenu()
         }
-        
-        loadingFlower = SKSpriteNode(imageNamed: TextureAtlas.textureNames[0])
-        
-        loadingFlower.size = CGSize(width: 80, height: 80)
-        loadingFlower.position = CGPoint(x: self.size.width/2, y: self.size.height/2)
-        
-        self.addChild(loadingFlower)
-        
-        loadingFlower.run(SKAction.repeatForever(SKAction.animate(with: TextureArray, timePerFrame: 0.1)))
-        
+        self.run(SKAction.sequence([wait, transition]))
     }
+
+    // Set up the loading flower animation
+    func setupLoadingAnimation() {
+        for i in 1...5 {
+            let texture = SKTexture(imageNamed: "loading_\(i)")
+            textureArray.append(texture)
+        }
+
+        loadingFlower = SKSpriteNode(texture: textureArray.first)
+        loadingFlower.size = CGSize(width: 80, height: 80)
+        loadingFlower.position = CGPoint(x: self.size.width / 2, y: self.size.height / 2)
+        self.addChild(loadingFlower)
+
+        let animation = SKAction.animate(with: textureArray, timePerFrame: 0.1)
+        loadingFlower.run(SKAction.repeatForever(animation))
+    }
+
+    // Transition to the main menu scene
+    func goToMainMenu() {
+        let mainMenuScene = MatchingGameMainMenuScene(size: self.size)
+        mainMenuScene.scaleMode = .aspectFill
+
+        let transition = SKTransition.fade(withDuration: 1.0)
+        self.view?.presentScene(mainMenuScene, transition: transition)
+    }
+
         
         // Handle a touch that begins at a specific point
         func touchDown(atPoint pos: CGPoint) {
