@@ -1,5 +1,5 @@
 import SwiftUI  // Import SwiftUI framework for building user interfaces
-import FirebaseCore  // Import FirebaseCore to configure Firebase services
+import Firebase
 
 @main  // Entry point of the SwiftUI app
 struct NiceBabiesApp: App {  // Define the main structure conforming to the App protocol
@@ -14,8 +14,14 @@ struct NiceBabiesApp: App {  // Define the main structure conforming to the App 
     
     var body: some Scene {  // Define the body of the app, which contains the main scene(s)
         WindowGroup {
-            // The starting view of the app, in this case, LoginAppView
-            LoginAppView()
+            // Check if a user is already authenticated
+            if Auth.auth().currentUser != nil {
+                // User is signed in, show the main view
+                HouseView(username: .constant(Auth.auth().currentUser?.email ?? "User"))
+            } else {
+                // No user is signed in, show the login view
+                LoginAppView()
+            }
         }
     }
 }
