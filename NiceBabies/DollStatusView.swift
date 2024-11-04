@@ -1,4 +1,4 @@
-import SwiftUI  
+import SwiftUI
 
 // Define a view called DollStatusView
 struct DollStatusView: View {
@@ -8,15 +8,16 @@ struct DollStatusView: View {
     @State private var currentIndex = 0  // Track the current index (not used in this code snippet)
     @Binding var equippedBaby: String  // Name of the currently equipped baby or doll image
     
-    @State private var hearts = 5.0 // initial amount of hearts
+    @State private var hearts: Double = UserDefaults.standard.double(forKey: "hearts") == 0 ? 5.0 : UserDefaults.standard.double(forKey: "hearts")
+    //@State private var hearts: Double = 5.0 // for testing purposes only
+    
+    
     @State private var workoutGameCompleted = false // Dummy boolean for game completion
 
     // Access the environment to control the presentation mode of the view (dismiss or present)
     @Environment(\.presentationMode) var isDollStatusViewPresented
     
     var body: some View {
-        
-        
         // A ZStack to layer the components
         ZStack {
             // Button to dismiss the view
@@ -33,37 +34,30 @@ struct DollStatusView: View {
             // A vertical stack containing the username and hearts
             VStack {
                 // Display the username with a font size of 30
+                Text("@" + username)
+                    .font(.system(size: 30))
                 
-  
-                    Text("@" + username)
-                        .font(.system(size: 30))
-                    
-
                 // HStack to display a row of heart icons
-                HStack{
-                    
-                    let dollHearts = ["full_heart", "full_heart", "full_heart", "full_heart", "full_heart"]
-                    
-                    ForEach(dollHearts, id: \.self) { dollHeart in
-                        
-                        Image("full_heart")  // Red heart icon
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 45.0, height: 80.0, alignment: .center)
-
-                        
-                        
+                HStack {
+                    ForEach(0..<5) { index in  // Loop to create 5 heart icons
+                        if Double(index) < hearts {
+                            if hearts - Double(index) > 0.5 {
+                                Image("full_heart")  // Red full heart icon
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: 45.0, height: 80.0, alignment: .center)
+                            } else {
+                                Image("half_heart")  // Red half heart icon
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: 45.0, height: 80.0, alignment: .center)
+                            }
+                        }
                     }
-                       /* Image("half_heart")  // Red heart icon
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 10.0, height: 110.0, alignment: .center)*/
-                    
                 }
             }
-            .position(x: 200, y: 150)
-
-              // Position the VStack
+            .frame(width: 135, height: 5)  // Set the size of the VStack
+            .position(x: 200, y: 150)  // Position the VStack
             
             // A VStack to display the equipped baby/doll image
             VStack {
@@ -82,13 +76,14 @@ struct DollStatusView: View {
     // Check inactivity and adjust the amount of hearts accordingly
     func checkInactivity(){
         if let lastActiveDate = UserDefaults.standard.object(forKey: "lastActiveDate") as? Date {
-            let hourElapsed = Date().timeIntervalSince(lastActiveDate) / 3600
             
+            let hourElapsed = Date().timeIntervalSince(lastActiveDate) / 3600
             //let testTimeElapsed = Date().timeIntervalSince(lastActiveDate) / 60 // Variable for testing purposes only
 
             // For every 6 hours take half a heart
             let heartsLost = hourElapsed / 6 / 2
-            //let heartsLost = testTimeElapsed / 6 / 2 // Variable for testing purposes only
+            
+            //let heartsLost = testTimeElapsed * 0.5  // Variable for testing purposes only
 
             hearts = max(hearts - heartsLost, 0)
 
@@ -98,7 +93,8 @@ struct DollStatusView: View {
             UserDefaults.standard.set(Date(), forKey: "lastActiveDate")
         }
 
-        // Save the current time as the last active time (update every time the view appears)
+        // Save the current time and hearts as the last active time (update every time the view appears)
+        UserDefaults.standard.set(hearts, forKey: "hearts")
         UserDefaults.standard.set(Date(), forKey: "lastActiveDate")
         
     }
