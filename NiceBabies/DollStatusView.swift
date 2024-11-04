@@ -15,6 +15,8 @@ struct DollStatusView: View {
     @Environment(\.presentationMode) var isDollStatusViewPresented
     
     var body: some View {
+        
+        
         // A ZStack to layer the components
         ZStack {
             // Button to dismiss the view
@@ -31,33 +33,37 @@ struct DollStatusView: View {
             // A vertical stack containing the username and hearts
             VStack {
                 // Display the username with a font size of 30
-                Text("@" + username)
-                    .font(.system(size: 30))
                 
+  
+                    Text("@" + username)
+                        .font(.system(size: 30))
+                    
+
                 // HStack to display a row of heart icons
-                HStack {
-                    ForEach(0..<5) { index in  // Loop to create 5 heart icons
-                        if Double(index) < hearts {
-                            if hearts - Double(index) > 0.5 {
-                                Image(systemName: "heart.fill")  // Full heart
-                                    .foregroundColor(.red)
-                                    .font(.system(size: 35))
-                            } else {
-                                Image("half_heart")  // Half heart image from assets
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 35, height: 35)
-                            }
-                        } else {
-                            Image(systemName: "heart")  // Empty heart
-                                .foregroundColor(.gray)
-                                .font(.system(size: 35))
-                        }
+                HStack{
+                    
+                    let dollHearts = ["full_heart", "full_heart", "full_heart", "full_heart", "full_heart"]
+                    
+                    ForEach(dollHearts, id: \.self) { dollHeart in
+                        
+                        Image("full_heart")  // Red heart icon
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 45.0, height: 80.0, alignment: .center)
+
+                        
+                        
                     }
+                       /* Image("half_heart")  // Red heart icon
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 10.0, height: 110.0, alignment: .center)*/
+                    
                 }
             }
-            .frame(width: 135, height: 5)  // Set the size of the VStack
-            .position(x: 200, y: 150)  // Position the VStack
+            .position(x: 200, y: 150)
+
+              // Position the VStack
             
             // A VStack to display the equipped baby/doll image
             VStack {

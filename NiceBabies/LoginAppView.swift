@@ -11,6 +11,7 @@ struct LoginAppView: View {
     @State private var isCreateAccountViewPresented = false  // Manage "Create Account" view presentation
     @State private var isPasswordCorrect: Bool = false  // Control navigation to the next view
     @State private var showErrorAlert: Bool = false  // Show an alert on login error
+    
 
     var body: some View {
         // Use a NavigationStack for navigation between views
@@ -131,7 +132,7 @@ struct LoginAppView: View {
             }
             
             // Navigation to HouseView when the password is correct
-            NavigationLink(destination: HouseView(username: $username), isActive: $isPasswordCorrect) {
+            NavigationLink(destination: HouseView(username: $username).navigationBarBackButtonHidden(true), isActive: $isPasswordCorrect) {
                 EmptyView()  // Use an empty view to trigger the navigation
             }
         }
