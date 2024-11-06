@@ -19,42 +19,8 @@ struct LoginAppView: View {
             ZStack {
                 
                 VStack {
-<<<<<<< Updated upstream
                     Spacer()  // Add space at the top
                     
-                    // Header: App title
-                    HStack {
-                        Spacer()
-                        Text("Nice Babies World")
-                            .font(.system(size: 20))  // Set the font size
-                            .padding(.bottom, 16)  // Add padding below the text
-                        Spacer()
-                    }
-                    
-                    // Sign-in/Sign-up section
-                    HStack {
-                        Spacer()
-                        Text("sign in")
-                            .font(.system(size: 20))
-                            .padding(.trailing, 16)
-                            .fontWeight(.semibold)  // Set font weight to semibold
-                            .underline()  // Underline the text
-                        
-                        // Button to present "Create Account" view
-                        Button(action: {
-                            isCreateAccountViewPresented.toggle()
-                        }) {
-                            Text("sign up")
-                                .font(.system(size: 20))
-                                .foregroundColor(.black)
-                        }
-                        .sheet(isPresented: $isCreateAccountViewPresented) {
-                            NewAccountView()  // Present NewAccountView in a sheet
-                        }
-                        Spacer()
-                    }
-                    .padding(.bottom, 32)  // Add padding below the section
-=======
                 
                     HStack{
                         Image("Nice Babies Logo")
@@ -66,17 +32,12 @@ struct LoginAppView: View {
                     }
                         
                    
->>>>>>> Stashed changes
                     
                     // Email input field with validation
                     HStack {
                         Image(systemName: "person.fill")  // Person icon
                             .padding(.leading, 16)
-<<<<<<< Updated upstream
-                        TextField("email", text: $email)  // Input for email
-=======
                         TextField("Email", text: $email)
->>>>>>> Stashed changes
                             .font(.system(size: 20))
                         
                         // Show checkmark or crossmark based on email validity
@@ -87,11 +48,6 @@ struct LoginAppView: View {
                         }
                     }
                     .padding()
-<<<<<<< Updated upstream
-                    .background(Color(red: 0.16, green: 0.5, blue: 0.9).opacity(0.2))  // Background with light blue tint
-                    .cornerRadius(90)  // Rounded corners
-                    .padding(.bottom, 16)  // Padding below the field
-=======
                     .background(Color(red: 0.61, green: 0.54, blue: 0.72))
                     .cornerRadius(90)
                     .overlay(
@@ -101,19 +57,12 @@ struct LoginAppView: View {
                     )
                     .padding(.bottom, 16)
                     
->>>>>>> Stashed changes
                     
                     // Password input field
                     HStack {
-<<<<<<< Updated upstream
                         Image(systemName: "lock.fill")  // Lock icon
                             .padding(.leading, 16)
-                        SecureField("password", text: $password)  // Secure input for password
-=======
-                        Image(systemName: "lock.fill")
-                            .padding(.leading, 30)
                         SecureField("Password", text: $password)
->>>>>>> Stashed changes
                             .font(.system(size: 20))
                             .padding()
                     }
@@ -124,11 +73,8 @@ struct LoginAppView: View {
                             .inset(by: 0.5)
                             .stroke(.black, lineWidth: 1))
                     .padding(.bottom, 16)
-<<<<<<< Updated upstream
 
                     // Login button with Firebase authentication logic
-=======
-                    
                     
                     HStack {
                         Spacer()
@@ -153,7 +99,6 @@ struct LoginAppView: View {
                     .padding(.bottom, 30)
                     .padding(.top, 20)
                     
->>>>>>> Stashed changes
                     HStack {
                         Spacer()
                         Button(action: {
@@ -184,19 +129,12 @@ struct LoginAppView: View {
                                 }
                             }
                         }) {
-<<<<<<< Updated upstream
-                            // Login button icon
-                            Image(systemName: "arrow.right.circle.fill")
-                                .font(.system(size: 40))  // Set icon size
-                                .foregroundColor(.blue)  // Set icon color
-                                .padding(.top, 16)  // Padding above the icon
-=======
+
                             Image("Enter Button")
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
                                 .frame(width: 78, height: 94)
                                 .padding(.top, 16)
->>>>>>> Stashed changes
                         }
                         .alert(isPresented: $showErrorAlert) {
                             Alert(title: Text("Login Error: Incorrect email or password"))  // Error alert
@@ -205,29 +143,25 @@ struct LoginAppView: View {
                     }
                     Spacer()  // Add space at the bottom
                 }
-<<<<<<< Updated upstream
                 .padding()  // Add padding around the entire view
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color(red: 0.72, green: 0.75, blue: 0.87))
             
             // Navigation to HouseView when the password is correct
             NavigationLink(destination: HouseView(username: $username).navigationBarBackButtonHidden(true), isActive: $isPasswordCorrect) {
                 EmptyView()  // Use an empty view to trigger the navigation
-=======
                 
                 .padding()
             }
-            
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color(red: 0.72, green: 0.75, blue: 0.87))
-            
-            NavigationLink(destination: HouseView(username: $username), isActive: $isPasswordCorrect) {
-                EmptyView()
->>>>>>> Stashed changes
-            }
+
+
             
         }
+
         
     }
+
 
 }
 
