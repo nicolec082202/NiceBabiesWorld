@@ -16,6 +16,8 @@ extension Color {
 struct ClosetView: View {
     @StateObject var UIState = UIStateModel()
     @Binding var equippedBaby: String
+    @Environment(\.presentationMode) var isClosetViewPresented
+
     
     var body: some View {
         let spacing: CGFloat = 130
@@ -51,7 +53,7 @@ struct ClosetView: View {
                             }
                             .cornerRadius(8)
                             .transition(AnyTransition.slide)
-                            .animation(.spring)
+                            .animation(.spring())
                         }
                     }
                 }
@@ -74,6 +76,8 @@ struct ClosetView: View {
                     print("\(selectedBaby)") //debugging purposes
                     equippedBaby = "NiceBaby_\(selectedBaby)"
                     //print("\(equippedBaby)") //debugging purposes
+                    isClosetViewPresented.wrappedValue.dismiss()
+                    
                 }) {
                     Text("EQUIP")
                         .font(.system(size: 20, weight: .regular))
@@ -181,7 +185,7 @@ struct ClosetView: View {
         var body: some View {
             content
                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
-                .background(Image("closet_view")
+                .background(Image("closetBackground")
                     .resizable()
                     .ignoresSafeArea()
                     .blur(radius: 5, opaque: true))
@@ -213,7 +217,7 @@ struct ClosetView: View {
                 .frame(width: cardWidth, height: _id == UIState.activeCard ? cardHeight : cardHeight - 1, alignment: .center)
                 .scaleEffect(_id == UIState.activeCard ? 1.5 : 0.7)  // Scale effect for active card
                 .padding(.top, _id == UIState.activeCard ? 140 : 0)
-                .animation(.spring)
+                .animation(.spring())
         }
     }
     
