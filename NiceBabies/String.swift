@@ -25,7 +25,11 @@ extension String {
     //3. Unique
     func isValidUserName () -> Bool{
         
-        return true
+        let regex = try! NSRegularExpression (pattern: "^[a-zA-Z0-9_]{6,10}$",
+                                              options: .caseInsensitive)
+        
+        return regex.firstMatch(in: self, range: NSRange (location: 0, length: count)) != nil
+        
     }
     
     //Valid Passwords should:
@@ -34,7 +38,10 @@ extension String {
     //3. Have at least one symbol
     func isValidPassword () -> Bool{
         
-        return true
+        let regex = try! NSRegularExpression (pattern: "^(?=.*[0-9])(?=.*[._%+-])[a-zA-Z0-9._%+-]{10,}$",
+                                              options: .caseInsensitive)
+        
+        return regex.firstMatch(in: self, range: NSRange (location: 0, length: count)) != nil
     }
 }
 
