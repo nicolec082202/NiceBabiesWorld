@@ -11,64 +11,63 @@ struct DollStatusView: View {
     @Environment(\.presentationMode) var isDollStatusViewPresented
 
     var body: some View {
-        GeometryReader { geometry in
-            let width = geometry.size.width
-            let height = geometry.size.height
-
-            ZStack {
-                // Button to dismiss the view
-                Button(action: {
-                    isDollStatusViewPresented.wrappedValue.dismiss()
-                }) {
-                    Image(systemName: "house.fill")
-                        .font(.system(size: width * 0.05)) // Adjust font size relative to width
-                        .foregroundColor(Color.black)
-                }
-                .position(x: width * 0.1, y: height * 0.01) // Position relative to view size
-
-                // Vertical stack for username and hearts
-                VStack {
-                    Text("@" + username)
-                        .font(.system(size: width * 0.08)) // Font size relative to width
+        
+        NavigationView{
+            GeometryReader { geometry in
+                let width = geometry.size.width
+                let height = geometry.size.height
+                
+                ZStack {
                     
-                    // Row of heart icons
-                    HStack {
-                        ForEach(0..<5) { index in
-                            if Double(index) < hearts {
-                                if hearts - Double(index) > 0.5 {
-                                    Image("full_heart")
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fill)
-                                        .frame(width: width * 0.1, height: height * 0.1) // Size relative to view dimensions
-                                } else {
-                                    Image("half_heart")
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fill)
-                                        .frame(width: width * 0.1, height: height * 0.1) // Size relative to view dimensions
+                    HamburgerMenuView(isMenuOpen: false, username: $username, equippedBaby: $equippedBaby, currentView: "DollStatusView")
+                    // Button to dismiss the view
+                   
+                    
+                    // Vertical stack for username and hearts
+                    VStack {
+                        Text("@" + username)
+                            .font(.system(size: width * 0.08)) // Font size relative to width
+                        
+                        // Row of heart icons
+                        HStack {
+                            ForEach(0..<5) { index in
+                                if Double(index) < hearts {
+                                    if hearts - Double(index) > 0.5 {
+                                        Image("full_heart")
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fill)
+                                            .frame(width: width * 0.1, height: height * 0.1) // Size relative to view dimensions
+                                    } else {
+                                        Image("half_heart")
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fill)
+                                            .frame(width: width * 0.1, height: height * 0.1) // Size relative to view dimensions
+                                    }
                                 }
                             }
                         }
                     }
+                    .frame(width: width * 0.4) // Adjust container size relative to width
+                    .position(x: width * 0.5, y: height * 0.2) // Centered relatively
+                    
+                    // Display the equipped baby/doll image
+                    VStack {
+                        Image(equippedBaby)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: width * 2, height: height * 1.3) // Adjust size relative to view dimensions
+                    }
+                    .zIndex(-1.0)
+                    .position(x: width * 0.53, y: height * 0.6) // Centered relatively
                 }
-                .frame(width: width * 0.4) // Adjust container size relative to width
-                .position(x: width * 0.5, y: height * 0.2) // Centered relatively
+                .onAppear(perform: checkInactivity)
+                .background(Image("HomePage Background")
+                    .resizable()
+                    .ignoresSafeArea()
+                    .frame(width: width*1.59, height: height)
+                    .blur(radius: 5, opaque: true))
                 
-                // Display the equipped baby/doll image
-                VStack {
-                    Image(equippedBaby)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: width * 2, height: height * 1.3) // Adjust size relative to view dimensions
-                }
-                .zIndex(-1.0)
-                .position(x: width * 0.53, y: height * 0.6) // Centered relatively
             }
-            .onAppear(perform: checkInactivity)
-            .background(Image("closetBackground")
-                .resizable()
-                .ignoresSafeArea()
-                .blur(radius: 5, opaque: true))
-
         }
 
     }
