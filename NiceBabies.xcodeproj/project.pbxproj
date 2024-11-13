@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E135FB932CA293490006457C /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E135FB922CA293490006457C /* Media.xcassets */; };
 		E135FB952CA76B5B0006457C /* SpriteKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E135FB942CA76B5B0006457C /* SpriteKitView.swift */; };
+		E1593C922CE1B6880063C3A0 /* HamburgerMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1593C912CE1B6880063C3A0 /* HamburgerMenuView.swift */; };
 		E167A5922CD1CF5200C2128C /* WorkOutGameLoadingScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E167A5912CD1CF5200C2128C /* WorkOutGameLoadingScene.swift */; };
 		E167A5962CD1D7AB00C2128C /* Loading.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E167A5952CD1D7AB00C2128C /* Loading.atlas */; };
 		E167A59A2CD2D17500C2128C /* WorkOutGameMainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E167A5992CD2D17500C2128C /* WorkOutGameMainMenuScene.swift */; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		E135FB922CA293490006457C /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		E135FB942CA76B5B0006457C /* SpriteKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteKitView.swift; sourceTree = "<group>"; };
+		E1593C912CE1B6880063C3A0 /* HamburgerMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamburgerMenuView.swift; sourceTree = "<group>"; };
 		E167A5912CD1CF5200C2128C /* WorkOutGameLoadingScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOutGameLoadingScene.swift; sourceTree = "<group>"; };
 		E167A5952CD1D7AB00C2128C /* Loading.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Loading.atlas; sourceTree = "<group>"; };
 		E167A5992CD2D17500C2128C /* WorkOutGameMainMenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOutGameMainMenuScene.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				E1D9D7952C38BA8900FB1B4E /* LoginAppView.swift */,
 				E1D9D79B2C38BEBA00FB1B4E /* String.swift */,
 				E1D9D7992C38BB3200FB1B4E /* DollStatusView.swift */,
+				E1593C912CE1B6880063C3A0 /* HamburgerMenuView.swift */,
 				E1CECCFC2C3BA7CB00F736C9 /* GameCatalogView.swift */,
 				E1CECCF82C3BA18D00F736C9 /* HouseView.swift */,
 				E1AC1E742C96927D009C56D1 /* ClosetView.swift */,
@@ -240,6 +243,7 @@
 				E1D9D7982C38BAF200FB1B4E /* NewAccountView.swift in Sources */,
 				E1D9D7812C38B97800FB1B4E /* NiceBabiesApp.swift in Sources */,
 				E167A5A42CD2D59700C2128C /* MatchingGameLevel1Scene.swift in Sources */,
+				E1593C922CE1B6880063C3A0 /* HamburgerMenuView.swift in Sources */,
 				E167A5A22CD2D58500C2128C /* MatchingGameMainMenuScene.swift in Sources */,
 				E167A5A02CD2D57900C2128C /* MatchingGameLoadingScene.swift in Sources */,
 				E167A5922CD1CF5200C2128C /* WorkOutGameLoadingScene.swift in Sources */,
@@ -390,7 +394,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ios.nb.NiceBabies;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nicebabies.nicebabiesworld;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -418,7 +422,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ios.nb.NiceBabies;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nicebabies.nicebabiesworld;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

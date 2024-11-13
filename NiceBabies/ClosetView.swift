@@ -16,6 +16,8 @@ extension Color {
 struct ClosetView: View {
     @StateObject var UIState = UIStateModel()
     @Binding var equippedBaby: String
+    @Environment(\.presentationMode) var isClosetViewPresented
+
     
     var body: some View {
         let spacing: CGFloat = 130
@@ -31,8 +33,11 @@ struct ClosetView: View {
             
         ]
         
+        
         ZStack {
+            
             Canvas{
+                
                 Carousel(
                     numberOfItems: CGFloat(items.count),
                     spacing: spacing
@@ -51,13 +56,32 @@ struct ClosetView: View {
                             }
                             .cornerRadius(8)
                             .transition(AnyTransition.slide)
-                            .animation(.spring)
+                            .animation(.spring())
                         }
                     }
                 }
                 //This dynamically updates the baby that is currently in view (activecard)
                 .environmentObject(UIState)
             }
+            
+            HStack {
+                            Button(action: {
+                                isClosetViewPresented.wrappedValue.dismiss()
+                            }) {
+                                Image(systemName: "xmark")
+                                    .font(.system(size: 24, weight: .bold))
+                                    .padding()
+                                    .background(Circle().fill(Color.white))
+                                    .foregroundColor(.black)
+                                    .shadow(radius: 2)
+                            }
+                            .padding()
+                            
+                            Spacer() // Pushes the "X" button to the left
+                        }
+                        .padding(.bottom, 800)
+                        
+            
             // Page control indicator
             HStack(spacing: 8) {
                 ForEach(0..<items.count, id: \.self) { index in
@@ -74,6 +98,8 @@ struct ClosetView: View {
                     print("\(selectedBaby)") //debugging purposes
                     equippedBaby = "NiceBaby_\(selectedBaby)"
                     //print("\(equippedBaby)") //debugging purposes
+                    isClosetViewPresented.wrappedValue.dismiss()
+                    
                 }) {
                     Text("EQUIP")
                         .font(.system(size: 20, weight: .regular))
@@ -179,12 +205,19 @@ struct ClosetView: View {
         
         //Background image
         var body: some View {
-            content
-                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
-                .background(Image("closet_view")
-                    .resizable()
-                    .ignoresSafeArea()
-                    .blur(radius: 5, opaque: true))
+            
+            GeometryReader { geometry in
+                let width = geometry.size.width
+                let height = geometry.size.height
+                content
+                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
+                    .background(Image("HomePage Background")
+                        .resizable()
+                        .ignoresSafeArea()
+                        .frame(width: width*1.59, height: height)
+                        .position(x: width * 0.5, y: height * 0.5)
+                        .blur(radius: 5, opaque: true))
+            }
         }
     }
     
@@ -213,7 +246,7 @@ struct ClosetView: View {
                 .frame(width: cardWidth, height: _id == UIState.activeCard ? cardHeight : cardHeight - 1, alignment: .center)
                 .scaleEffect(_id == UIState.activeCard ? 1.5 : 0.7)  // Scale effect for active card
                 .padding(.top, _id == UIState.activeCard ? 140 : 0)
-                .animation(.spring)
+                .animation(.spring())
         }
     }
     
