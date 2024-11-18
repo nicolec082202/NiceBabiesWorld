@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3FE5879A2CEB797400029436 /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE587992CEB797400029436 /* TutorialView.swift */; };
+		3FE5879C2CEB7ACB00029436 /* HamburgerMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE5879B2CEB7ACB00029436 /* HamburgerMenuView.swift */; };
 		E135FB932CA293490006457C /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E135FB922CA293490006457C /* Media.xcassets */; };
 		E135FB952CA76B5B0006457C /* SpriteKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E135FB942CA76B5B0006457C /* SpriteKitView.swift */; };
 		E191FFAD2C5D924400D3AD3A /* DollGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E191FFAC2C5D924400D3AD3A /* DollGalleryView.swift */; };
@@ -33,6 +35,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3FE587992CEB797400029436 /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
+		3FE5879B2CEB7ACB00029436 /* HamburgerMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamburgerMenuView.swift; sourceTree = "<group>"; };
 		E135FB922CA293490006457C /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		E135FB942CA76B5B0006457C /* SpriteKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteKitView.swift; sourceTree = "<group>"; };
 		E191FFAC2C5D924400D3AD3A /* DollGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DollGalleryView.swift; sourceTree = "<group>"; };
@@ -115,6 +119,8 @@
 				E1AC1E742C96927D009C56D1 /* ClosetView.swift */,
 				E1D9D7972C38BAF200FB1B4E /* NewAccountView.swift */,
 				E135FB942CA76B5B0006457C /* SpriteKitView.swift */,
+				3FE587992CEB797400029436 /* TutorialView.swift */,
+				3FE5879B2CEB7ACB00029436 /* HamburgerMenuView.swift */,
 				E1D9D7842C38B97900FB1B4E /* Assets.xcassets */,
 				E1D9D7932C38B9BC00FB1B4E /* GoogleService-Info.plist */,
 				E1D9D7862C38B97900FB1B4E /* Preview Content */,
@@ -213,12 +219,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FE5879A2CEB797400029436 /* TutorialView.swift in Sources */,
 				E1D9D79C2C38BEBB00FB1B4E /* String.swift in Sources */,
 				E1D9D7832C38B97800FB1B4E /* ContentView.swift in Sources */,
 				E1D92DB32C9E80B800B09F0C /* WorkOutGameViewController.swift in Sources */,
 				E1D92DB12C9E801A00B09F0C /* WorkOutGameScene.swift in Sources */,
 				E1D9D7982C38BAF200FB1B4E /* NewAccountView.swift in Sources */,
 				E191FFAD2C5D924400D3AD3A /* DollGalleryView.swift in Sources */,
+				3FE5879C2CEB7ACB00029436 /* HamburgerMenuView.swift in Sources */,
 				E1D9D7812C38B97800FB1B4E /* NiceBabiesApp.swift in Sources */,
 				E1CECCF92C3BA18D00F736C9 /* HouseView.swift in Sources */,
 				E135FB952CA76B5B0006457C /* SpriteKitView.swift in Sources */,
