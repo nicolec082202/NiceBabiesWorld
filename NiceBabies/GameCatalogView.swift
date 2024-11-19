@@ -29,6 +29,7 @@ struct GameCatalogView: View {
                     // Button for Workout Game
                     Button(action: {
                         isWorkoutGamePresented = true
+                        OrientationManager.landscapeSupported = true
                     }) {
                         Text("Launch Workout Game")
                             .font(.title2) // Adjusted for better responsiveness
@@ -42,6 +43,9 @@ struct GameCatalogView: View {
                         // Launch the Workout Game
                         SpriteKitView(gameType: .workout)
                             .edgesIgnoringSafeArea(.all)
+                            .onDisappear{
+                                OrientationManager.landscapeSupported = false
+                            }
                     }
 
                     // Button for Matching Game

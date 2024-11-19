@@ -1,18 +1,27 @@
-import SwiftUI  // Import SwiftUI framework for building user interfaces
+import SwiftUI
 import Firebase
 
-@main  // Entry point of the SwiftUI app
-struct NiceBabiesApp: App {  // Define the main structure conforming to the App protocol
-    
-    // Register app delegate for Firebase setup (commented out, possibly for future use)
-    // @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-    
-    init() {
-        // Initialize Firebase when the app starts
+class AppDelegate: NSObject, UIApplicationDelegate {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // Initialize Firebase
         FirebaseApp.configure()
+        return true
     }
     
-    var body: some Scene {  // Define the body of the app, which contains the main scene(s)
+    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+        if OrientationManager.landscapeSupported {
+            return .landscape // Allow only landscape orientation
+        }
+        return .portrait // Default to portrait orientation
+    }
+}
+
+@main
+struct NiceBabiesApp: App {
+    // Link the custom AppDelegate to SwiftUI using UIApplicationDelegateAdaptor
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+
+    var body: some Scene {
         WindowGroup {
             // Check if a user is already authenticated
             if Auth.auth().currentUser != nil {
