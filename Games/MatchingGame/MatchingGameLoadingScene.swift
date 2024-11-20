@@ -1,8 +1,6 @@
 import SpriteKit  // Import SpriteKit for game scenes and visual elements
 import GameplayKit  // Import GameplayKit for potential game mechanics and AI behavior
 
-import SpriteKit
-
 class MatchingGameLoadingScene: SKScene {
     var equippedBaby: String
 
