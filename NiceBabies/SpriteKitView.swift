@@ -1,4 +1,4 @@
-import Foundation
+
 import SwiftUI
 import SpriteKit
 
@@ -19,7 +19,7 @@ struct SpriteKitView: UIViewControllerRepresentable {
         let scene: SKScene
         switch gameType {
         case .workout:
-            let workoutScene = WorkOutGameLoadingScene(size: UIScreen.main.bounds.size)
+            let workoutScene = WorkOutGameLoadingScene(size: UIScreen.main.bounds.size,equippedBaby: equippedBaby)
             // Customize your scene if necessary
             scene = workoutScene
         case .matching:

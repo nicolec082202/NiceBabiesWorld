@@ -3,6 +3,17 @@ import GameplayKit  // Import GameplayKit for potential game mechanics and AI be
 
 // Define the WorkOutGameScene class, inheriting from SKScene
 class WorkOutGameLoadingScene: SKScene {
+    var equippedBaby: String
+    
+    // Custom initializer
+    init(size: CGSize, equippedBaby: String) {
+        self.equippedBaby = equippedBaby
+        super.init(size: size)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     var loadingFlower = SKSpriteNode()
     var textureArray = [SKTexture]()
@@ -37,7 +48,7 @@ class WorkOutGameLoadingScene: SKScene {
 
     // Transition to the main menu scene
     func goToMainMenu() {
-        let mainMenuScene = WorkOutGameMainMenuScene(size: self.size)
+        let mainMenuScene = WorkOutGameMainMenuScene(size: self.size, equippedBaby: equippedBaby)
         mainMenuScene.scaleMode = .aspectFill
 
         let transition = SKTransition.fade(withDuration: 1.0)
