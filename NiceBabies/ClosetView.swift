@@ -1,5 +1,5 @@
-
 import SwiftUI
+import WidgetKit
 
 struct CarouselItemModel: Identifiable {
     let id: Int
@@ -97,6 +97,11 @@ struct ClosetView: View {
                     let selectedBaby = items[UIState.activeCard].name
                     print("\(selectedBaby)") //debugging purposes
                     equippedBaby = "NiceBaby_\(selectedBaby)"
+                    let defaults = UserDefaults(suiteName: "group.nicebabies") ?? UserDefaults.standard
+                    defaults.set("NiceBaby_\(selectedBaby)", forKey: "equippedBaby")
+                    defaults.synchronize()
+                    // reload widget
+                    WidgetCenter.shared.reloadAllTimelines()
                     //print("\(equippedBaby)") //debugging purposes
                     isClosetViewPresented.wrappedValue.dismiss()
                     
@@ -258,4 +263,3 @@ struct ClosetView: View {
         }
     }
 }
-

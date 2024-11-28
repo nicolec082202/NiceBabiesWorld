@@ -11,7 +11,8 @@
 		AD3D4AC12CF6E90C0014582D /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD3D4AC02CF6E90C0014582D /* SwiftUI.framework */; };
 		AD3D4ACD2CF6E9100014582D /* NiceBabiesWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = AD3D4ABC2CF6E90C0014582D /* NiceBabiesWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		AD3D4AD22CF6E97D0014582D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADD1CDB42CF6E4AB00420AC9 /* Assets.xcassets */; };
-		AD3D4AD72CF6ECCC0014582D /* NiceBabiesWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD1CDB62CF6E4AB00420AC9 /* NiceBabiesWidget.swift */; };
+		AD3D4AE22CF7C8260014582D /* ClosetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AC1E742C96927D009C56D1 /* ClosetView.swift */; };
+		AD3FFC722CF827B1009C6935 /* NiceBabiesWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD1CDB62CF6E4AB00420AC9 /* NiceBabiesWidget.swift */; };
 		ADD1CDB32CF6E49E00420AC9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADD1CDB22CF6E49E00420AC9 /* GoogleService-Info.plist */; };
 		E135FB932CA293490006457C /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E135FB922CA293490006457C /* Media.xcassets */; };
 		E135FB952CA76B5B0006457C /* SpriteKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E135FB942CA76B5B0006457C /* SpriteKitView.swift */; };
@@ -336,7 +337,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD3D4AD72CF6ECCC0014582D /* NiceBabiesWidget.swift in Sources */,
+				AD3FFC722CF827B1009C6935 /* NiceBabiesWidget.swift in Sources */,
+				AD3D4AE22CF7C8260014582D /* ClosetView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,9 +404,9 @@
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.nicebabies.nicebabiesworld.NiceBabiesWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nicebabies.nicebabiesworld.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -437,9 +439,9 @@
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.nicebabies.nicebabiesworld.NiceBabiesWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nicebabies.nicebabiesworld.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
