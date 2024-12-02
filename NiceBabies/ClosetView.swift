@@ -1,4 +1,3 @@
-
 import SwiftUI
 
 struct CarouselItemModel: Identifiable {
@@ -8,9 +7,8 @@ struct CarouselItemModel: Identifiable {
 }
 
 extension Color {
-    // RGB Values
-    static let dropshot = Color(red: 0.976470588, green: 0.5333333, blue: 0.0196078431)
-    static let doublebounce = Color(red: 0.952941176, green: 0.337254902, blue: 0.584313725)
+    static let dropshot = Color(red: 0.976, green: 0.533, blue: 0.02)
+    static let doublebounce = Color(red: 0.953, green: 0.337, blue: 0.584)
 }
 
 struct ClosetView: View {
@@ -18,11 +16,7 @@ struct ClosetView: View {
     @Binding var equippedBaby: String
     @Environment(\.presentationMode) var isClosetViewPresented
 
-    
     var body: some View {
-        let spacing: CGFloat = 130
-        let cardHeight: CGFloat = 180
-        
         let items = [
             CarouselItemModel(id: 0, name: "Fish", image: Image("NiceBaby_Fish")),
             CarouselItemModel(id: 1, name: "Monkey", image: Image("NiceBaby_Monkey")),
@@ -30,59 +24,58 @@ struct ClosetView: View {
             CarouselItemModel(id: 3, name: "Panda", image: Image("NiceBaby_Panda")),
             CarouselItemModel(id: 4, name: "Cow", image: Image("NiceBaby_Cow")),
             CarouselItemModel(id: 5, name: "Rabbit", image: Image("NiceBaby_Rabbit")),
-            
         ]
-        
-        
+
         ZStack {
-            
-            Canvas{
-                
-                Carousel(
-                    numberOfItems: CGFloat(items.count),
-                    spacing: spacing
-                ) {
-                    ForEach(items) { item in
-                        Item(
-                            _id: Int(item.id),
-                            spacing: spacing,
-                            cardHeight: cardHeight
-                        ) {
-                            VStack {
-                                item.image
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .frame(maxWidth: .infinity, minHeight: 540)
+            Canvas {
+                GeometryReader { geometry in
+                    let screenWidth = geometry.size.width
+                    let spacing = screenWidth * 0.15
+                    let cardHeight: CGFloat = screenWidth * 0.5
+
+                    Carousel(
+                        numberOfItems: CGFloat(items.count),
+                        spacing: spacing
+                    ) {
+                        ForEach(items) { item in
+                            Item(
+                                _id: Int(item.id),
+                                spacing: spacing,
+                                cardHeight: cardHeight
+                            ) {
+                                VStack {
+                                    item.image
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fill)
+                                        .frame(height: cardHeight)
+                                }
+                                .cornerRadius(8)
+                                .transition(AnyTransition.slide)
+                                .animation(.spring())
                             }
-                            .cornerRadius(8)
-                            .transition(AnyTransition.slide)
-                            .animation(.spring())
                         }
                     }
+                    .environmentObject(UIState)
                 }
-                //This dynamically updates the baby that is currently in view (activecard)
-                .environmentObject(UIState)
             }
-            
+
             HStack {
-                            Button(action: {
-                                isClosetViewPresented.wrappedValue.dismiss()
-                            }) {
-                                Image(systemName: "xmark")
-                                    .font(.system(size: 24, weight: .bold))
-                                    .padding()
-                                    .background(Circle().fill(Color.white))
-                                    .foregroundColor(.black)
-                                    .shadow(radius: 2)
-                            }
-                            .padding()
-                            
-                            Spacer() // Pushes the "X" button to the left
-                        }
-                        .padding(.bottom, 800)
-                        
-            
-            // Page control indicator
+                Button(action: {
+                    isClosetViewPresented.wrappedValue.dismiss()
+                }) {
+                    Image(systemName: "xmark")
+                        .font(.system(size: 24, weight: .bold))
+                        .padding()
+                        .background(Circle().fill(Color.white))
+                        .foregroundColor(.black)
+                        .shadow(radius: 2)
+                }
+                .padding()
+
+                Spacer()
+            }
+            .padding(.bottom, 800)
+
             HStack(spacing: 8) {
                 ForEach(0..<items.count, id: \.self) { index in
                     Circle()
@@ -92,14 +85,12 @@ struct ClosetView: View {
                 }
             }
             .padding(.top, 485)
+
             VStack {
                 Button(action: {
                     let selectedBaby = items[UIState.activeCard].name
-                    print("\(selectedBaby)") //debugging purposes
                     equippedBaby = "NiceBaby_\(selectedBaby)"
-                    //print("\(equippedBaby)") //debugging purposes
                     isClosetViewPresented.wrappedValue.dismiss()
-                    
                 }) {
                     Text("EQUIP")
                         .font(.system(size: 20, weight: .regular))
@@ -109,59 +100,43 @@ struct ClosetView: View {
                         .cornerRadius(25)
                 }
                 .padding(.top, 590)
-                
             }
-            
         }
     }
-    
+
     public class UIStateModel: ObservableObject {
         @Published var activeCard: Int = 0
         @Published var screenDrag: Float = 145
     }
-    
-    struct Carousel<Items : View> : View {
-        // Initializing necessary properties for the carousel
-        // Including a timer for automatic sliding
+
+    struct Carousel<Items: View>: View {
         let items: Items
         let numberOfItems: CGFloat
         let spacing: CGFloat
         let totalSpacing: CGFloat
         let cardWidth: CGFloat
-        
-        // Gesture state for drag detection
+
         @GestureState var isDetectingLongPress = false
-        
-        // Accessing UI state
         @EnvironmentObject var UIState: UIStateModel
-        
+
         @inlinable public init(
             numberOfItems: CGFloat,
             spacing: CGFloat,
-            @ViewBuilder _ items: () -> Items) {
-                
-                // Setting up carousel parameters
-                self.items = items()
-                self.numberOfItems = numberOfItems
-                self.spacing = spacing
-                self.totalSpacing = (numberOfItems - 1) * spacing
-                self.cardWidth = (UIScreen.main.bounds.width - (spacing * 3)) / 2
-                
-            }
-        
-        // Body of the carousel view
+            @ViewBuilder _ items: () -> Items
+        ) {
+            self.items = items()
+            self.numberOfItems = numberOfItems
+            self.spacing = spacing
+            self.totalSpacing = (numberOfItems - 1) * spacing
+            self.cardWidth = (UIScreen.main.bounds.width - (spacing * 3)) / 2
+        }
+
         var body: some View {
             let screenWidth = UIScreen.main.bounds.width
-            
-            // Calculate the position that centers the active card
             let centralizeOffset = (screenWidth - cardWidth) / 2.0
-            
-            // Calculate the offset for the current active card
             let activeOffset = CGFloat(UIState.activeCard) * -(cardWidth + spacing)
-            
-            // Combine offsets with drag
             let totalOffset = centralizeOffset + activeOffset + CGFloat(UIState.screenDrag)
-            
+
             return HStack(alignment: .top, spacing: spacing) {
                 items
             }
@@ -174,64 +149,59 @@ struct ClosetView: View {
                     }
                     .onEnded { value in
                         UIState.screenDrag = 145
-                        // Move right
-                        if (value.translation.width < -50) && UIState.activeCard < Int(numberOfItems) - 1 {
+                        if value.translation.width < -50, UIState.activeCard < Int(numberOfItems) - 1 {
                             withAnimation(.spring()) {
-                                UIState.activeCard = UIState.activeCard + 1
+                                UIState.activeCard += 1
                             }
-                            let impactMed = UIImpactFeedbackGenerator(style: .medium)
-                            impactMed.impactOccurred()
+                            UIImpactFeedbackGenerator(style: .medium).impactOccurred()
                         }
-                        // Move left
-                        if (value.translation.width > 50) && UIState.activeCard > 0 {
+                        if value.translation.width > 50, UIState.activeCard > 0 {
                             withAnimation(.spring()) {
-                                UIState.activeCard = UIState.activeCard - 1
+                                UIState.activeCard -= 1
                             }
-                            let impactMed = UIImpactFeedbackGenerator(style: .medium)
-                            impactMed.impactOccurred()
+                            UIImpactFeedbackGenerator(style: .medium).impactOccurred()
                         }
                     }
             )
         }
     }
-    struct Canvas<Content : View> : View {
+
+    struct Canvas<Content: View>: View {
         let content: Content
         @EnvironmentObject var UIState: UIStateModel
-        
+
         @inlinable init(@ViewBuilder _ content: () -> Content) {
             self.content = content()
-            
         }
-        
-        //Background image
+
         var body: some View {
-            
             GeometryReader { geometry in
                 let width = geometry.size.width
                 let height = geometry.size.height
                 content
-                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
-                    .background(Image("HomePage Background")
-                        .resizable()
-                        .ignoresSafeArea()
-                        .frame(width: width*1.59, height: height)
-                        .position(x: width * 0.5, y: height * 0.5)
-                        .blur(radius: 5, opaque: true))
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+                    .background(
+                        Image("HomePage Background")
+                            .resizable()
+                            .ignoresSafeArea()
+                            .frame(width: width * 1.59, height: height)
+                            .position(x: width * 0.5, y: height * 0.5)
+                            .blur(radius: 5, opaque: true)
+                    )
             }
         }
     }
-    
+
     struct Item<Content: View>: View {
         @EnvironmentObject var UIState: UIStateModel
         let cardWidth: CGFloat
         let cardHeight: CGFloat
         var _id: Int
         var content: Content
-        
+
         @inlinable public init(
             _id: Int,
             spacing: CGFloat,
-            //widthOfHiddenCards: CGFloat,
             cardHeight: CGFloat,
             @ViewBuilder _ content: () -> Content
         ) {
@@ -240,17 +210,16 @@ struct ClosetView: View {
             self.cardHeight = cardHeight
             self._id = _id
         }
-        
+
         var body: some View {
             content
-                .frame(width: cardWidth, height: _id == UIState.activeCard ? cardHeight : cardHeight - 1, alignment: .center)
-                .scaleEffect(_id == UIState.activeCard ? 1.5 : 0.7)  // Scale effect for active card
+                .frame(width: cardWidth, height: _id == UIState.activeCard ? cardHeight : cardHeight - 1)
+                .scaleEffect(_id == UIState.activeCard ? 1.5 : 0.7)
                 .padding(.top, _id == UIState.activeCard ? 140 : 0)
                 .animation(.spring())
         }
     }
-    
-    // Preview of the ClosetView for development in Xcode
+
     struct ClosetView_Previews: PreviewProvider {
         static var previews: some View {
             ClosetView(equippedBaby: .constant("Monkey"))
