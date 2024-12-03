@@ -16,20 +16,6 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AD3D4ABB2CF6E90C0014582D"
-               BuildableName = "NiceBabiesWidgetExtension.appex"
-               BlueprintName = "NiceBabiesWidgetExtension"
-               ReferencedContainer = "container:NiceBabies.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "E1D9D77C2C38B97800FB1B4E"
                BuildableName = "NiceBabies.app"
                BlueprintName = "NiceBabies"
@@ -58,15 +44,9 @@
       allowLocationSimulation = "YES"
       launchAutomaticallySubstyle = "2">
       <RemoteRunnable
-         runnableDebuggingMode = "2"
-         BundleIdentifier = "com.apple.springboard">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AD3D4ABB2CF6E90C0014582D"
-            BuildableName = "NiceBabiesWidgetExtension.appex"
-            BlueprintName = "NiceBabiesWidgetExtension"
-            ReferencedContainer = "container:NiceBabies.xcodeproj">
-         </BuildableReference>
+         runnableDebuggingMode = "1"
+         BundleIdentifier = "com.nicebabies.nicebabiesworld"
+         RemotePath = "/Users/carolinheredia/Library/Developer/CoreSimulator/Devices/AE5D0724-F26B-43EE-AA84-41E8E3AAB2F1/data/Containers/Bundle/Application/4AF0A37F-0BAE-4107-AAE1-F4A68BBBE87A/NiceBabies.app">
       </RemoteRunnable>
       <MacroExpansion>
          <BuildableReference

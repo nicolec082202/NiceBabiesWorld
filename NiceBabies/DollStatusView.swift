@@ -1,14 +1,11 @@
 import SwiftUI
-import WidgetKit
 
 struct DollStatusView: View {
     @Binding var username: String
     @State private var currentIndex = 0
     @Binding var equippedBaby: String
-    @State private var hearts: Double = {
-         let defaults = UserDefaults(suiteName: "group.nicebabies") ?? UserDefaults.standard
-         return defaults.double(forKey: "hearts") == 0 ? 5.0 : defaults.double(forKey: "hearts")
-     }() //adding suitename belonging to app group capability
+    
+    @State private var hearts: Double = UserDefaults.standard.double(forKey: "hearts") == 0 ? 5.0 : UserDefaults.standard.double(forKey: "hearts")
     @State private var workoutGameCompleted = false
 
     @Environment(\.presentationMode) var isDollStatusViewPresented
@@ -76,32 +73,21 @@ struct DollStatusView: View {
     }
 
     func checkInactivity() {
-        let defaults = UserDefaults(suiteName: "group.nicebabies") ?? UserDefaults.standard
-
         if let lastActiveDate = UserDefaults.standard.object(forKey: "lastActiveDate") as? Date {
             let hourElapsed = Date().timeIntervalSince(lastActiveDate) / 3600
             let heartsLost = hourElapsed / 6 / 2
             hearts = max(hearts - heartsLost, 0)
         } else {
-            defaults.set(Date(), forKey: "lastActiveDate")
+            UserDefaults.standard.set(Date(), forKey: "lastActiveDate")
         }
-        // Add this to your DollStatusView or wherever you modify hearts
-        defaults.set(hearts, forKey: "hearts")
-        defaults.set(Date(), forKey: "lastActiveDate")
-        defaults.synchronize()
-        WidgetCenter.shared.reloadAllTimelines()
+        UserDefaults.standard.set(hearts, forKey: "hearts")
+        UserDefaults.standard.set(Date(), forKey: "lastActiveDate")
     }
 
     func updateHearts() {
-        let defaults = UserDefaults(suiteName: "group.nicebabies") ?? UserDefaults.standard
-
         if workoutGameCompleted {
             hearts = min(hearts + 1, 5)
             workoutGameCompleted = false
-            
-            defaults.set(hearts, forKey: "hearts")
-            defaults.synchronize()
-            WidgetCenter.shared.reloadAllTimelines()
         }
     }
 }

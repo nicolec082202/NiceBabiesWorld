@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD1F1DA92CFC547200C785C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1D9D7842C38B97900FB1B4E /* Assets.xcassets */; };
 		AD3D4ABF2CF6E90C0014582D /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD3D4ABE2CF6E90C0014582D /* WidgetKit.framework */; };
 		AD3D4AC12CF6E90C0014582D /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD3D4AC02CF6E90C0014582D /* SwiftUI.framework */; };
 		AD3D4ACD2CF6E9100014582D /* NiceBabiesWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = AD3D4ABC2CF6E90C0014582D /* NiceBabiesWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		AD3D4AD22CF6E97D0014582D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADD1CDB42CF6E4AB00420AC9 /* Assets.xcassets */; };
 		AD3D4AE22CF7C8260014582D /* ClosetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AC1E742C96927D009C56D1 /* ClosetView.swift */; };
 		AD3FFC722CF827B1009C6935 /* NiceBabiesWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD1CDB62CF6E4AB00420AC9 /* NiceBabiesWidget.swift */; };
+		AD49B4EF2CFE50B300E81B0A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADD1CDB22CF6E49E00420AC9 /* GoogleService-Info.plist */; };
+		AD49B52C2CFE59CB00E81B0A /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AD49B52B2CFE59CB00E81B0A /* FirebaseAuth */; };
+		AD49B52E2CFE59D300E81B0A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = AD49B52D2CFE59D300E81B0A /* FirebaseFirestore */; };
 		ADD1CDB32CF6E49E00420AC9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADD1CDB22CF6E49E00420AC9 /* GoogleService-Info.plist */; };
 		E135FB932CA293490006457C /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E135FB922CA293490006457C /* Media.xcassets */; };
 		E135FB952CA76B5B0006457C /* SpriteKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E135FB942CA76B5B0006457C /* SpriteKitView.swift */; };
@@ -31,7 +35,6 @@
 		E1D92DB12C9E801A00B09F0C /* WorkOutGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D92DB02C9E801A00B09F0C /* WorkOutGameScene.swift */; };
 		E1D92DB32C9E80B800B09F0C /* WorkOutGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D92DB22C9E80B800B09F0C /* WorkOutGameViewController.swift */; };
 		E1D9D7812C38B97800FB1B4E /* NiceBabiesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D9D7802C38B97800FB1B4E /* NiceBabiesApp.swift */; };
-		E1D9D7852C38B97900FB1B4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1D9D7842C38B97900FB1B4E /* Assets.xcassets */; };
 		E1D9D7882C38B97900FB1B4E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1D9D7872C38B97900FB1B4E /* Preview Assets.xcassets */; };
 		E1D9D7902C38B99D00FB1B4E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = E1D9D78F2C38B99D00FB1B4E /* FirebaseAuth */; };
 		E1D9D7922C38B99D00FB1B4E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = E1D9D7912C38B99D00FB1B4E /* FirebaseFirestore */; };
@@ -72,6 +75,8 @@
 		AD3D4ADB2CF6EDF90014582D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD3D4ADF2CF6EEB20014582D /* NiceBabies.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NiceBabies.entitlements; sourceTree = "<group>"; };
 		AD3D4AE02CF6EEE30014582D /* NiceBabiesWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NiceBabiesWidgetExtension.entitlements; sourceTree = "<group>"; };
+		AD49B4EE2CFD260800E81B0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		AD49B4F02CFE553F00E81B0A /* firebase-ios-sdk */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "firebase-ios-sdk"; path = "/Users/carolinheredia/Library/Developer/Xcode/DerivedData/NiceBabies-afujolfsmiwbpfaubqyaolbpejwx/SourcePackages/checkouts/firebase-ios-sdk"; sourceTree = "<absolute>"; };
 		ADD1CDB22CF6E49E00420AC9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ADD1CDB42CF6E4AB00420AC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADD1CDB62CF6E4AB00420AC9 /* NiceBabiesWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NiceBabiesWidget.swift; sourceTree = "<group>"; };
@@ -107,6 +112,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD3D4AC12CF6E90C0014582D /* SwiftUI.framework in Frameworks */,
+				AD49B52E2CFE59D300E81B0A /* FirebaseFirestore in Frameworks */,
+				AD49B52C2CFE59CB00E81B0A /* FirebaseAuth in Frameworks */,
 				AD3D4ABF2CF6E90C0014582D /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -128,6 +135,7 @@
 			children = (
 				AD3D4ABE2CF6E90C0014582D /* WidgetKit.framework */,
 				AD3D4AC02CF6E90C0014582D /* SwiftUI.framework */,
+				AD49B4F02CFE553F00E81B0A /* firebase-ios-sdk */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -200,6 +208,7 @@
 		E1D9D77F2C38B97800FB1B4E /* NiceBabies */ = {
 			isa = PBXGroup;
 			children = (
+				AD49B4EE2CFD260800E81B0A /* Info.plist */,
 				AD3D4ADF2CF6EEB20014582D /* NiceBabies.entitlements */,
 				E1D9D7802C38B97800FB1B4E /* NiceBabiesApp.swift */,
 				E1D9D7952C38BA8900FB1B4E /* LoginAppView.swift */,
@@ -242,6 +251,10 @@
 			dependencies = (
 			);
 			name = NiceBabiesWidgetExtension;
+			packageProductDependencies = (
+				AD49B52B2CFE59CB00E81B0A /* FirebaseAuth */,
+				AD49B52D2CFE59D300E81B0A /* FirebaseFirestore */,
+			);
 			productName = NiceBabiesWidgetExtension;
 			productReference = AD3D4ABC2CF6E90C0014582D /* NiceBabiesWidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -315,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD3D4AD22CF6E97D0014582D /* Assets.xcassets in Resources */,
+				AD49B4EF2CFE50B300E81B0A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,7 +340,7 @@
 				E135FB932CA293490006457C /* Media.xcassets in Resources */,
 				ADD1CDB32CF6E49E00420AC9 /* GoogleService-Info.plist in Resources */,
 				E167A5962CD1D7AB00C2128C /* Loading.atlas in Resources */,
-				E1D9D7852C38B97900FB1B4E /* Assets.xcassets in Resources */,
+				AD1F1DA92CFC547200C785C0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,6 +589,7 @@
 				DEVELOPMENT_TEAM = L39GK3X456;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NiceBabies/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -606,6 +621,7 @@
 				DEVELOPMENT_TEAM = L39GK3X456;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NiceBabies/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -668,6 +684,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		AD49B52B2CFE59CB00E81B0A /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E1D9D78E2C38B99D00FB1B4E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		AD49B52D2CFE59D300E81B0A /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E1D9D78E2C38B99D00FB1B4E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
 		E1D9D78F2C38B99D00FB1B4E /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E1D9D78E2C38B99D00FB1B4E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

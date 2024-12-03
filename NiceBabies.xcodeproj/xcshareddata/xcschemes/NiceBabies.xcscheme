@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
    LastUpgradeVersion = "1540"
-   version = "1.7">
+   version = "2.2">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES"
@@ -18,6 +18,29 @@
                BlueprintIdentifier = "E1D9D77C2C38B97800FB1B4E"
                BuildableName = "NiceBabies.app"
                BlueprintName = "NiceBabies"
+               ReferencedContainer = "container:NiceBabies.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <AutocreatedTestPlanReference>
+            </AutocreatedTestPlanReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AD3D4ABB2CF6E90C0014582D"
+               BuildableName = "NiceBabiesWidgetExtension.appex"
+               BlueprintName = "NiceBabiesWidgetExtension"
                ReferencedContainer = "container:NiceBabies.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
