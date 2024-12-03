@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "full_heart.png",
+      "filename" : "NiceBaby_Rabbit_Sprite_Happy.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -17,8 +17,5 @@
   "info" : {
     "author" : "xcode",
     "version" : 1
-  },
-  "properties" : {
-    "localizable" : true
   }
 }

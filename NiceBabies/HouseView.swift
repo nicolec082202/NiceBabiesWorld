@@ -71,7 +71,6 @@ struct HouseView: View {
             .navigationBarHidden(true) // Hide navigation bar if not needed
         }
     }
-
     func signOutUser() {
         do {
             try Auth.auth().signOut() // Firebase sign out

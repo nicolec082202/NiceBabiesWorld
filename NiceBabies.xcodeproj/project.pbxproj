@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD1F1DA92CFC547200C785C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1D9D7842C38B97900FB1B4E /* Assets.xcassets */; };
+		AD3D4ABF2CF6E90C0014582D /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD3D4ABE2CF6E90C0014582D /* WidgetKit.framework */; };
+		AD3D4AC12CF6E90C0014582D /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD3D4AC02CF6E90C0014582D /* SwiftUI.framework */; };
+		AD3D4ACD2CF6E9100014582D /* NiceBabiesWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = AD3D4ABC2CF6E90C0014582D /* NiceBabiesWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AD3D4AD22CF6E97D0014582D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADD1CDB42CF6E4AB00420AC9 /* Assets.xcassets */; };
+		AD3D4AE22CF7C8260014582D /* ClosetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AC1E742C96927D009C56D1 /* ClosetView.swift */; };
+		AD3FFC722CF827B1009C6935 /* NiceBabiesWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD1CDB62CF6E4AB00420AC9 /* NiceBabiesWidget.swift */; };
+		AD49B4EF2CFE50B300E81B0A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADD1CDB22CF6E49E00420AC9 /* GoogleService-Info.plist */; };
+		AD49B52C2CFE59CB00E81B0A /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AD49B52B2CFE59CB00E81B0A /* FirebaseAuth */; };
+		AD49B52E2CFE59D300E81B0A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = AD49B52D2CFE59D300E81B0A /* FirebaseFirestore */; };
+		ADD1CDB32CF6E49E00420AC9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADD1CDB22CF6E49E00420AC9 /* GoogleService-Info.plist */; };
 		E135FB932CA293490006457C /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E135FB922CA293490006457C /* Media.xcassets */; };
 		E135FB952CA76B5B0006457C /* SpriteKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E135FB942CA76B5B0006457C /* SpriteKitView.swift */; };
 		E1593C922CE1B6880063C3A0 /* HamburgerMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1593C912CE1B6880063C3A0 /* HamburgerMenuView.swift */; };
@@ -24,7 +35,6 @@
 		E1D92DB12C9E801A00B09F0C /* WorkOutGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D92DB02C9E801A00B09F0C /* WorkOutGameScene.swift */; };
 		E1D92DB32C9E80B800B09F0C /* WorkOutGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D92DB22C9E80B800B09F0C /* WorkOutGameViewController.swift */; };
 		E1D9D7812C38B97800FB1B4E /* NiceBabiesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D9D7802C38B97800FB1B4E /* NiceBabiesApp.swift */; };
-		E1D9D7852C38B97900FB1B4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1D9D7842C38B97900FB1B4E /* Assets.xcassets */; };
 		E1D9D7882C38B97900FB1B4E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1D9D7872C38B97900FB1B4E /* Preview Assets.xcassets */; };
 		E1D9D7902C38B99D00FB1B4E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = E1D9D78F2C38B99D00FB1B4E /* FirebaseAuth */; };
 		E1D9D7922C38B99D00FB1B4E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = E1D9D7912C38B99D00FB1B4E /* FirebaseFirestore */; };
@@ -32,10 +42,44 @@
 		E1D9D7982C38BAF200FB1B4E /* NewAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D9D7972C38BAF200FB1B4E /* NewAccountView.swift */; };
 		E1D9D79A2C38BB3200FB1B4E /* DollStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D9D7992C38BB3200FB1B4E /* DollStatusView.swift */; };
 		E1D9D79C2C38BEBB00FB1B4E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D9D79B2C38BEBA00FB1B4E /* String.swift */; };
-		E1F50C8E2CB38A9200042384 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1F50C8D2CB38A9200042384 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		AD3D4ACA2CF6E9100014582D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1D9D7752C38B97800FB1B4E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD3D4ABB2CF6E90C0014582D;
+			remoteInfo = NiceBabiesWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AD3D4ACC2CF6E9100014582D /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				AD3D4ACD2CF6E9100014582D /* NiceBabiesWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		AD3D4ABC2CF6E90C0014582D /* NiceBabiesWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NiceBabiesWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD3D4ABE2CF6E90C0014582D /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		AD3D4AC02CF6E90C0014582D /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		AD3D4ADB2CF6EDF90014582D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD3D4ADF2CF6EEB20014582D /* NiceBabies.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NiceBabies.entitlements; sourceTree = "<group>"; };
+		AD3D4AE02CF6EEE30014582D /* NiceBabiesWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NiceBabiesWidgetExtension.entitlements; sourceTree = "<group>"; };
+		AD49B4EE2CFD260800E81B0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		AD49B4F02CFE553F00E81B0A /* firebase-ios-sdk */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "firebase-ios-sdk"; path = "/Users/carolinheredia/Library/Developer/Xcode/DerivedData/NiceBabies-afujolfsmiwbpfaubqyaolbpejwx/SourcePackages/checkouts/firebase-ios-sdk"; sourceTree = "<absolute>"; };
+		ADD1CDB22CF6E49E00420AC9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ADD1CDB42CF6E4AB00420AC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ADD1CDB62CF6E4AB00420AC9 /* NiceBabiesWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NiceBabiesWidget.swift; sourceTree = "<group>"; };
 		E135FB922CA293490006457C /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		E135FB942CA76B5B0006457C /* SpriteKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteKitView.swift; sourceTree = "<group>"; };
 		E1593C912CE1B6880063C3A0 /* HamburgerMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamburgerMenuView.swift; sourceTree = "<group>"; };
@@ -60,10 +104,20 @@
 		E1D9D7972C38BAF200FB1B4E /* NewAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccountView.swift; sourceTree = "<group>"; };
 		E1D9D7992C38BB3200FB1B4E /* DollStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DollStatusView.swift; sourceTree = "<group>"; };
 		E1D9D79B2C38BEBA00FB1B4E /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
-		E1F50C8D2CB38A9200042384 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../NiceBabiesWorld-main/NiceBabies/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		AD3D4AB92CF6E90C0014582D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD3D4AC12CF6E90C0014582D /* SwiftUI.framework in Frameworks */,
+				AD49B52E2CFE59D300E81B0A /* FirebaseFirestore in Frameworks */,
+				AD49B52C2CFE59CB00E81B0A /* FirebaseAuth in Frameworks */,
+				AD3D4ABF2CF6E90C0014582D /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E1D9D77A2C38B97800FB1B4E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -76,6 +130,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD3D4ABD2CF6E90C0014582D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AD3D4ABE2CF6E90C0014582D /* WidgetKit.framework */,
+				AD3D4AC02CF6E90C0014582D /* SwiftUI.framework */,
+				AD49B4F02CFE553F00E81B0A /* firebase-ios-sdk */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ADD1CDB82CF6E4AB00420AC9 /* NiceBabiesWidget */ = {
+			isa = PBXGroup;
+			children = (
+				AD3D4ADB2CF6EDF90014582D /* Info.plist */,
+				ADD1CDB42CF6E4AB00420AC9 /* Assets.xcassets */,
+				ADD1CDB62CF6E4AB00420AC9 /* NiceBabiesWidget.swift */,
+			);
+			path = NiceBabiesWidget;
+			sourceTree = SOURCE_ROOT;
+		};
 		E167A59E2CD2D52B00C2128C /* MatchingGame */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,8 +187,11 @@
 		E1D9D7742C38B97800FB1B4E = {
 			isa = PBXGroup;
 			children = (
+				AD3D4AE02CF6EEE30014582D /* NiceBabiesWidgetExtension.entitlements */,
+				ADD1CDB82CF6E4AB00420AC9 /* NiceBabiesWidget */,
 				E167A5A52CD2DB6E00C2128C /* Games */,
 				E1D9D77F2C38B97800FB1B4E /* NiceBabies */,
+				AD3D4ABD2CF6E90C0014582D /* Frameworks */,
 				E1D9D77E2C38B97800FB1B4E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -123,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				E1D9D77D2C38B97800FB1B4E /* NiceBabies.app */,
+				AD3D4ABC2CF6E90C0014582D /* NiceBabiesWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -130,6 +208,8 @@
 		E1D9D77F2C38B97800FB1B4E /* NiceBabies */ = {
 			isa = PBXGroup;
 			children = (
+				AD49B4EE2CFD260800E81B0A /* Info.plist */,
+				AD3D4ADF2CF6EEB20014582D /* NiceBabies.entitlements */,
 				E1D9D7802C38B97800FB1B4E /* NiceBabiesApp.swift */,
 				E1D9D7952C38BA8900FB1B4E /* LoginAppView.swift */,
 				E1D9D79B2C38BEBA00FB1B4E /* String.swift */,
@@ -140,8 +220,8 @@
 				E1AC1E742C96927D009C56D1 /* ClosetView.swift */,
 				E1D9D7972C38BAF200FB1B4E /* NewAccountView.swift */,
 				E135FB942CA76B5B0006457C /* SpriteKitView.swift */,
-				E1F50C8D2CB38A9200042384 /* GoogleService-Info.plist */,
 				E1D9D7842C38B97900FB1B4E /* Assets.xcassets */,
+				ADD1CDB22CF6E49E00420AC9 /* GoogleService-Info.plist */,
 				E1D9D7862C38B97900FB1B4E /* Preview Content */,
 			);
 			path = NiceBabies;
@@ -158,6 +238,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		AD3D4ABB2CF6E90C0014582D /* NiceBabiesWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD3D4ACE2CF6E9100014582D /* Build configuration list for PBXNativeTarget "NiceBabiesWidgetExtension" */;
+			buildPhases = (
+				AD3D4AB82CF6E90C0014582D /* Sources */,
+				AD3D4AB92CF6E90C0014582D /* Frameworks */,
+				AD3D4ABA2CF6E90C0014582D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NiceBabiesWidgetExtension;
+			packageProductDependencies = (
+				AD49B52B2CFE59CB00E81B0A /* FirebaseAuth */,
+				AD49B52D2CFE59D300E81B0A /* FirebaseFirestore */,
+			);
+			productName = NiceBabiesWidgetExtension;
+			productReference = AD3D4ABC2CF6E90C0014582D /* NiceBabiesWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		E1D9D77C2C38B97800FB1B4E /* NiceBabies */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E1D9D78B2C38B97900FB1B4E /* Build configuration list for PBXNativeTarget "NiceBabies" */;
@@ -165,10 +266,12 @@
 				E1D9D7792C38B97800FB1B4E /* Sources */,
 				E1D9D77A2C38B97800FB1B4E /* Frameworks */,
 				E1D9D77B2C38B97800FB1B4E /* Resources */,
+				AD3D4ACC2CF6E9100014582D /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				AD3D4ACB2CF6E9100014582D /* PBXTargetDependency */,
 			);
 			name = NiceBabies;
 			packageProductDependencies = (
@@ -186,9 +289,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1430;
+				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					AD3D4ABB2CF6E90C0014582D = {
+						CreatedOnToolsVersion = 15.4;
+					};
 					E1D9D77C2C38B97800FB1B4E = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
@@ -211,26 +317,45 @@
 			projectRoot = "";
 			targets = (
 				E1D9D77C2C38B97800FB1B4E /* NiceBabies */,
+				AD3D4ABB2CF6E90C0014582D /* NiceBabiesWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		AD3D4ABA2CF6E90C0014582D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD3D4AD22CF6E97D0014582D /* Assets.xcassets in Resources */,
+				AD49B4EF2CFE50B300E81B0A /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E1D9D77B2C38B97800FB1B4E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1F50C8E2CB38A9200042384 /* GoogleService-Info.plist in Resources */,
 				E1D9D7882C38B97900FB1B4E /* Preview Assets.xcassets in Resources */,
 				E135FB932CA293490006457C /* Media.xcassets in Resources */,
+				ADD1CDB32CF6E49E00420AC9 /* GoogleService-Info.plist in Resources */,
 				E167A5962CD1D7AB00C2128C /* Loading.atlas in Resources */,
-				E1D9D7852C38B97900FB1B4E /* Assets.xcassets in Resources */,
+				AD1F1DA92CFC547200C785C0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		AD3D4AB82CF6E90C0014582D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD3FFC722CF827B1009C6935 /* NiceBabiesWidget.swift in Sources */,
+				AD3D4AE22CF7C8260014582D /* ClosetView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E1D9D7792C38B97800FB1B4E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -259,7 +384,84 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		AD3D4ACB2CF6E9100014582D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD3D4ABB2CF6E90C0014582D /* NiceBabiesWidgetExtension */;
+			targetProxy = AD3D4ACA2CF6E9100014582D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		AD3D4ACF2CF6E9100014582D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = NiceBabiesWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = L39GK3X456;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NiceBabiesWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NiceBabiesWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nicebabies.nicebabiesworld.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AD3D4AD02CF6E9100014582D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = NiceBabiesWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = L39GK3X456;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NiceBabiesWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NiceBabiesWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nicebabies.nicebabiesworld.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		E1D9D7892C38B97900FB1B4E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -377,13 +579,17 @@
 		E1D9D78C2C38B97900FB1B4E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NiceBabies/NiceBabies.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NiceBabies/Preview Content\"";
+				DEVELOPMENT_TEAM = L39GK3X456;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NiceBabies/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -405,13 +611,17 @@
 		E1D9D78D2C38B97900FB1B4E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NiceBabies/NiceBabies.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NiceBabies/Preview Content\"";
+				DEVELOPMENT_TEAM = L39GK3X456;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NiceBabies/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -433,6 +643,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		AD3D4ACE2CF6E9100014582D /* Build configuration list for PBXNativeTarget "NiceBabiesWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD3D4ACF2CF6E9100014582D /* Debug */,
+				AD3D4AD02CF6E9100014582D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E1D9D7782C38B97800FB1B4E /* Build configuration list for PBXProject "NiceBabies" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -465,6 +684,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		AD49B52B2CFE59CB00E81B0A /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E1D9D78E2C38B99D00FB1B4E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		AD49B52D2CFE59D300E81B0A /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E1D9D78E2C38B99D00FB1B4E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
 		E1D9D78F2C38B99D00FB1B4E /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E1D9D78E2C38B99D00FB1B4E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
