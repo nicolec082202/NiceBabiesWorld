@@ -116,53 +116,39 @@ struct ClosetView: View {
     
     public class UIStateModel: ObservableObject {
         @Published var activeCard: Int = 0
-        @Published var screenDrag: Float = 145
+        @Published var screenDrag: Float = 0
     }//end UIStateModel
     
     struct Carousel<Items : View> : View {
-        // Initializing necessary properties for the carousel
-        // Including a timer for automatic sliding
         let items: Items
         let numberOfItems: CGFloat
         let spacing: CGFloat
         let totalSpacing: CGFloat
         let cardWidth: CGFloat
-        
-        // Gesture state for drag detection
+
         @GestureState var isDetectingLongPress = false
-        
-        // Accessing UI state
         @EnvironmentObject var UIState: UIStateModel
-        
+
         @inlinable public init(
             numberOfItems: CGFloat,
             spacing: CGFloat,
             cardWidth: CGFloat,
             @ViewBuilder _ items: () -> Items) {
-                
-                // Setting up carousel parameters
-                self.items = items()
-                self.numberOfItems = numberOfItems
-                self.spacing = spacing
-                self.cardWidth = cardWidth
-                self.totalSpacing = (numberOfItems - 1) * spacing
-                
-                
-            }
-        
-        // Body of the carousel view
+            
+            self.items = items()
+            self.numberOfItems = numberOfItems
+            self.spacing = spacing
+            self.cardWidth = cardWidth
+            self.totalSpacing = (numberOfItems - 1) * spacing
+        }
+
         var body: some View {
             let screenWidth = UIScreen.main.bounds.width
-            
-            // Calculate the position that centers the active card
             let centralizeOffset = (screenWidth - cardWidth) / 2.0
-            
-            // Calculate the offset for the current active card
             let activeOffset = CGFloat(UIState.activeCard) * -(cardWidth + spacing)
-            
-            // Combine offsets with drag
             let totalOffset = centralizeOffset + activeOffset + CGFloat(UIState.screenDrag)
             
+
             return HStack(alignment: .top, spacing: spacing) {
                 items
             }
@@ -175,27 +161,24 @@ struct ClosetView: View {
                     }
                     .onEnded { value in
                         UIState.screenDrag = 145
-                        // Move right
                         if (value.translation.width < -50) && UIState.activeCard < Int(numberOfItems) - 1 {
                             withAnimation(.spring()) {
-                                UIState.activeCard = UIState.activeCard + 1
+                                UIState.activeCard += 1
                             }
                             let impactMed = UIImpactFeedbackGenerator(style: .medium)
                             impactMed.impactOccurred()
                         }
-                        // Move left
                         if (value.translation.width > 50) && UIState.activeCard > 0 {
                             withAnimation(.spring()) {
-                                UIState.activeCard = UIState.activeCard - 1
+                                UIState.activeCard -= 1
                             }
                             let impactMed = UIImpactFeedbackGenerator(style: .medium)
                             impactMed.impactOccurred()
                         }
                     }
             )
-        }// end body
-        
-    }//end Carousel
+        }
+    }
     
     
     
