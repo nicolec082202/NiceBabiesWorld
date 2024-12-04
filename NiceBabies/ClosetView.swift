@@ -112,7 +112,7 @@ struct ClosetView: View {
 
 public class UIStateModel: ObservableObject {
     @Published var activeCard: Int = 0
-    @Published var screenDrag: Float = 0
+    @Published var screenDrag: Float = 145
 }
 
 struct Carousel<Items: View>: View {
@@ -146,7 +146,7 @@ struct Carousel<Items: View>: View {
         return HStack(alignment: .top, spacing: spacing) {
             items
         }
-        .offset(x: totalOffset, y: 0)
+        .offset(x: totalOffset + 400, y: 0)
         .animation(.spring(response: 0.5, dampingFraction: 0.8), value: UIState.activeCard)
         .gesture(
             DragGesture()
