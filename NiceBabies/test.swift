@@ -19,8 +19,9 @@ struct test: View {
                     Image(item)
                         .resizable()
                         .scaledToFit()
-                        .frame(height:150)
+                        .frame(height:450)
                         .padding(.horizontal, 20)
+                        
                     
                 }
             }
