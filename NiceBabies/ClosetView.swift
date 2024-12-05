@@ -1,8 +1,8 @@
-
 import SwiftUI
 
 class UIStateModel: ObservableObject {
     @Published var activeCard: Int = 0
+    @Published var screenDrag: Float = 0.0
 }
 
 extension Color {
@@ -57,6 +57,7 @@ struct ClosetView: View {
                                     }
                                     .onTapGesture {
                                         UIState.activeCard = index
+                                        print("Tapped on card: \(index)")
                                     }
                                     .onAppear {
                                         withAnimation {
@@ -69,6 +70,7 @@ struct ClosetView: View {
                     .scrollTargetBehavior(.paging)
                     .onChange(of: UIState.activeCard) { newValue in
                         currentPage = newValue
+                        print("Active card changed to: \(newValue)")
                     }
                     .onAppear {
                         // Reset the currentPage when the view appears
@@ -95,6 +97,7 @@ struct ClosetView: View {
                     Button(action: {
                         guard UIState.activeCard >= 0 && UIState.activeCard < items.count else { return }
                         equippedBaby = items[UIState.activeCard]
+                        print("Equipped baby: \(equippedBaby)")
                         isClosetViewPresented.wrappedValue.dismiss()
                     }) {
                         Text("EQUIP")
@@ -123,12 +126,10 @@ struct ClosetView: View {
                     Spacer()
                 }
                 .padding(.bottom, height * 0.9)
-                                        
-
-            }//end ZStack
-        }//end Geometry
-    }//end body
-}//end ClosetView
+            }
+        }
+    }
+}
 
 struct CloseView_Previews: PreviewProvider {
     static var previews: some View {
@@ -136,7 +137,3 @@ struct CloseView_Previews: PreviewProvider {
             .environmentObject(UIStateModel())
     }
 }
-
-
-
-
