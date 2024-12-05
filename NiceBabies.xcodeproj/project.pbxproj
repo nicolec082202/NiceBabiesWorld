@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E07B08B82D011B78006DB405 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07B08B72D011B78006DB405 /* test.swift */; };
 		E0FCFBBC2CEBA9CB007907B0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0FCFBBB2CEBA9CB007907B0 /* GoogleService-Info.plist */; };
 		E135FB932CA293490006457C /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E135FB922CA293490006457C /* Media.xcassets */; };
 		E135FB952CA76B5B0006457C /* SpriteKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E135FB942CA76B5B0006457C /* SpriteKitView.swift */; };
@@ -37,7 +36,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E07B08B72D011B78006DB405 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		E0FCFBB62CEBA949007907B0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E0FCFBBB2CEBA9CB007907B0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E135FB922CA293490006457C /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
@@ -147,7 +145,6 @@
 				E0FCFBBB2CEBA9CB007907B0 /* GoogleService-Info.plist */,
 				E1D9D7842C38B97900FB1B4E /* Assets.xcassets */,
 				E1D9D7862C38B97900FB1B4E /* Preview Content */,
-				E07B08B72D011B78006DB405 /* test.swift */,
 			);
 			path = NiceBabies;
 			sourceTree = "<group>";
@@ -253,7 +250,6 @@
 				E167A5A02CD2D57900C2128C /* MatchingGameLoadingScene.swift in Sources */,
 				E167A5922CD1CF5200C2128C /* WorkOutGameLoadingScene.swift in Sources */,
 				E1CECCF92C3BA18D00F736C9 /* HouseView.swift in Sources */,
-				E07B08B82D011B78006DB405 /* test.swift in Sources */,
 				E135FB952CA76B5B0006457C /* SpriteKitView.swift in Sources */,
 				E1AC1E752C96927D009C56D1 /* ClosetView.swift in Sources */,
 				E1D9D7962C38BA8900FB1B4E /* LoginAppView.swift in Sources */,
