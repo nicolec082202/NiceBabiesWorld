@@ -5,11 +5,12 @@ struct CarouselItemModel: Identifiable {
     let name: String
     let image: Image
 }
-
+/*
 extension Color {
     static let dropshot = Color(red: 0.976, green: 0.533, blue: 0.020)
     static let doublebounce = Color(red: 0.953, green: 0.337, blue: 0.584)
 }
+*/
 
 struct ClosetView: View {
     @StateObject var UIState = UIStateModel()
