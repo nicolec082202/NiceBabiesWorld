@@ -31,7 +31,7 @@ class JumpingState : PlayerState {
         return false
     }
     
-    let textures : Array<SKTexture> = (0..<2).map({return "jump/\($0)"}).map(SKTexture.init)
+    let textures : Array<SKTexture> = (0..<2).map({return "jump/NiceBaby_Panda/\($0)"}).map(SKTexture.init)
     lazy var action = {SKAction.animate(with: textures, timePerFrame: 0.1)} ()
     
     
@@ -70,7 +70,7 @@ class IdleState : PlayerState {
         }
     }
     
-    let textures = SKTexture(imageNamed: "player/0")
+    let textures = SKTexture(imageNamed: "player/NiceBaby_Panda/0")
     lazy var action = { SKAction.animate(with: [textures], timePerFrame: 0.1) } ()
     
     override func didEnter(from previousState: GKState?) {
@@ -88,7 +88,7 @@ class WalkingState : PlayerState {
         }
     }
     
-    let textures : Array<SKTexture> = (0..<6).map({return "player/\($0)"}).map(SKTexture.init)
+    let textures : Array<SKTexture> = (0..<3).map({return "player/NiceBaby_Panda/\($0)"}).map(SKTexture.init)
     lazy var action = { SKAction.repeatForever(.animate(with: textures, timePerFrame: 0.1))} ()
     
     override func didEnter(from previousState: GKState?) {

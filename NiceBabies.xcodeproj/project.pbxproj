@@ -7,13 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A334E9D52D0385EE0008999B /* OrientationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A334E9D42D0385EE0008999B /* OrientationManager.swift */; };
+		A3789A692D0384A1001E9D09 /* Level1.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3789A642D0384A1001E9D09 /* Level1.swift */; };
+		A3789A6A2D0384A1001E9D09 /* Level3.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3789A662D0384A1001E9D09 /* Level3.swift */; };
+		A3789A6B2D0384A1001E9D09 /* playerStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3789A682D0384A1001E9D09 /* playerStateMachine.swift */; };
+		A3789A6C2D0384A1001E9D09 /* MainMenu.sks in Resources */ = {isa = PBXBuildFile; fileRef = A3789A672D0384A1001E9D09 /* MainMenu.sks */; };
+		A3789A6D2D0384A1001E9D09 /* Level1.sks in Resources */ = {isa = PBXBuildFile; fileRef = A3789A632D0384A1001E9D09 /* Level1.sks */; };
+		A3789A6E2D0384A1001E9D09 /* Level3.sks in Resources */ = {isa = PBXBuildFile; fileRef = A3789A652D0384A1001E9D09 /* Level3.sks */; };
 		E135FB932CA293490006457C /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E135FB922CA293490006457C /* Media.xcassets */; };
 		E135FB952CA76B5B0006457C /* SpriteKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E135FB942CA76B5B0006457C /* SpriteKitView.swift */; };
 		E1593C922CE1B6880063C3A0 /* HamburgerMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1593C912CE1B6880063C3A0 /* HamburgerMenuView.swift */; };
 		E167A5922CD1CF5200C2128C /* WorkOutGameLoadingScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E167A5912CD1CF5200C2128C /* WorkOutGameLoadingScene.swift */; };
 		E167A5962CD1D7AB00C2128C /* Loading.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E167A5952CD1D7AB00C2128C /* Loading.atlas */; };
 		E167A59A2CD2D17500C2128C /* WorkOutGameMainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E167A5992CD2D17500C2128C /* WorkOutGameMainMenuScene.swift */; };
-		E167A59C2CD2D1EB00C2128C /* WorkOutGameLevel1Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E167A59B2CD2D1EB00C2128C /* WorkOutGameLevel1Scene.swift */; };
 		E167A5A02CD2D57900C2128C /* MatchingGameLoadingScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E167A59F2CD2D57900C2128C /* MatchingGameLoadingScene.swift */; };
 		E167A5A22CD2D58500C2128C /* MatchingGameMainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E167A5A12CD2D58500C2128C /* MatchingGameMainMenuScene.swift */; };
 		E167A5A42CD2D59700C2128C /* MatchingGameLevel1Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E167A5A32CD2D59700C2128C /* MatchingGameLevel1Scene.swift */; };
@@ -36,13 +42,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A334E9D42D0385EE0008999B /* OrientationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientationManager.swift; sourceTree = "<group>"; };
+		A3789A632D0384A1001E9D09 /* Level1.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level1.sks; sourceTree = "<group>"; };
+		A3789A642D0384A1001E9D09 /* Level1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level1.swift; sourceTree = "<group>"; };
+		A3789A652D0384A1001E9D09 /* Level3.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level3.sks; sourceTree = "<group>"; };
+		A3789A662D0384A1001E9D09 /* Level3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level3.swift; sourceTree = "<group>"; };
+		A3789A672D0384A1001E9D09 /* MainMenu.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainMenu.sks; sourceTree = "<group>"; };
+		A3789A682D0384A1001E9D09 /* playerStateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playerStateMachine.swift; sourceTree = "<group>"; };
 		E135FB922CA293490006457C /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		E135FB942CA76B5B0006457C /* SpriteKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteKitView.swift; sourceTree = "<group>"; };
 		E1593C912CE1B6880063C3A0 /* HamburgerMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamburgerMenuView.swift; sourceTree = "<group>"; };
 		E167A5912CD1CF5200C2128C /* WorkOutGameLoadingScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOutGameLoadingScene.swift; sourceTree = "<group>"; };
 		E167A5952CD1D7AB00C2128C /* Loading.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Loading.atlas; sourceTree = "<group>"; };
 		E167A5992CD2D17500C2128C /* WorkOutGameMainMenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOutGameMainMenuScene.swift; sourceTree = "<group>"; };
-		E167A59B2CD2D1EB00C2128C /* WorkOutGameLevel1Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOutGameLevel1Scene.swift; sourceTree = "<group>"; };
 		E167A59F2CD2D57900C2128C /* MatchingGameLoadingScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingGameLoadingScene.swift; sourceTree = "<group>"; };
 		E167A5A12CD2D58500C2128C /* MatchingGameMainMenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingGameMainMenuScene.swift; sourceTree = "<group>"; };
 		E167A5A32CD2D59700C2128C /* MatchingGameLevel1Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingGameLevel1Scene.swift; sourceTree = "<group>"; };
@@ -60,7 +72,7 @@
 		E1D9D7972C38BAF200FB1B4E /* NewAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccountView.swift; sourceTree = "<group>"; };
 		E1D9D7992C38BB3200FB1B4E /* DollStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DollStatusView.swift; sourceTree = "<group>"; };
 		E1D9D79B2C38BEBA00FB1B4E /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
-		E1F50C8D2CB38A9200042384 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../NiceBabiesWorld-main/NiceBabies/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E1F50C8D2CB38A9200042384 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +117,12 @@
 				E1D92DB02C9E801A00B09F0C /* WorkOutGameScene.swift */,
 				E167A5912CD1CF5200C2128C /* WorkOutGameLoadingScene.swift */,
 				E167A5992CD2D17500C2128C /* WorkOutGameMainMenuScene.swift */,
-				E167A59B2CD2D1EB00C2128C /* WorkOutGameLevel1Scene.swift */,
+				A3789A632D0384A1001E9D09 /* Level1.sks */,
+				A3789A642D0384A1001E9D09 /* Level1.swift */,
+				A3789A652D0384A1001E9D09 /* Level3.sks */,
+				A3789A662D0384A1001E9D09 /* Level3.swift */,
+				A3789A672D0384A1001E9D09 /* MainMenu.sks */,
+				A3789A682D0384A1001E9D09 /* playerStateMachine.swift */,
 			);
 			path = WorkOutGame;
 			sourceTree = "<group>";
@@ -143,6 +160,7 @@
 				E1F50C8D2CB38A9200042384 /* GoogleService-Info.plist */,
 				E1D9D7842C38B97900FB1B4E /* Assets.xcassets */,
 				E1D9D7862C38B97900FB1B4E /* Preview Content */,
+				A334E9D42D0385EE0008999B /* OrientationManager.swift */,
 			);
 			path = NiceBabies;
 			sourceTree = "<group>";
@@ -221,6 +239,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1F50C8E2CB38A9200042384 /* GoogleService-Info.plist in Resources */,
+				A3789A6C2D0384A1001E9D09 /* MainMenu.sks in Resources */,
+				A3789A6D2D0384A1001E9D09 /* Level1.sks in Resources */,
+				A3789A6E2D0384A1001E9D09 /* Level3.sks in Resources */,
 				E1D9D7882C38B97900FB1B4E /* Preview Assets.xcassets in Resources */,
 				E135FB932CA293490006457C /* Media.xcassets in Resources */,
 				E167A5962CD1D7AB00C2128C /* Loading.atlas in Resources */,
@@ -235,6 +256,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3789A692D0384A1001E9D09 /* Level1.swift in Sources */,
+				A3789A6A2D0384A1001E9D09 /* Level3.swift in Sources */,
+				A3789A6B2D0384A1001E9D09 /* playerStateMachine.swift in Sources */,
 				E1D9D79C2C38BEBB00FB1B4E /* String.swift in Sources */,
 				E167A59A2CD2D17500C2128C /* WorkOutGameMainMenuScene.swift in Sources */,
 				E1D92DB32C9E80B800B09F0C /* WorkOutGameViewController.swift in Sources */,
@@ -245,13 +269,13 @@
 				E167A5A42CD2D59700C2128C /* MatchingGameLevel1Scene.swift in Sources */,
 				E1593C922CE1B6880063C3A0 /* HamburgerMenuView.swift in Sources */,
 				E167A5A22CD2D58500C2128C /* MatchingGameMainMenuScene.swift in Sources */,
+				A334E9D52D0385EE0008999B /* OrientationManager.swift in Sources */,
 				E167A5A02CD2D57900C2128C /* MatchingGameLoadingScene.swift in Sources */,
 				E167A5922CD1CF5200C2128C /* WorkOutGameLoadingScene.swift in Sources */,
 				E1CECCF92C3BA18D00F736C9 /* HouseView.swift in Sources */,
 				E135FB952CA76B5B0006457C /* SpriteKitView.swift in Sources */,
 				E1AC1E752C96927D009C56D1 /* ClosetView.swift in Sources */,
 				E1D9D7962C38BA8900FB1B4E /* LoginAppView.swift in Sources */,
-				E167A59C2CD2D1EB00C2128C /* WorkOutGameLevel1Scene.swift in Sources */,
 				E1D9D79A2C38BB3200FB1B4E /* DollStatusView.swift in Sources */,
 				E1CECCFD2C3BA7CB00F736C9 /* GameCatalogView.swift in Sources */,
 			);
@@ -382,6 +406,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NiceBabies/Preview Content\"";
+				DEVELOPMENT_TEAM = NRAAPV7P7U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -410,6 +435,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NiceBabies/Preview Content\"";
+				DEVELOPMENT_TEAM = NRAAPV7P7U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

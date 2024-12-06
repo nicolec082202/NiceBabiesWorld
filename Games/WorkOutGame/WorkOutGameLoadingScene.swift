@@ -9,6 +9,19 @@ protocol SpriteKitSceneDelegate: AnyObject {
 // Define the WorkOutGameScene class, inheriting from SKScene
 class WorkOutGameLoadingScene: SKScene {
     
+    var equippedBaby: String
+
+    // Custom initializer
+    init(size: CGSize, equippedBaby: String) {
+        self.equippedBaby = equippedBaby
+        super.init(size: size)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
     weak var sceneDelegate: SpriteKitSceneDelegate?
     
     var loadingFlower = SKSpriteNode()
@@ -46,7 +59,7 @@ class WorkOutGameLoadingScene: SKScene {
     func goToMainMenu() {
         // Set custom size for the main menu scene
         let customSize = CGSize(width: 2868, height: 1320)
-        let mainMenuScene = WorkOutGameMainMenuScene(size: customSize)
+        let mainMenuScene = WorkOutGameMainMenuScene(size: customSize, equippedBaby: equippedBaby)
 
         mainMenuScene.sceneDelegate = sceneDelegate
     

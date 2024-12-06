@@ -15,7 +15,7 @@ struct GameCatalogView: View {
                 let height = geometry.size.height
 
                 ZStack {
-                    HamburgerMenuView(isMenuOpen: false, username: $username, equippedBaby: $equippedBaby, currentView: "GameCatalogView")
+                    HamburgerMenuView(isMenuOpen: false, username: $username, equippedBaby: $equippedBaby, gameCompleted: $gameCompleted, currentView: "GameCatalogView")
                     
                     Text("Game Catalog View")
                         .font(.title)

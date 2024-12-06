@@ -2,12 +2,16 @@ import UIKit
 import SpriteKit
 
 class WorkoutGameViewController: UIViewController {
+    
+    var equippedBaby: String = ""
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         if let view = self.view as? SKView {
             // Load the Workout Game Loading Scene
-            let scene = WorkOutGameLoadingScene(size: view.bounds.size)
+            let scene = WorkOutGameLoadingScene(size: view.bounds.size, equippedBaby: equippedBaby)
             scene.scaleMode = .aspectFill
             view.presentScene(scene)
 

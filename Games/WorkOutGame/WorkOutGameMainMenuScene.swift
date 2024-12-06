@@ -2,7 +2,19 @@ import SpriteKit
 import SwiftUI
 
 class WorkOutGameMainMenuScene: SKScene {
-    //var equippedBaby: String = "default_baby"
+
+    var equippedBaby: String
+
+    // Custom initializer
+    init(size: CGSize, equippedBaby: String) {
+        self.equippedBaby = equippedBaby
+        super.init(size: size)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     var level1Completed = false
     
     weak var sceneDelegate: SpriteKitSceneDelegate?
@@ -78,7 +90,7 @@ class WorkOutGameMainMenuScene: SKScene {
             }
         }
     }
-    /*
+    
     private func displayEquippedBaby() {
         // Create the texture (it will not be nil)
         let texture = SKTexture(imageNamed: (equippedBaby + "_Sprite_Neutral"))
@@ -89,6 +101,6 @@ class WorkOutGameMainMenuScene: SKScene {
         babySpriteNode.size = CGSize(width: 150, height: 150) // Adjust size as needed
         babySpriteNode.zPosition = 1 // Ensure it appears above other nodes
         self.addChild(babySpriteNode)
-    }*/
+    }
 
 }

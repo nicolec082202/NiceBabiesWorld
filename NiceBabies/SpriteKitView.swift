@@ -23,7 +23,7 @@ struct SpriteKitView: UIViewControllerRepresentable {
         let scene: SKScene
         switch gameType {
         case .workout:
-            let workoutScene = WorkOutGameLoadingScene(size: UIScreen.main.bounds.size)
+            let workoutScene = WorkOutGameLoadingScene(size: UIScreen.main.bounds.size, equippedBaby: equippedBaby)
             workoutScene.sceneDelegate = context.coordinator // Set the delegate
             
             scene = workoutScene

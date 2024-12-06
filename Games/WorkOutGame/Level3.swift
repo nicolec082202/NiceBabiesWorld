@@ -105,7 +105,7 @@ class Level3: WorkOutGameScene {
     
     func goToMainMenuFromMenu() {
         let customSize = CGSize(width: 2868, height: 1320) // Replace with your desired size
-        let mainMenuScene = WorkOutGameMainMenuScene(size: customSize)
+        let mainMenuScene = WorkOutGameMainMenuScene(size: customSize, equippedBaby: "")
         
         mainMenuScene.sceneDelegate = sceneDelegate
         

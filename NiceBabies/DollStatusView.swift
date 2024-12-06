@@ -20,7 +20,7 @@ struct DollStatusView: View {
                 
                 ZStack {
                     
-                    HamburgerMenuView(isMenuOpen: false, username: $username, equippedBaby: $equippedBaby, currentView: "DollStatusView")
+                    HamburgerMenuView(isMenuOpen: false, username: $username, equippedBaby: $equippedBaby, gameCompleted: $gameCompleted, currentView: "DollStatusView")
                     // Button to dismiss the view
                    
                     
