@@ -64,7 +64,7 @@ class WorkOutGameLoadingScene: SKScene {
         mainMenuScene.sceneDelegate = sceneDelegate
     
         // Set the scale mode
-        mainMenuScene.scaleMode = .aspectFill
+        mainMenuScene.scaleMode = .aspectFit
 
         // Transition to the main menu scene
         let transition = SKTransition.fade(withDuration: 1.0)

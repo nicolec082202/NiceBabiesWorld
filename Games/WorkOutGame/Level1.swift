@@ -123,7 +123,7 @@ class Level1: WorkOutGameScene {
         print("Attempting to transition to Level2")
         if let gameScene = WorkOutGameScene(fileNamed: "Level3") {
             print("Level2 scene loaded successfully")
-            gameScene.scaleMode = .aspectFill
+            gameScene.scaleMode = .aspectFit
             gameScene.sceneDelegate = self.sceneDelegate
             let transition = SKTransition.push(with: .left, duration: 1.0)
             self.view?.presentScene(gameScene, transition: transition)

@@ -12,7 +12,7 @@ class WorkoutGameViewController: UIViewController {
         if let view = self.view as? SKView {
             // Load the Workout Game Loading Scene
             let scene = WorkOutGameLoadingScene(size: view.bounds.size, equippedBaby: equippedBaby)
-            scene.scaleMode = .aspectFill
+            scene.scaleMode = .aspectFit
             view.presentScene(scene)
 
             view.ignoresSiblingOrder = true

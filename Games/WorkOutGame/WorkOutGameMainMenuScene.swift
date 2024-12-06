@@ -76,7 +76,7 @@ class WorkOutGameMainMenuScene: SKScene {
                 
                 // Navigate to the first level
                 if let gameScene = WorkOutGameScene(fileNamed: "Level1") {
-                    gameScene.scaleMode = .aspectFill
+                    gameScene.scaleMode = .aspectFit
                     gameScene.sceneDelegate = self.sceneDelegate // Transfer the delegate
                     let transition = SKTransition.push(with: .left, duration: 1.0)
                     self.view?.presentScene(gameScene, transition: transition)

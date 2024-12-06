@@ -58,7 +58,7 @@ class MatchingGameMainMenuScene: SKScene {
             if node.name == "startGame" {
                 let level1Scene = MatchingGameLevel1Scene(size: self.size)
                 level1Scene.equippedBaby = equippedBaby // Pass equipped baby string to next scene
-                level1Scene.scaleMode = .aspectFill
+                level1Scene.scaleMode = .aspectFit
                 let transition = SKTransition.push(with: .left, duration: 1.0)
                 self.view?.presentScene(level1Scene, transition: transition)
             }

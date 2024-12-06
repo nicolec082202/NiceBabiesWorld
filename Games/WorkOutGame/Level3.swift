@@ -109,7 +109,7 @@ class Level3: WorkOutGameScene {
         
         mainMenuScene.sceneDelegate = sceneDelegate
         
-        mainMenuScene.scaleMode = .aspectFill
+        mainMenuScene.scaleMode = .aspectFit
 
         let transition = SKTransition.fade(withDuration: 1.0)
         self.view?.presentScene(mainMenuScene, transition: transition)
