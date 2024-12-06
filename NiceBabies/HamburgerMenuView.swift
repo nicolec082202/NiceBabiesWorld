@@ -5,6 +5,7 @@ struct HamburgerMenuView: View {
     @State var isMenuOpen: Bool
     @Binding var username: String
     @Binding var equippedBaby: String
+    @Binding var gameCompleted: Bool
     @State private var navigateToLogIn = false // State to trigger navigation
     @State var currentView: String = ""// Current view identifier passed in
     
@@ -12,9 +13,9 @@ struct HamburgerMenuView: View {
     var body: some View {
         
          let menuItems: [MenuItem] = [
-            MenuItem(viewName: "HouseView", imageName: "HamburgerMenu_Home", destination: AnyView(HouseView(username: $username)), action: nil),
-            MenuItem(viewName: "GameCatalogView", imageName: "HamburgerMenu_Laptop", destination: AnyView(GameCatalogView(equippedBaby: $equippedBaby, username: $username)), action: nil),
-            MenuItem(viewName: "DollStatusView", imageName: "HamburgerMenu_Doll", destination: AnyView(DollStatusView(username: $username, equippedBaby: $equippedBaby)), action: nil),
+            MenuItem(viewName: "HouseView", imageName: "HamburgerMenu_Home", destination: AnyView(HouseView(username: $username, gameCompleted: $gameCompleted)), action: nil),
+            MenuItem(viewName: "GameCatalogView", imageName: "HamburgerMenu_Laptop", destination: AnyView(GameCatalogView(equippedBaby: $equippedBaby, username: $username, gameCompleted: $gameCompleted)), action: nil),
+            MenuItem(viewName: "DollStatusView", imageName: "HamburgerMenu_Doll", destination: AnyView(DollStatusView(username: $username, equippedBaby: $equippedBaby, gameCompleted: $gameCompleted)), action: nil),
             MenuItem(viewName: "Logout", imageName: "HamburgerMenu_Logout", destination: AnyView(LoginAppView()), action: {self.signOutUser()})
         ]
         
@@ -113,6 +114,6 @@ struct MenuItem {
 
 struct HamburgerMenuView_Previews: PreviewProvider {
     static var previews: some View {
-        HamburgerMenuView(isMenuOpen: true, username: .constant("TheBaby"), equippedBaby: .constant("NiceBaby_Monkey"))
+        HamburgerMenuView(isMenuOpen: true, username: .constant("TheBaby"), equippedBaby: .constant("NiceBaby_Monkey"), gameCompleted: .constant(false))
     }
 }

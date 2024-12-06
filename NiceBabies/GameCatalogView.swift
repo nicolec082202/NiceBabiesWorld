@@ -6,6 +6,7 @@ struct GameCatalogView: View {
     @State private var isMatchingGamePresented = false
     @Binding var equippedBaby: String
     @Binding var username: String
+    @Binding var gameCompleted: Bool
 
     var body: some View {
         NavigationView { // Ensure GameCatalogView itself has a NavigationView context
@@ -14,7 +15,7 @@ struct GameCatalogView: View {
                 let height = geometry.size.height
 
                 ZStack {
-                    HamburgerMenuView(isMenuOpen: false, username: $username, equippedBaby: $equippedBaby, currentView: "GameCatalogView")
+                    HamburgerMenuView(isMenuOpen: false, username: $username, equippedBaby: $equippedBaby, gameCompleted: $gameCompleted, currentView: "GameCatalogView")
                     
                     Text("Game Catalog View")
                         .font(.title)
@@ -23,7 +24,8 @@ struct GameCatalogView: View {
                     VStack(spacing: height * 0.02) {
                         Button(action: {
                             isWorkoutGamePresented = true
-                        }) {
+                            OrientationManager.landscapeSupported = true
+                    }) {
                             Text("Launch Workout Game")
                                 .font(.title2)
                                 .padding()
@@ -33,9 +35,16 @@ struct GameCatalogView: View {
                                 .cornerRadius(10)
                         }
                         .fullScreenCover(isPresented: $isWorkoutGamePresented) {
-                            SpriteKitView(equippedBaby: $equippedBaby, gameType: .workout)
+                            SpriteKitView(equippedBaby: $equippedBaby, gameType: .workout, onExit: {
+                            print("Exiting the game to GameCatalogView") // Debugging print
+                            isWorkoutGamePresented = false
+                            OrientationManager.landscapeSupported = false
+                            },
+                            gameCompleted: $gameCompleted
+                        )
                                 .edgesIgnoringSafeArea(.all)
-                        }
+                                
+                    }
 
                         Button(action: {
                             isMatchingGamePresented = true
@@ -49,7 +58,7 @@ struct GameCatalogView: View {
                                 .cornerRadius(10)
                         }
                         .fullScreenCover(isPresented: $isMatchingGamePresented) {
-                            SpriteKitView(equippedBaby: $equippedBaby, gameType: .matching)
+                            SpriteKitView(equippedBaby: $equippedBaby, gameType: .matching, gameCompleted: $gameCompleted)
                                 .edgesIgnoringSafeArea(.all)
                         }
                     }
@@ -66,6 +75,7 @@ struct GameCatalogView: View {
 // Preview of the GameCatalogView for development in Xcode
 struct GameCatalogView_Previews: PreviewProvider {
     static var previews: some View {
-        GameCatalogView(equippedBaby:.constant("NiceBaby_Monkey"), username: .constant("TheBaby"))
+        GameCatalogView(equippedBaby:.constant("NiceBaby_Monkey"), username: .constant("TheBaby"), gameCompleted:.constant(false))
     }
 }
+

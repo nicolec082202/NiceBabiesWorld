@@ -50,7 +50,7 @@ class MatchingGameLoadingScene: SKScene {
     // Transition to the main menu scene
     func goToMainMenu() {
         let mainMenuScene = MatchingGameMainMenuScene(size: self.size, equippedBaby: equippedBaby) // Pass equippedBaby
-        mainMenuScene.scaleMode = .aspectFill
+        mainMenuScene.scaleMode = .aspectFit
 
         let transition = SKTransition.fade(withDuration: 1.0)
         self.view?.presentScene(mainMenuScene, transition: transition)

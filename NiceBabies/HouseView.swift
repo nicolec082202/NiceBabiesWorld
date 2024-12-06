@@ -7,6 +7,8 @@ struct HouseView: View {
     @State private var equippedBaby = "NiceBaby_Monkey"
     @State private var navigateToLogIn = false // State to trigger navigation
     @Binding var username: String
+    @Binding var gameCompleted : Bool
+
 
     var body: some View {
         NavigationView { // Wrap content in NavigationView
@@ -23,10 +25,10 @@ struct HouseView: View {
                         .position(x: width * 0.5, y: height * 0.5)
                     
                     // Hamburger Menu
-                    HamburgerMenuView(isMenuOpen: false, username: $username, equippedBaby: $equippedBaby, currentView: "HouseView")
+                    HamburgerMenuView(isMenuOpen: false, username: $username, equippedBaby: $equippedBaby, gameCompleted: $gameCompleted, currentView: "HouseView")
                     
                     // NavigationLink for GameCatalogView
-                    NavigationLink(destination: GameCatalogView(equippedBaby: $equippedBaby, username: $username).navigationBarHidden(true)) {
+                    NavigationLink(destination: GameCatalogView(equippedBaby: $equippedBaby, username: $username, gameCompleted: $gameCompleted).navigationBarHidden(true)) {
                         Image("Laptop")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
@@ -64,7 +66,7 @@ struct HouseView: View {
                     .contentShape(Rectangle())
                     .position(x: width * 0.52, y: height * 0.75) // Position relative to screen size
                     .fullScreenCover(isPresented: $isDollStatusViewPresented) {
-                        DollStatusView(username: $username, equippedBaby: $equippedBaby)
+                        DollStatusView(username: $username, equippedBaby: $equippedBaby, gameCompleted: $gameCompleted)
                     }
                 }
             }
@@ -85,6 +87,6 @@ struct HouseView: View {
 // Preview of the HouseView for development in Xcode
 struct HouseView_Previews: PreviewProvider {
     static var previews: some View {
-        HouseView(username: .constant("thebaby"))
+        HouseView(username: .constant("thebaby"), gameCompleted: .constant(false))
     }
 }
