@@ -4,12 +4,13 @@ struct DollStatusView: View {
     @Binding var username: String
     @State private var currentIndex = 0
     @Binding var equippedBaby: String
+    @Binding  var gameCompleted : Bool
     
     @State private var hearts: Double = UserDefaults.standard.double(forKey: "hearts") == 0 ? 5.0 : UserDefaults.standard.double(forKey: "hearts")
-    @State private var workoutGameCompleted = false
 
     @Environment(\.presentationMode) var isDollStatusViewPresented
 
+    
     var body: some View {
         GeometryReader { geometry in
             let width = geometry.size.width
@@ -78,24 +79,32 @@ struct DollStatusView: View {
             let hourElapsed = Date().timeIntervalSince(lastActiveDate) / 3600
             let heartsLost = hourElapsed / 6 / 2
             hearts = max(hearts - heartsLost, 0)
+            updateHearts()
         } else {
             UserDefaults.standard.set(Date(), forKey: "lastActiveDate")
         }
         UserDefaults.standard.set(hearts, forKey: "hearts")
         UserDefaults.standard.set(Date(), forKey: "lastActiveDate")
+        
     }
 
     func updateHearts() {
-        if workoutGameCompleted {
+        if gameCompleted {
             hearts = min(hearts + 1, 5)
-            workoutGameCompleted = false
+            gameCompleted = false
         }
     }
 }
-
+/*
 // Preview for the DollStatusView
 struct DollStatusView_Previews: PreviewProvider {
-    static var previews: some View {
-        DollStatusView(username: .constant("thebaby"), equippedBaby: .constant("NiceBaby_Monkey"))
+    
+ static var previews: some View {
+        DollStatusView(username: .constant("thebaby"), equippedBaby: .constant("NiceBaby_Monkey"), gamecompleted: .constant(false)
+        DollStatusView(
+            username: username,
+            equippedBaby: $equippedBaby,
+            gameCompleted: $gameCompleted
+        )
     }
-}
+} */

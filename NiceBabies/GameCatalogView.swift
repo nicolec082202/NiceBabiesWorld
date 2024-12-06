@@ -4,6 +4,7 @@ struct GameCatalogView: View {
     @Environment(\.presentationMode) var isGameCatalogViewPresented
     @State private var isWorkoutGamePresented = false
     @State private var isMatchingGamePresented = false
+    @Binding var gameCompleted: Bool
 
     var body: some View {
         GeometryReader { geometry in
@@ -41,11 +42,15 @@ struct GameCatalogView: View {
                     }
                     .fullScreenCover(isPresented: $isWorkoutGamePresented) {
                         // Launch the Workout Game
-                        SpriteKitView(gameType: .workout)
+                        SpriteKitView(gameType: .workout, onExit: {
+                            print("Exiting the game to GameCatalogView") // Debugging print
+                            isWorkoutGamePresented = false
+                            OrientationManager.landscapeSupported = false
+                            },
+                            gameCompleted: $gameCompleted
+                        )
                             .edgesIgnoringSafeArea(.all)
-                            .onDisappear{
-                                OrientationManager.landscapeSupported = false
-                            }
+                            
                     }
 
                     // Button for Matching Game
@@ -62,7 +67,7 @@ struct GameCatalogView: View {
                     }
                     .fullScreenCover(isPresented: $isMatchingGamePresented) {
                         // Launch the Matching Game
-                        SpriteKitView(gameType: .matching)
+                        SpriteKitView(gameType: .matching, gameCompleted: $gameCompleted)
                             .edgesIgnoringSafeArea(.all)
                     }
                 }
@@ -72,10 +77,11 @@ struct GameCatalogView: View {
         }
     }
 }
-
+ /*
 // Preview of the GameCatalogView for development in Xcode
 struct GameCatalogView_Previews: PreviewProvider {
     static var previews: some View {
         GameCatalogView()
     }
 }
+*/

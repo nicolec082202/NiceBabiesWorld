@@ -1,9 +1,16 @@
 import SpriteKit  // Import SpriteKit for game scenes and visual elements
 import GameplayKit  // Import GameplayKit for potential game mechanics and AI behavior
 
+protocol SpriteKitSceneDelegate: AnyObject {
+    func didRequestDismissal() // Notify when an exit is requested
+    func didCompleteGame()
+}
+
 // Define the WorkOutGameScene class, inheriting from SKScene
 class WorkOutGameLoadingScene: SKScene {
-
+    
+    weak var sceneDelegate: SpriteKitSceneDelegate?
+    
     var loadingFlower = SKSpriteNode()
     var textureArray = [SKTexture]()
 
@@ -37,9 +44,16 @@ class WorkOutGameLoadingScene: SKScene {
 
     // Transition to the main menu scene
     func goToMainMenu() {
-        let mainMenuScene = WorkOutGameMainMenuScene(size: self.size)
+        // Set custom size for the main menu scene
+        let customSize = CGSize(width: 2868, height: 1320)
+        let mainMenuScene = WorkOutGameMainMenuScene(size: customSize)
+
+        mainMenuScene.sceneDelegate = sceneDelegate
+    
+        // Set the scale mode
         mainMenuScene.scaleMode = .aspectFill
 
+        // Transition to the main menu scene
         let transition = SKTransition.fade(withDuration: 1.0)
         self.view?.presentScene(mainMenuScene, transition: transition)
     }
@@ -87,3 +101,4 @@ class WorkOutGameLoadingScene: SKScene {
     }
     
 
+    

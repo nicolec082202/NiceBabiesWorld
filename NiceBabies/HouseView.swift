@@ -8,6 +8,8 @@ struct HouseView: View {
     @State private var equippedBaby = "NiceBaby_Monkey"
     @State private var navigateToLogIn = false // State to trigger navigation
     @Binding var username: String
+    @Binding var gameCompleted : Bool
+
 
     var body: some View {
         NavigationView { // Wrap content in NavigationView
@@ -33,7 +35,7 @@ struct HouseView: View {
                     .contentShape(Rectangle())
                     .position(x: width * 0.79, y: height * 0.5) // Position relative to screen size
                     .fullScreenCover(isPresented: $isGameCatalogViewPresented) {
-                        GameCatalogView()
+                        GameCatalogView(gameCompleted: $gameCompleted)
                     }
 
                     // Logout Button
@@ -74,7 +76,7 @@ struct HouseView: View {
                     .contentShape(Rectangle())
                     .position(x: width * 0.6, y: height * 0.75) // Position relative to screen size
                     .fullScreenCover(isPresented: $isDollStatusViewPresented) {
-                        DollStatusView(username: $username, equippedBaby: $equippedBaby)
+                        DollStatusView(username: $username, equippedBaby: $equippedBaby, gameCompleted: $gameCompleted)
                     }
 
                     // NavigationLink for logging out
@@ -102,10 +104,11 @@ struct HouseView: View {
 
 
 
-
+/*
 // Preview of the HouseView for development in Xcode
 struct HouseView_Previews: PreviewProvider {
     static var previews: some View {
-        HouseView(username: .constant("thebaby"))
+        HouseView(username: .constant("thebaby"), gameCompleted: $gameCompleted)
     }
 }
+*/

@@ -21,12 +21,14 @@ struct NiceBabiesApp: App {
     // Link the custom AppDelegate to SwiftUI using UIApplicationDelegateAdaptor
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
 
+    @State  var gameCompleted: Bool = false
+    
     var body: some Scene {
         WindowGroup {
             // Check if a user is already authenticated
             if Auth.auth().currentUser != nil {
                 // User is signed in, show the main view
-                HouseView(username: .constant(Auth.auth().currentUser?.email ?? "User"))
+                HouseView(username: .constant(Auth.auth().currentUser?.email ?? "User"), gameCompleted: $gameCompleted)
             } else {
                 // No user is signed in, show the login view
                 LoginAppView()
