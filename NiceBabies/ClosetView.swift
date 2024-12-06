@@ -33,8 +33,11 @@ struct ClosetView: View {
             
         ]
         
+        
         ZStack {
+            
             Canvas{
+                
                 Carousel(
                     numberOfItems: CGFloat(items.count),
                     spacing: spacing
@@ -60,6 +63,25 @@ struct ClosetView: View {
                 //This dynamically updates the baby that is currently in view (activecard)
                 .environmentObject(UIState)
             }
+            
+            HStack {
+                            Button(action: {
+                                isClosetViewPresented.wrappedValue.dismiss()
+                            }) {
+                                Image(systemName: "xmark")
+                                    .font(.system(size: 24, weight: .bold))
+                                    .padding()
+                                    .background(Circle().fill(Color.white))
+                                    .foregroundColor(.black)
+                                    .shadow(radius: 2)
+                            }
+                            .padding()
+                            
+                            Spacer() // Pushes the "X" button to the left
+                        }
+                        .padding(.bottom, 800)
+                        
+            
             // Page control indicator
             HStack(spacing: 8) {
                 ForEach(0..<items.count, id: \.self) { index in
@@ -183,12 +205,19 @@ struct ClosetView: View {
         
         //Background image
         var body: some View {
-            content
-                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
-                .background(Image("closetBackground")
-                    .resizable()
-                    .ignoresSafeArea()
-                    .blur(radius: 5, opaque: true))
+            
+            GeometryReader { geometry in
+                let width = geometry.size.width
+                let height = geometry.size.height
+                content
+                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
+                    .background(Image("HomePage Background")
+                        .resizable()
+                        .ignoresSafeArea()
+                        .frame(width: width*1.59, height: height)
+                        .position(x: width * 0.5, y: height * 0.5)
+                        .blur(radius: 5, opaque: true))
+            }
         }
     }
     

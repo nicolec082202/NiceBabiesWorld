@@ -99,6 +99,3 @@ class WorkOutGameLoadingScene: SKScene {
             // Use this function to update the game’s state or animations
         }
     }
-    
-
-    

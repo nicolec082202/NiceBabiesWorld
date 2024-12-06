@@ -1,8 +1,20 @@
 import SpriteKit  // Import SpriteKit for game scenes and visual elements
 import GameplayKit  // Import GameplayKit for potential game mechanics and AI behavior
 
-// Define the WorkOutGameScene class, inheriting from SKScene
+import SpriteKit
+
 class MatchingGameLoadingScene: SKScene {
+    var equippedBaby: String
+
+        // Custom initializer
+        init(size: CGSize, equippedBaby: String) {
+            self.equippedBaby = equippedBaby
+            super.init(size: size)
+        }
+
+        required init?(coder aDecoder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
 
     var loadingFlower = SKSpriteNode()
     var textureArray = [SKTexture]()
@@ -37,53 +49,12 @@ class MatchingGameLoadingScene: SKScene {
 
     // Transition to the main menu scene
     func goToMainMenu() {
-        let mainMenuScene = MatchingGameMainMenuScene(size: self.size)
+        let mainMenuScene = MatchingGameMainMenuScene(size: self.size, equippedBaby: equippedBaby) // Pass equippedBaby
         mainMenuScene.scaleMode = .aspectFill
 
         let transition = SKTransition.fade(withDuration: 1.0)
         self.view?.presentScene(mainMenuScene, transition: transition)
     }
+}
 
-        
-        // Handle a touch that begins at a specific point
-        func touchDown(atPoint pos: CGPoint) {
-
-        }
-        
-        // Handle a touch that moves to a new point
-        func touchMoved(toPoint pos: CGPoint) {
-
-        }
-        
-        // Handle a touch that ends at a specific point
-        func touchUp(atPoint pos: CGPoint) {
-
-        }
-        
-        // Called when a touch begins
-        override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-
-        }
-        
-        // Called when a touch moves
-        override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-
-        }
-        
-        // Called when a touch ends
-        override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-
-        }
-        
-        // Called when a touch is canceled (e.g., interrupted by an event like a phone call)
-        override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-
-        }
-        
-        // Called before each frame is rendered
-        override func update(_ currentTime: TimeInterval) {
-            // Use this function to update the game’s state or animations
-        }
-    }
-    
 

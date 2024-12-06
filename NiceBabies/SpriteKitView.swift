@@ -2,7 +2,6 @@ import Foundation
 import SwiftUI
 import SpriteKit
 
-// Enum to identify which game to load
 enum GameType {
     case workout
     case matching
@@ -10,29 +9,27 @@ enum GameType {
 
 
 
-// Define SpriteKitView struct that conforms to UIViewControllerRepresentable protocol
 struct SpriteKitView: UIViewControllerRepresentable {
-    var gameType: GameType  // Pass in the game type
+    @Binding var equippedBaby: String
+    var gameType: GameType
     var onExit: (() -> Void)? // Closure to handle the exit action
     @Binding var gameCompleted: Bool
     
     func makeUIViewController(context: Context) -> UIViewController {
         let viewController = UIViewController()
-
-        // Create an SKView that will be the main view for the controller
         let skView = SKView(frame: UIScreen.main.bounds)
 
-        // Load the appropriate scene based on the game type
+        // Load the appropriate scene based on game type
         let scene: SKScene
         switch gameType {
         case .workout:
             let workoutScene = WorkOutGameLoadingScene(size: UIScreen.main.bounds.size)
             workoutScene.sceneDelegate = context.coordinator // Set the delegate
             
-            print("Delegate set for WorkOutGameLoadingScene") // Debugging print
             scene = workoutScene
         case .matching:
-            scene = MatchingGameLoadingScene(size: UIScreen.main.bounds.size)
+            let matchingLoadingScene = MatchingGameLoadingScene(size: UIScreen.main.bounds.size, equippedBaby: equippedBaby) // Use custom initializer
+            scene = matchingLoadingScene
         }
 
         scene.scaleMode = .resizeFill  // Adjust to fit the view

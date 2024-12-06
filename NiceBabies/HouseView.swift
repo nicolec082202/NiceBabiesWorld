@@ -2,7 +2,6 @@ import SwiftUI
 import Firebase
 
 struct HouseView: View {
-    @State private var isGameCatalogViewPresented = false
     @State private var isClosetViewPresented = false
     @State private var isDollStatusViewPresented = false
     @State private var equippedBaby = "NiceBaby_Monkey"
@@ -19,46 +18,37 @@ struct HouseView: View {
 
                 ZStack {
                     // Background Image
-                    Image("closetBackground")
+                    Image("HomePage Background")
                         .resizable()
                         .ignoresSafeArea()
-
-                    // Button to present the GameCatalogView
-                    Button(action: {
-                        isGameCatalogViewPresented = true
-                    }) {
-                        Image("laptop")
+                        .frame(width: width * 1.59, height: height)
+                        .position(x: width * 0.5, y: height * 0.5)
+                    
+                    // Hamburger Menu
+                    HamburgerMenuView(isMenuOpen: false, username: $username, equippedBaby: $equippedBaby, currentView: "HouseView")
+                    
+                    // NavigationLink for GameCatalogView
+                    NavigationLink(destination: GameCatalogView(equippedBaby: $equippedBaby, username: $username).navigationBarHidden(true)) {
+                        Image("Laptop")
                             .resizable()
-                            .foregroundColor(Color.black)
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: width * 0.4, height: height * 0.4)
                     }
-                    .frame(width: width * 0.22, height: height * 0.1) // Set frame size relative to screen size
+                    .frame(width: width * 0.4, height: height * 0.2)
                     .contentShape(Rectangle())
-                    .position(x: width * 0.79, y: height * 0.5) // Position relative to screen size
-                    .fullScreenCover(isPresented: $isGameCatalogViewPresented) {
-                        GameCatalogView(gameCompleted: $gameCompleted)
-                    }
-
-                    // Logout Button
-                    Button(action: {
-                        signOutUser()
-                    }) {
-                        Image(systemName: "arrow.forward.circle")
-                            .foregroundColor(Color.black)
-                            .font(.system(size: 35))
-                    }
-                    .position(x: width * 0.9, y: height * 0.02) // Position relative to screen size
-
+                    .position(x: width * 0.38, y: height * 0.33) // Position relative to screen size
+                    
                     // Button to present the ClosetView
                     Button(action: {
                         isClosetViewPresented = true
                     }) {
-                        Image("closet1")
+                        Image("Closet")
                             .resizable()
-                            .foregroundColor(Color.black)
+                            .frame(width: width * 0.26, height: height * 0.3)
                     }
-                    .frame(width: width * 0.71, height: height * 0.45) // Set frame size relative to screen size
+                    .frame(width: width * 0.26, height: height * 0.23) // Set frame size relative to screen size
                     .contentShape(Rectangle())
-                    .position(x: width * 0.13, y: height * 0.26) // Position relative to screen size
+                    .position(x: width * 0.7, y: height * 0.32) // Position relative to screen size
                     .fullScreenCover(isPresented: $isClosetViewPresented) {
                         ClosetView(equippedBaby: $equippedBaby)
                     }
@@ -70,19 +60,13 @@ struct HouseView: View {
                         Image(equippedBaby)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .frame(width: width * 0.7, height: height * 0.7) // Set frame size relative to screen size
+                            .frame(width: width * 0.7, height: height * 0.7) // Set frame size relative to view dimensions
                     }
                     .frame(width: width * 0.2, height: height * 0.2) // Ensure button frame matches visible content
                     .contentShape(Rectangle())
-                    .position(x: width * 0.6, y: height * 0.75) // Position relative to screen size
+                    .position(x: width * 0.52, y: height * 0.75) // Position relative to screen size
                     .fullScreenCover(isPresented: $isDollStatusViewPresented) {
-                        DollStatusView(username: $username, equippedBaby: $equippedBaby, gameCompleted: $gameCompleted)
-                    }
-
-                    // NavigationLink for logging out
-                    NavigationLink(destination: LoginAppView()
-                        .navigationBarBackButtonHidden(true), isActive: $navigateToLogIn) {
-                        EmptyView()
+                        DollStatusView(username: $username, equippedBaby: $equippedBaby)
                     }
                 }
             }
@@ -100,15 +84,9 @@ struct HouseView: View {
     }
 }
 
-
-
-
-
-/*
 // Preview of the HouseView for development in Xcode
 struct HouseView_Previews: PreviewProvider {
     static var previews: some View {
-        HouseView(username: .constant("thebaby"), gameCompleted: $gameCompleted)
+        HouseView(username: .constant("thebaby"), gameCompleted: .constant(false))
     }
 }
-*/
