@@ -3,13 +3,22 @@ import GameplayKit  // Import GameplayKit for potential game mechanics and AI be
 
 // Define the WorkOutGameScene class, inheriting from SKScene
 class WorkOutGameLoadingScene: SKScene {
-
+    
     var loadingFlower = SKSpriteNode()
     var textureArray = [SKTexture]()
 
     override func didMove(to view: SKView) {
         // Set up the loading animation
         setupLoadingAnimation()
+
+        
+        let labelNode = SKLabelNode(text: "Game Loading...")
+        labelNode.fontName = "Arial-BoldMT" // Set the font name
+        labelNode.fontSize = 20 // Set the font size
+        labelNode.fontColor = UIColor(red: 249/255, green: 136/255, blue: 6/255, alpha: 1.0) // Set the color of the text
+        labelNode.position = CGPoint(x: self.frame.midX, y: self.frame.midY - 80)
+
+        self.addChild(labelNode)
 
         // Simulate a loading delay (e.g., 2 seconds)
         let wait = SKAction.wait(forDuration: 2.0)

@@ -12,12 +12,20 @@ struct NiceBabiesApp: App {  // Define the main structure conforming to the App 
         FirebaseApp.configure()
     }
     
+        @State private var navigateToDollStatus = false
+
+    
     var body: some Scene {  // Define the body of the app, which contains the main scene(s)
         WindowGroup {
             // Check if a user is already authenticated
             if Auth.auth().currentUser != nil {
                 // User is signed in, show the main view
-                HouseView(username: .constant(Auth.auth().currentUser?.email ?? "User"))
+                HouseView()
+                    .onOpenURL { url in
+                        if url.scheme == "nicebabies" && url.host == "dollstatus" {
+                            navigateToDollStatus = true
+                        }
+                    }
             } else {
                 // No user is signed in, show the login view
                 LoginAppView()

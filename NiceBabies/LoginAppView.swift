@@ -144,16 +144,16 @@ struct LoginAppView: View {
                     Spacer()  // Add space at the bottom
                 }
                 .padding()  // Add padding around the entire view
+                
+                // Navigation to HouseView when the password is correct
+                NavigationLink(destination: HouseView().navigationBarBackButtonHidden(true), isActive: $isPasswordCorrect) {
+                    EmptyView()  // Use an empty view to trigger the navigation
+                    
+                }
+                
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color(red: 0.72, green: 0.75, blue: 0.87))
-            
-            // Navigation to HouseView when the password is correct
-            NavigationLink(destination: HouseView(username: $username).navigationBarBackButtonHidden(true), isActive: $isPasswordCorrect) {
-                EmptyView()  // Use an empty view to trigger the navigation
-                
-                .padding()
-            }
 
 
             

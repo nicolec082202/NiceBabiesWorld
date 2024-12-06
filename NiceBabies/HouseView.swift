@@ -2,12 +2,11 @@ import SwiftUI
 import Firebase
 
 struct HouseView: View {
-    @State private var isGameCatalogViewPresented = false
     @State private var isClosetViewPresented = false
     @State private var isDollStatusViewPresented = false
-    @State private var equippedBaby = "NiceBaby_Monkey"
+    @State var equippedBaby = ""
     @State private var navigateToLogIn = false // State to trigger navigation
-    @Binding var username: String
+    @State var username = ""
 
     var body: some View {
         NavigationView { // Wrap content in NavigationView
@@ -17,46 +16,36 @@ struct HouseView: View {
 
                 ZStack {
                     // Background Image
-                    Image("closetBackground")
+                    Image("HomePage Background")
                         .resizable()
-                        .ignoresSafeArea()
-
-                    // Button to present the GameCatalogView
-                    Button(action: {
-                        isGameCatalogViewPresented = true
-                    }) {
-                        Image("laptop")
+                        .edgesIgnoringSafeArea(.all)          .frame(width: width * 1.59, height: height)
+                        .position(x: width * 0.5, y: height * 0.5)
+                    
+                    // Hamburger Menu
+                    HamburgerMenuView(isMenuOpen: false, currentView: "HouseView")
+                    
+                    // NavigationLink for GameCatalogView
+                    NavigationLink(destination: GameCatalogView().navigationBarHidden(true)) {
+                        Image("Laptop")
                             .resizable()
-                            .foregroundColor(Color.black)
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: width * 0.4, height: height * 0.4)
                     }
-                    .frame(width: width * 0.22, height: height * 0.1) // Set frame size relative to screen size
+                    .frame(width: width * 0.4, height: height * 0.2)
                     .contentShape(Rectangle())
-                    .position(x: width * 0.79, y: height * 0.5) // Position relative to screen size
-                    .fullScreenCover(isPresented: $isGameCatalogViewPresented) {
-                        GameCatalogView()
-                    }
-
-                    // Logout Button
-                    Button(action: {
-                        signOutUser()
-                    }) {
-                        Image(systemName: "arrow.forward.circle")
-                            .foregroundColor(Color.black)
-                            .font(.system(size: 35))
-                    }
-                    .position(x: width * 0.9, y: height * 0.02) // Position relative to screen size
-
+                    .position(x: width * 0.38, y: height * 0.33) // Position relative to screen size
+                    
                     // Button to present the ClosetView
                     Button(action: {
                         isClosetViewPresented = true
                     }) {
-                        Image("closet1")
+                        Image("Closet")
                             .resizable()
-                            .foregroundColor(Color.black)
+                            .frame(width: width * 0.26, height: height * 0.3)
                     }
-                    .frame(width: width * 0.71, height: height * 0.45) // Set frame size relative to screen size
+                    .frame(width: width * 0.26, height: height * 0.23) // Set frame size relative to screen size
                     .contentShape(Rectangle())
-                    .position(x: width * 0.13, y: height * 0.26) // Position relative to screen size
+                    .position(x: width * 0.7, y: height * 0.32) // Position relative to screen size
                     .fullScreenCover(isPresented: $isClosetViewPresented) {
                         ClosetView(equippedBaby: $equippedBaby)
                     }
@@ -68,21 +57,36 @@ struct HouseView: View {
                         Image(equippedBaby)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .frame(width: width * 0.7, height: height * 0.7) // Set frame size relative to screen size
+                            .frame(width: width * 0.5, height: height * 0.5) // Set frame size relative to view dimensions
                     }
                     .frame(width: width * 0.2, height: height * 0.2) // Ensure button frame matches visible content
                     .contentShape(Rectangle())
-                    .position(x: width * 0.6, y: height * 0.75) // Position relative to screen size
+                    .position(x: width * 0.5, y: height * 0.65) // Position relative to screen size
                     .fullScreenCover(isPresented: $isDollStatusViewPresented) {
-                        DollStatusView(username: $username, equippedBaby: $equippedBaby)
-                    }
-
-                    // NavigationLink for logging out
-                    NavigationLink(destination: LoginAppView()
-                        .navigationBarBackButtonHidden(true), isActive: $navigateToLogIn) {
-                        EmptyView()
+                        DollStatusView()
                     }
                 }
+                .onAppear{
+                    
+            // Fetch username
+                    fetchUserData(for: "username") { value, error in
+                        if let error = error {
+                            print("Error fetching username: \(error.localizedDescription)")
+                        } else if let fetchedUsername = value as? String {
+                            username = fetchedUsername
+                        }
+                    }
+
+                    // Fetch equippedBaby
+                    fetchUserData(for: "equippedBaby") { value, error in
+                        if let error = error {
+                            print("Error fetching equippedBaby: \(error.localizedDescription)")
+                        } else if let fetchedEquippedBaby = value as? String {
+                            equippedBaby = fetchedEquippedBaby
+                        }
+                    }
+                }
+                
             }
             .navigationBarHidden(true) // Hide navigation bar if not needed
         }
@@ -98,14 +102,9 @@ struct HouseView: View {
     }
 }
 
-
-
-
-
-
 // Preview of the HouseView for development in Xcode
 struct HouseView_Previews: PreviewProvider {
     static var previews: some View {
-        HouseView(username: .constant("thebaby"))
+        HouseView()
     }
 }

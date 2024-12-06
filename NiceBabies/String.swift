@@ -20,21 +20,28 @@ extension String {
     
     
     //Valid usernames should:
-    //1. Be between 6-10 characters
-    //2. Only conatain letters, numbers, _
-    //3. Unique
-    func isValidUserName () -> Bool{
-        
-        return true
-    }
-    
-    //Valid Passwords should:
-    //1. Be minimum 8 characters
-    //2. Have at least one number
-    //3. Have at least one symbol
-    func isValidPassword () -> Bool{
-        
-        return true
-    }
+        //1. Be between 6-10 characters
+        //2. Only conatain letters, numbers, _
+        //3. Unique
+        func isValidUserName () -> Bool{
+
+            let regex = try! NSRegularExpression (pattern: "^[a-zA-Z0-9_]{6,10}$",
+                                                  options: .caseInsensitive)
+
+            return regex.firstMatch(in: self, range: NSRange (location: 0, length: count)) != nil
+
+        }
+
+        //Valid Passwords should:
+        //1. Be minimum 8 characters
+        //2. Have at least one number
+        //3. Have at least one symbol
+        func isValidPassword () -> Bool{
+
+            let regex = try! NSRegularExpression (pattern: "^(?=.*[0-9])(?=.*[._%+-])[a-zA-Z0-9._%+-]{10,}$",
+                                                  options: .caseInsensitive)
+
+            return regex.firstMatch(in: self, range: NSRange (location: 0, length: count)) != nil
+        }
 }
 

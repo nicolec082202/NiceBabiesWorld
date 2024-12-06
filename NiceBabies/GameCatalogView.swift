@@ -4,70 +4,91 @@ struct GameCatalogView: View {
     @Environment(\.presentationMode) var isGameCatalogViewPresented
     @State private var isWorkoutGamePresented = false
     @State private var isMatchingGamePresented = false
+    @State private var isFlappyGamePresented = false
 
     var body: some View {
-        GeometryReader { geometry in
-            let width = geometry.size.width
-            let height = geometry.size.height
+        NavigationView { // Ensure GameCatalogView itself has a NavigationView context
+            GeometryReader { geometry in
+                let width = geometry.size.width
+                let height = geometry.size.height
+                
+                ZStack {
+                    
+                    
+                    Color(red: 0, green: 0, blue: 0)
+                        .edgesIgnoringSafeArea(.all)
 
-            ZStack {
-                // Home Button to dismiss the view
-                Button(action: {
-                    isGameCatalogViewPresented.wrappedValue.dismiss()
-                }) {
-                    Image(systemName: "house.fill")
-                        .font(.system(size: width * 0.05)) // Font size relative to width
-                        .foregroundColor(.black)
+
+                    
+                    Image("Cat")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: width*1.5, height: height*1.5)
+                        .position(x: width*0.7, y: height*0.2)
+                    
+                    Image("Game Select Icon")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: width*0.7, height: height*1.4)
+                        .position(x: width*0.5, y: height*0.27)
+                
+
+
+                    Spacer()
+                    
+                    VStack{
+
+                        HStack{
+                            
+                            
+                            Button(action: {
+                                isFlappyGamePresented = true
+                            }) {
+                                Image("Flappy Bird Game Button Icon")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 120, height: 120)
+                                    .cornerRadius(10)
+                            }
+                            .fullScreenCover(isPresented: $isFlappyGamePresented) {
+                                SpriteKitView(gameType: .flappy)
+                                    .edgesIgnoringSafeArea(.all)
+                            }
+                            
+                            
+                            
+                            Button(action: {
+                                isMatchingGamePresented = true
+                            }) {
+                                Image("Matching Game Button Icon")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 120, height: 120)
+                                    .cornerRadius(10)
+                            }
+                            .fullScreenCover(isPresented: $isMatchingGamePresented) {
+                                SpriteKitView( gameType: .matching)
+                                    .edgesIgnoringSafeArea(.all)
+                            }
+                            
+                        }
+                        
+                        
+                        
+                    }
+                    .frame(width: width, height: height)
+                    .position(x: width*0.5, y: height*0.6)
+                    
+                    HamburgerMenuView(isMenuOpen: false, currentView: "GameCatalogView")
+
+
                 }
-                .position(x: width * 0.1, y: height * 0.05) // Position relative to screen size
-
-                Text("Game Catalog View")
-                    .font(.title)
-                    .position(x: width * 0.5, y: height * 0.1) // Centered relative to screen width
-
-                VStack(spacing: height * 0.02) { // Spacing relative to height
-                    // Button for Workout Game
-                    Button(action: {
-                        isWorkoutGamePresented = true
-                    }) {
-                        Text("Launch Workout Game")
-                            .font(.title2) // Adjusted for better responsiveness
-                            .padding()
-                            .frame(width: width * 0.8) // Width relative to screen size
-                            .background(Color.green)
-                            .foregroundColor(.white)
-                            .cornerRadius(10)
-                    }
-                    .fullScreenCover(isPresented: $isWorkoutGamePresented) {
-                        // Launch the Workout Game
-                        SpriteKitView(gameType: .workout)
-                            .edgesIgnoringSafeArea(.all)
-                    }
-
-                    // Button for Matching Game
-                    Button(action: {
-                        isMatchingGamePresented = true
-                    }) {
-                        Text("Launch Matching Game")
-                            .font(.title2) // Adjusted for better responsiveness
-                            .padding()
-                            .frame(width: width * 0.8) // Width relative to screen size
-                            .background(Color.purple)
-                            .foregroundColor(.white)
-                            .cornerRadius(10)
-                    }
-                    .fullScreenCover(isPresented: $isMatchingGamePresented) {
-                        // Launch the Matching Game
-                        SpriteKitView(gameType: .matching)
-                            .edgesIgnoringSafeArea(.all)
-                    }
-                }
-                .frame(width: width, height: height)
-                .position(x: width * 0.5, y: height * 0.5) // Centered in the view
             }
+            .navigationBarHidden(true) // Hide navigation bar if not needed
         }
     }
 }
+
 
 // Preview of the GameCatalogView for development in Xcode
 struct GameCatalogView_Previews: PreviewProvider {

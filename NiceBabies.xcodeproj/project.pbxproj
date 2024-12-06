@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E106805E2D03BC470033EAB6 /* FetchDatabaseValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12B8A272CFC20FE006231DD /* FetchDatabaseValues.swift */; };
+		E12B8A282CFC20FE006231DD /* FetchDatabaseValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12B8A272CFC20FE006231DD /* FetchDatabaseValues.swift */; };
 		E135FB932CA293490006457C /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E135FB922CA293490006457C /* Media.xcassets */; };
 		E135FB952CA76B5B0006457C /* SpriteKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E135FB942CA76B5B0006457C /* SpriteKitView.swift */; };
+		E155045D2CFE7F8D004219E0 /* FlappyBirdGameLoadingScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E155045C2CFE7F8D004219E0 /* FlappyBirdGameLoadingScene.swift */; };
+		E155045F2CFE7FB3004219E0 /* FlappyBirdGameMainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E155045E2CFE7FB3004219E0 /* FlappyBirdGameMainMenuScene.swift */; };
+		E1593C922CE1B6880063C3A0 /* HamburgerMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1593C912CE1B6880063C3A0 /* HamburgerMenuView.swift */; };
 		E167A5922CD1CF5200C2128C /* WorkOutGameLoadingScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E167A5912CD1CF5200C2128C /* WorkOutGameLoadingScene.swift */; };
 		E167A5962CD1D7AB00C2128C /* Loading.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E167A5952CD1D7AB00C2128C /* Loading.atlas */; };
 		E167A59A2CD2D17500C2128C /* WorkOutGameMainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E167A5992CD2D17500C2128C /* WorkOutGameMainMenuScene.swift */; };
@@ -17,6 +22,20 @@
 		E167A5A22CD2D58500C2128C /* MatchingGameMainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E167A5A12CD2D58500C2128C /* MatchingGameMainMenuScene.swift */; };
 		E167A5A42CD2D59700C2128C /* MatchingGameLevel1Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E167A5A32CD2D59700C2128C /* MatchingGameLevel1Scene.swift */; };
 		E167A5A92CD2DE7B00C2128C /* MatchingGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E167A5A82CD2DE7B00C2128C /* MatchingGameViewController.swift */; };
+		E171D6FB2D0362F600C5A984 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E171D6FA2D0362F600C5A984 /* WidgetKit.framework */; };
+		E171D6FD2D0362F700C5A984 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E171D6FC2D0362F700C5A984 /* SwiftUI.framework */; };
+		E171D7022D0362F700C5A984 /* NiceBabiesWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E171D7012D0362F700C5A984 /* NiceBabiesWidgetLiveActivity.swift */; };
+		E171D7072D0362F900C5A984 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E171D7062D0362F900C5A984 /* Assets.xcassets */; };
+		E171D7092D0362F900C5A984 /* NiceBabiesWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = E171D7052D0362F700C5A984 /* NiceBabiesWidget.intentdefinition */; };
+		E171D70A2D0362F900C5A984 /* NiceBabiesWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = E171D7052D0362F700C5A984 /* NiceBabiesWidget.intentdefinition */; };
+		E171D70D2D0362F900C5A984 /* NiceBabiesWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E171D6F82D0362F600C5A984 /* NiceBabiesWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E171D7122D03634F00C5A984 /* NiceBabiesWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DC8A7B2D03022A006474B7 /* NiceBabiesWidget.swift */; };
+		E171D7142D03639000C5A984 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = E171D7132D03639000C5A984 /* FirebaseAuth */; };
+		E171D7162D03639500C5A984 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = E171D7152D03639500C5A984 /* FirebaseFirestore */; };
+		E171D7172D03644C00C5A984 /* DataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DC8A792D0301A1006474B7 /* DataContainer.swift */; };
+		E171D7182D0367F900C5A984 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1F50C8D2CB38A9200042384 /* GoogleService-Info.plist */; };
+		E171D7192D03683000C5A984 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1D9D7842C38B97900FB1B4E /* Assets.xcassets */; };
+		E171D71A2D03687900C5A984 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E135FB922CA293490006457C /* Media.xcassets */; };
 		E1AC1E752C96927D009C56D1 /* ClosetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AC1E742C96927D009C56D1 /* ClosetView.swift */; };
 		E1CECCF92C3BA18D00F736C9 /* HouseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CECCF82C3BA18D00F736C9 /* HouseView.swift */; };
 		E1CECCFD2C3BA7CB00F736C9 /* GameCatalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CECCFC2C3BA7CB00F736C9 /* GameCatalogView.swift */; };
@@ -31,12 +50,43 @@
 		E1D9D7982C38BAF200FB1B4E /* NewAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D9D7972C38BAF200FB1B4E /* NewAccountView.swift */; };
 		E1D9D79A2C38BB3200FB1B4E /* DollStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D9D7992C38BB3200FB1B4E /* DollStatusView.swift */; };
 		E1D9D79C2C38BEBB00FB1B4E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D9D79B2C38BEBA00FB1B4E /* String.swift */; };
+		E1DC8A7A2D0301A2006474B7 /* DataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DC8A792D0301A1006474B7 /* DataContainer.swift */; };
+		E1E9CEE32CFE815A009A5560 /* FlappyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E9CEE22CFE815A009A5560 /* FlappyViewController.swift */; };
+		E1E9CEE52CFE8163009A5560 /* FlappyBirdGameLevel1Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E9CEE42CFE8162009A5560 /* FlappyBirdGameLevel1Scene.swift */; };
 		E1F50C8E2CB38A9200042384 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1F50C8D2CB38A9200042384 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		E171D70B2D0362F900C5A984 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1D9D7752C38B97800FB1B4E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E171D6F72D0362F600C5A984;
+			remoteInfo = NiceBabiesWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E171D7112D0362F900C5A984 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E171D70D2D0362F900C5A984 /* NiceBabiesWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		E12B8A272CFC20FE006231DD /* FetchDatabaseValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchDatabaseValues.swift; sourceTree = "<group>"; };
 		E135FB922CA293490006457C /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		E135FB942CA76B5B0006457C /* SpriteKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteKitView.swift; sourceTree = "<group>"; };
+		E155045C2CFE7F8D004219E0 /* FlappyBirdGameLoadingScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlappyBirdGameLoadingScene.swift; sourceTree = "<group>"; };
+		E155045E2CFE7FB3004219E0 /* FlappyBirdGameMainMenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlappyBirdGameMainMenuScene.swift; sourceTree = "<group>"; };
+		E1593C912CE1B6880063C3A0 /* HamburgerMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamburgerMenuView.swift; sourceTree = "<group>"; };
 		E167A5912CD1CF5200C2128C /* WorkOutGameLoadingScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOutGameLoadingScene.swift; sourceTree = "<group>"; };
 		E167A5952CD1D7AB00C2128C /* Loading.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Loading.atlas; sourceTree = "<group>"; };
 		E167A5992CD2D17500C2128C /* WorkOutGameMainMenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOutGameMainMenuScene.swift; sourceTree = "<group>"; };
@@ -45,6 +95,13 @@
 		E167A5A12CD2D58500C2128C /* MatchingGameMainMenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingGameMainMenuScene.swift; sourceTree = "<group>"; };
 		E167A5A32CD2D59700C2128C /* MatchingGameLevel1Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingGameLevel1Scene.swift; sourceTree = "<group>"; };
 		E167A5A82CD2DE7B00C2128C /* MatchingGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingGameViewController.swift; sourceTree = "<group>"; };
+		E171D6F82D0362F600C5A984 /* NiceBabiesWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NiceBabiesWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E171D6FA2D0362F600C5A984 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		E171D6FC2D0362F700C5A984 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		E171D7012D0362F700C5A984 /* NiceBabiesWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiceBabiesWidgetLiveActivity.swift; sourceTree = "<group>"; };
+		E171D7052D0362F700C5A984 /* NiceBabiesWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = NiceBabiesWidget.intentdefinition; sourceTree = "<group>"; };
+		E171D7062D0362F900C5A984 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E171D7082D0362F900C5A984 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1AC1E742C96927D009C56D1 /* ClosetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosetView.swift; sourceTree = "<group>"; };
 		E1CECCF82C3BA18D00F736C9 /* HouseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseView.swift; sourceTree = "<group>"; };
 		E1CECCFC2C3BA7CB00F736C9 /* GameCatalogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCatalogView.swift; sourceTree = "<group>"; };
@@ -58,10 +115,26 @@
 		E1D9D7972C38BAF200FB1B4E /* NewAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccountView.swift; sourceTree = "<group>"; };
 		E1D9D7992C38BB3200FB1B4E /* DollStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DollStatusView.swift; sourceTree = "<group>"; };
 		E1D9D79B2C38BEBA00FB1B4E /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		E1DC8A792D0301A1006474B7 /* DataContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataContainer.swift; sourceTree = "<group>"; };
+		E1DC8A7B2D03022A006474B7 /* NiceBabiesWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NiceBabiesWidget.swift; path = ../NiceBabies/NiceBabiesWidget.swift; sourceTree = "<group>"; };
+		E1E9CEE22CFE815A009A5560 /* FlappyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlappyViewController.swift; sourceTree = "<group>"; };
+		E1E9CEE42CFE8162009A5560 /* FlappyBirdGameLevel1Scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlappyBirdGameLevel1Scene.swift; sourceTree = "<group>"; };
+		E1E9CEE62D002F8F009A5560 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E1F50C8D2CB38A9200042384 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../NiceBabiesWorld-main/NiceBabies/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E171D6F52D0362F600C5A984 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E171D6FD2D0362F700C5A984 /* SwiftUI.framework in Frameworks */,
+				E171D7162D03639500C5A984 /* FirebaseFirestore in Frameworks */,
+				E171D7142D03639000C5A984 /* FirebaseAuth in Frameworks */,
+				E171D6FB2D0362F600C5A984 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E1D9D77A2C38B97800FB1B4E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -74,6 +147,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E155045B2CFE7F75004219E0 /* FlappyBirdGame */ = {
+			isa = PBXGroup;
+			children = (
+				E1E9CEE42CFE8162009A5560 /* FlappyBirdGameLevel1Scene.swift */,
+				E1E9CEE22CFE815A009A5560 /* FlappyViewController.swift */,
+				E155045C2CFE7F8D004219E0 /* FlappyBirdGameLoadingScene.swift */,
+				E155045E2CFE7FB3004219E0 /* FlappyBirdGameMainMenuScene.swift */,
+			);
+			path = FlappyBirdGame;
+			sourceTree = "<group>";
+		};
 		E167A59E2CD2D52B00C2128C /* MatchingGame */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,12 +172,34 @@
 		E167A5A52CD2DB6E00C2128C /* Games */ = {
 			isa = PBXGroup;
 			children = (
+				E155045B2CFE7F75004219E0 /* FlappyBirdGame */,
 				E135FB922CA293490006457C /* Media.xcassets */,
 				E167A5952CD1D7AB00C2128C /* Loading.atlas */,
 				E1D92DB82C9E814200B09F0C /* WorkOutGame */,
 				E167A59E2CD2D52B00C2128C /* MatchingGame */,
 			);
 			path = Games;
+			sourceTree = "<group>";
+		};
+		E171D6F92D0362F600C5A984 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E171D6FA2D0362F600C5A984 /* WidgetKit.framework */,
+				E171D6FC2D0362F700C5A984 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E171D6FE2D0362F700C5A984 /* NiceBabiesWidget */ = {
+			isa = PBXGroup;
+			children = (
+				E1DC8A7B2D03022A006474B7 /* NiceBabiesWidget.swift */,
+				E171D7012D0362F700C5A984 /* NiceBabiesWidgetLiveActivity.swift */,
+				E171D7052D0362F700C5A984 /* NiceBabiesWidget.intentdefinition */,
+				E171D7062D0362F900C5A984 /* Assets.xcassets */,
+				E171D7082D0362F900C5A984 /* Info.plist */,
+			);
+			path = NiceBabiesWidget;
 			sourceTree = "<group>";
 		};
 		E1D92DB82C9E814200B09F0C /* WorkOutGame */ = {
@@ -113,6 +219,8 @@
 			children = (
 				E167A5A52CD2DB6E00C2128C /* Games */,
 				E1D9D77F2C38B97800FB1B4E /* NiceBabies */,
+				E171D6FE2D0362F700C5A984 /* NiceBabiesWidget */,
+				E171D6F92D0362F600C5A984 /* Frameworks */,
 				E1D9D77E2C38B97800FB1B4E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -121,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				E1D9D77D2C38B97800FB1B4E /* NiceBabies.app */,
+				E171D6F82D0362F600C5A984 /* NiceBabiesWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,10 +237,14 @@
 		E1D9D77F2C38B97800FB1B4E /* NiceBabies */ = {
 			isa = PBXGroup;
 			children = (
+				E1E9CEE62D002F8F009A5560 /* Info.plist */,
 				E1D9D7802C38B97800FB1B4E /* NiceBabiesApp.swift */,
+				E1DC8A792D0301A1006474B7 /* DataContainer.swift */,
 				E1D9D7952C38BA8900FB1B4E /* LoginAppView.swift */,
 				E1D9D79B2C38BEBA00FB1B4E /* String.swift */,
 				E1D9D7992C38BB3200FB1B4E /* DollStatusView.swift */,
+				E12B8A272CFC20FE006231DD /* FetchDatabaseValues.swift */,
+				E1593C912CE1B6880063C3A0 /* HamburgerMenuView.swift */,
 				E1CECCFC2C3BA7CB00F736C9 /* GameCatalogView.swift */,
 				E1CECCF82C3BA18D00F736C9 /* HouseView.swift */,
 				E1AC1E742C96927D009C56D1 /* ClosetView.swift */,
@@ -155,6 +268,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		E171D6F72D0362F600C5A984 /* NiceBabiesWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E171D70E2D0362F900C5A984 /* Build configuration list for PBXNativeTarget "NiceBabiesWidgetExtension" */;
+			buildPhases = (
+				E171D6F42D0362F600C5A984 /* Sources */,
+				E171D6F52D0362F600C5A984 /* Frameworks */,
+				E171D6F62D0362F600C5A984 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NiceBabiesWidgetExtension;
+			packageProductDependencies = (
+				E171D7132D03639000C5A984 /* FirebaseAuth */,
+				E171D7152D03639500C5A984 /* FirebaseFirestore */,
+			);
+			productName = NiceBabiesWidgetExtension;
+			productReference = E171D6F82D0362F600C5A984 /* NiceBabiesWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		E1D9D77C2C38B97800FB1B4E /* NiceBabies */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E1D9D78B2C38B97900FB1B4E /* Build configuration list for PBXNativeTarget "NiceBabies" */;
@@ -162,10 +296,12 @@
 				E1D9D7792C38B97800FB1B4E /* Sources */,
 				E1D9D77A2C38B97800FB1B4E /* Frameworks */,
 				E1D9D77B2C38B97800FB1B4E /* Resources */,
+				E171D7112D0362F900C5A984 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E171D70C2D0362F900C5A984 /* PBXTargetDependency */,
 			);
 			name = NiceBabies;
 			packageProductDependencies = (
@@ -186,6 +322,9 @@
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					E171D6F72D0362F600C5A984 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
 					E1D9D77C2C38B97800FB1B4E = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
@@ -208,11 +347,23 @@
 			projectRoot = "";
 			targets = (
 				E1D9D77C2C38B97800FB1B4E /* NiceBabies */,
+				E171D6F72D0362F600C5A984 /* NiceBabiesWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E171D6F62D0362F600C5A984 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E171D7072D0362F900C5A984 /* Assets.xcassets in Resources */,
+				E171D7192D03683000C5A984 /* Assets.xcassets in Resources */,
+				E171D71A2D03687900C5A984 /* Media.xcassets in Resources */,
+				E171D7182D0367F900C5A984 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E1D9D77B2C38B97800FB1B4E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -228,25 +379,45 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E171D6F42D0362F600C5A984 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E171D7092D0362F900C5A984 /* NiceBabiesWidget.intentdefinition in Sources */,
+				E106805E2D03BC470033EAB6 /* FetchDatabaseValues.swift in Sources */,
+				E171D7022D0362F700C5A984 /* NiceBabiesWidgetLiveActivity.swift in Sources */,
+				E171D7122D03634F00C5A984 /* NiceBabiesWidget.swift in Sources */,
+				E171D7172D03644C00C5A984 /* DataContainer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E1D9D7792C38B97800FB1B4E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				E1D9D79C2C38BEBB00FB1B4E /* String.swift in Sources */,
 				E167A59A2CD2D17500C2128C /* WorkOutGameMainMenuScene.swift in Sources */,
+				E171D70A2D0362F900C5A984 /* NiceBabiesWidget.intentdefinition in Sources */,
 				E1D92DB32C9E80B800B09F0C /* WorkOutGameViewController.swift in Sources */,
 				E1D92DB12C9E801A00B09F0C /* WorkOutGameScene.swift in Sources */,
+				E1E9CEE52CFE8163009A5560 /* FlappyBirdGameLevel1Scene.swift in Sources */,
 				E167A5A92CD2DE7B00C2128C /* MatchingGameViewController.swift in Sources */,
 				E1D9D7982C38BAF200FB1B4E /* NewAccountView.swift in Sources */,
 				E1D9D7812C38B97800FB1B4E /* NiceBabiesApp.swift in Sources */,
+				E1E9CEE32CFE815A009A5560 /* FlappyViewController.swift in Sources */,
 				E167A5A42CD2D59700C2128C /* MatchingGameLevel1Scene.swift in Sources */,
+				E1593C922CE1B6880063C3A0 /* HamburgerMenuView.swift in Sources */,
+				E155045F2CFE7FB3004219E0 /* FlappyBirdGameMainMenuScene.swift in Sources */,
 				E167A5A22CD2D58500C2128C /* MatchingGameMainMenuScene.swift in Sources */,
 				E167A5A02CD2D57900C2128C /* MatchingGameLoadingScene.swift in Sources */,
+				E12B8A282CFC20FE006231DD /* FetchDatabaseValues.swift in Sources */,
+				E155045D2CFE7F8D004219E0 /* FlappyBirdGameLoadingScene.swift in Sources */,
 				E167A5922CD1CF5200C2128C /* WorkOutGameLoadingScene.swift in Sources */,
 				E1CECCF92C3BA18D00F736C9 /* HouseView.swift in Sources */,
 				E135FB952CA76B5B0006457C /* SpriteKitView.swift in Sources */,
 				E1AC1E752C96927D009C56D1 /* ClosetView.swift in Sources */,
 				E1D9D7962C38BA8900FB1B4E /* LoginAppView.swift in Sources */,
+				E1DC8A7A2D0301A2006474B7 /* DataContainer.swift in Sources */,
 				E167A59C2CD2D1EB00C2128C /* WorkOutGameLevel1Scene.swift in Sources */,
 				E1D9D79A2C38BB3200FB1B4E /* DollStatusView.swift in Sources */,
 				E1CECCFD2C3BA7CB00F736C9 /* GameCatalogView.swift in Sources */,
@@ -255,7 +426,67 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		E171D70C2D0362F900C5A984 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E171D6F72D0362F600C5A984 /* NiceBabiesWidgetExtension */;
+			targetProxy = E171D70B2D0362F900C5A984 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		E171D70F2D0362F900C5A984 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NiceBabiesWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NiceBabiesWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nicebabies.nicebabiesworld.NiceBabiesWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E171D7102D0362F900C5A984 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NiceBabiesWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NiceBabiesWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nicebabies.nicebabiesworld.NiceBabiesWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		E1D9D7892C38B97900FB1B4E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -373,6 +604,7 @@
 		E1D9D78C2C38B97900FB1B4E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -380,9 +612,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"NiceBabies/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NiceBabies/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -401,6 +634,7 @@
 		E1D9D78D2C38B97900FB1B4E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -408,9 +642,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"NiceBabies/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NiceBabies/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -429,6 +664,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E171D70E2D0362F900C5A984 /* Build configuration list for PBXNativeTarget "NiceBabiesWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E171D70F2D0362F900C5A984 /* Debug */,
+				E171D7102D0362F900C5A984 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E1D9D7782C38B97800FB1B4E /* Build configuration list for PBXProject "NiceBabies" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -461,6 +705,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		E171D7132D03639000C5A984 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E1D9D78E2C38B99D00FB1B4E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		E171D7152D03639500C5A984 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E1D9D78E2C38B99D00FB1B4E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
 		E1D9D78F2C38B99D00FB1B4E /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E1D9D78E2C38B99D00FB1B4E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
